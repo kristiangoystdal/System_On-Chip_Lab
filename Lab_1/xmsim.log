@@ -1,0 +1,27 @@
+xmsim(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm BATCHARGERctr_tb.cc BATCHARGERctr_tb.clk BATCHARGERctr_tb.cv BATCHARGERctr_tb.dgnd BATCHARGERctr_tb.dvdd BATCHARGERctr_tb.en BATCHARGERctr_tb.ibat BATCHARGERctr_tb.iend BATCHARGERctr_tb.imonen BATCHARGERctr_tb.rstz BATCHARGERctr_tb.tbat BATCHARGERctr_tb.tc BATCHARGERctr_tb.tempmax BATCHARGERctr_tb.tempmin BATCHARGERctr_tb.tmax BATCHARGERctr_tb.tmonen BATCHARGERctr_tb.vbat BATCHARGERctr_tb.vcutoff BATCHARGERctr_tb.vmonen BATCHARGERctr_tb.vpreset BATCHARGERctr_tb.vtok
+Created probe 1
+xcelium> run
+Vbat < Vcutoff, waiting tc mode
+tc mode ok
+Vbat > Vcutoff waiting cc mode
+cc mode ok
+Vbat > Vpreset, waiting cv mode
+cv mode ok
+waiting timeout
+timeout ok
+voltage reduced, Vbat < Vpreset, waiting cc mode
+cc mode ok
+Vbat > Vpreset, waiting cv mode
+cv mode ok
+exit cv by minimum current ok
+Simulation complete via $finish(1) at time 22070 NS + 0
+./BATCHARGERctr_tb.v:125 	$finish;
+xcelium> ^C
+xcelium> exit
