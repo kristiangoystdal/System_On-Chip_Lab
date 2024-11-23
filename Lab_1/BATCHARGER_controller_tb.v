@@ -1,9 +1,7 @@
 `timescale 1ns / 1ps
 
 
-module BATCHARGERctr_tb;
-
-
+module BATCHARGER_controller_tb;
 
   wire cc;  // output to analog block: constant current mode with ich current
   wire tc;  // output to analog block: trickle mode with 0.1 x ich current
@@ -31,7 +29,7 @@ module BATCHARGERctr_tb;
 
   parameter start = 0, wait1 = 1, end1 = 2, ccmode = 3, tcmode = 4, cvmode = 5;
 
-  BATCHARGERctr uut (
+  BATCHARGER_controller uut (
       .cc(cc),
       .tc(tc),
       .cv(cv),
@@ -60,6 +58,7 @@ module BATCHARGERctr_tb;
     clk = 0;
     vtok = 0;
     rstz = 0;  // active 0 reset at the begining
+    en = 0;  // disable the controller at the begining
 
     vbat[7:0] = 8'b10011001 ; // Vbat=3V -> after resistor divider: 0.3V -> adc with Vref=0.5V:  vabt=8'b10011001 
     ibat[7:0] = 8'b01100110;  // 8 bits data from adc with battery current: 0.2*C
@@ -74,6 +73,7 @@ module BATCHARGERctr_tb;
 
 
     #12 rstz = 1;  // reset end
+    #12 en = 1;  // enable the controller
     vtok = 1;  // voltage and temperature values are valid
 
     // with Vbat < Vcutoff -> tc mode is expected
