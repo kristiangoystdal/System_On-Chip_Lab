@@ -73,8 +73,8 @@ module BATCHARGER_controller_tb;
 
 
     #12 rstz = 1;  // reset end
-    #12 en = 1;  // enable the controller
-    vtok = 1;  // voltage and temperature values are valid
+    en = 1;        // enable the controller
+    vtok = 1;      // voltage and temperature values are valid
 
     // with Vbat < Vcutoff -> tc mode is expected
 

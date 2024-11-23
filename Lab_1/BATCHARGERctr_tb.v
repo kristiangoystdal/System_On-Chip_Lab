@@ -68,7 +68,7 @@ module BATCHARGERctr_tb;
     vpreset[7:0] = 8'b11000111; // constant from OTP: voltage for constant voltage mode; Vpreset=3.9V
     tempmin[7:0] = 8'b00101110;  // constant from OTP: minimum temperature: -10ºC
     tempmax[7:0] = 8'b10001011;  // constant from OTP: maximum temperature: 50ºC
-    tmax[7:0] = 8'b00001000; // constant from OTP: maximum charge time (units of 255 clock periods): 255*8 = 2040 clock periods 
+    tmax[7:0] = 8'b00001000; // constant from OTP: maximum charge time (units of 255 clock periods): 255*8 =   clock periods 
     iend[7:0] = 8'b00110011;  // charge current div by 10 to be used as charging end criteria: 0.1C 
 
 
