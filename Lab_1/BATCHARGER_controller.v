@@ -92,11 +92,11 @@ module BATCHARGER_controller (
       end
 
       FINISH: begin
-        if (vcutoff < vbat) begin
+        if (vbat < vcutoff) begin
           next_state = TC;  // Move to TC state if voltage exceeds cutoff
           tc = 1;  // Enable trickle mode
           vmonen = 1;  // Enable voltage monitor
-        end else if (vcutoff > vbat && vbat < vpreset) begin
+        end else if (vbat > vcutoff && vbat < vpreset) begin
           next_state = CC;  // Move to CC state if voltage is below cutoff
           cc = 1;  // Enable constant current mode
           vmonen = 1;  // Enable voltage monitor
