@@ -46,7 +46,7 @@ module BATCHARGER_controller (
   always @(*) begin
     case (current_state)
       START: begin
-        if (en) begin 
+        if (en) begin
           next_state = WAIT;  // If enabled, move to WAIT state
           tmonen = 1;  // Enable temperature monitor
         end else next_state = START;  // Remain in START state
@@ -55,7 +55,7 @@ module BATCHARGER_controller (
       WAIT: begin
         if (tempmin < tbat && tbat < tempmax) begin
           next_state = TC;  // Move to TC state if temperature is valid
-          tc = 1; // Enable trickle mode
+          tc = 1;  // Enable trickle mode
           vmonen = 1;  // Enable voltage monitor
         end else next_state = WAIT;  // Otherwise, remain in WAIT state
       end
@@ -66,29 +66,26 @@ module BATCHARGER_controller (
           next_state = CC;  // Move to CC state if voltage exceeds cutoff
           tc = 0;  // Disable trickle mode
           cc = 1;  // Enable constant current mode
-        end
-        else next_state = TC;  // Otherwise, remain in TC state
+        end else next_state = TC;  // Otherwise, remain in TC state
       end
 
       CC: begin
-        if (vbat > vpreset) begin 
+        if (vbat > vpreset) begin
           next_state = CV;  // Move to CV state if voltage exceeds preset
           cc = 0;  // Disable constant current mode
           cv = 1;  // Enable constant voltage mode
           vmonen = 0;  // Disable voltage monitor
           imonen = 1;  // Enable current monitor
-        end
-        else next_state = CC;  // Otherwise, remain in CC state
+        end else next_state = CC;  // Otherwise, remain in CC state
       end
 
       CV: begin
         if (iend > ibat || tmax_scaled <= tpreset) begin
-          if(tmax_scaled <= tpreset) timeout = 1;  // Signal timeout if time criteria met
+          if (tmax_scaled <= tpreset) timeout = 1;  // Signal timeout if time criteria met
           next_state = FINISH;  // Move to FINISH state if current or time criteria met
           cv = 0;  // Disable constant voltage mode
           imonen = 0;  // Disable current monitor
-        end
-        else next_state = CV;  // Otherwise, remain in CV state
+        end else next_state = CV;  // Otherwise, remain in CV state
       end
 
       FINISH: begin
@@ -104,7 +101,7 @@ module BATCHARGER_controller (
       end
 
       default: begin
-        next_state = WAIT;  // Default to WAIT state
+        next_state = START;  // Default to WAIT state
       end
     endcase
   end
@@ -112,15 +109,14 @@ module BATCHARGER_controller (
   // State update logic (sequential)
   always @(posedge clk or posedge rstz) begin
     if (!rstz) begin
-      current_state <= START;   // Reset state to START
-      tpreset       <= 11'b0;   // Reset time counter
-      tc            <= 1'b0;    // Disable trickle mode
-      cc            <= 1'b0;    // Disable constant current mode
-      cv            <= 1'b0;    // Disable constant voltage mode
-      imonen        <= 1'b0;    // Disable current monitor
-      vmonen        <= 1'b0;    // Disable voltage monitor
-      tmonen        <= 1'b0;    // Disable temperature monitor
-      timeout       <= 0;       // Reset timeout
+      current_state <= START;  // Reset state to START
+      tpreset       <= 11'b0;  // Reset time counter
+      tc            <= 1'b0;  // Disable trickle mode
+      cc            <= 1'b0;  // Disable constant current mode
+      cv            <= 1'b0;  // Disable constant voltage mode
+      imonen        <= 1'b0;  // Disable current monitor
+      vmonen        <= 1'b0;  // Disable voltage monitor
+      timeout       <= 0;  // Reset timeout
     end else begin
       if (tpreset >= tmax_scaled) begin
         timeout <= 1;  // Signal timeout when tpreset exceeds tmax
@@ -128,13 +124,13 @@ module BATCHARGER_controller (
         timeout <= 0;  // Reset timeout
       end
 
-      if(current_state == TC || current_state == CC || current_state == CV) begin
-        tpreset <= tpreset + 1;   // Increment time counter
+      if (current_state == TC || current_state == CC || current_state == CV) begin
+        tpreset <= tpreset + 1;  // Increment time counter
       end else begin
-        tpreset <= 11'b0;    // Reset time counter
+        tpreset <= 11'b0;  // Reset time counter
       end
-      
-      current_state <= next_state;    // Update current state
+
+      current_state <= next_state;  // Update current state
     end
   end
 endmodule

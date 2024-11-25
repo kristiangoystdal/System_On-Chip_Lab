@@ -1,0 +1,5 @@
+irm -Rf ../worklib/* ../worklib/.*
+##
+xmvlog BATCHARGERctr_tb.v BATCHARGERctr.vp
+xmelab -access +rwc BATCHARGERctr_tb
+xmsim -gui BATCHARGERctr_tb &
