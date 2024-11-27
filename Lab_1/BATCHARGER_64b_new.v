@@ -1,7 +1,7 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 10ps
 
 
-module BATCHARGER_64b (
+module BATCHARGER_64b_new (
 
     output [63:0] iforcedbat,  // output current to battery
     input [63:0]  vsensbat, // voltage sensed (obtained at the battery as "voltage from iforcedbat integration" + ESR * iforcedbat )  
