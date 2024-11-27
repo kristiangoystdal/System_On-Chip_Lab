@@ -1,104 +1,89 @@
 `timescale 1 ns / 10 ps
 
-
 module BATCHARGER_64b_sttb;
 
-  wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
-  wire [63:0] vbat;  // battery voltage (V)
-  wire [63:0] ibat;  // battery current (A)
-  wire [63:0] vtbat;  // Battery temperature
-  wire [63:0] dvdd;  // digital supply
-  wire [63:0] dgnd;  // digital ground
-  wire [63:0] pgnd;  // power ground		       
+  // Define the input and output signals
+  wire [63:0] vin;     // Input voltage
+  wire [63:0] vbat;    // Battery voltage
+  wire [63:0] ibat;    // Battery current
+  wire [63:0] vtbat;   // Battery temperature
+  wire [63:0] dvdd;    // Digital supply
+  wire [63:0] dgnd;    // Digital ground
+  wire [63:0] pgnd;    // Power ground
 
+  reg en;              // Module enable signal
+  reg [3:0] sel;       // Battery capacity selection bits
 
-  reg en;  // enables the module
-  reg [3:0]   sel;  // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
-
-
-  real rl_dvdd, rl_dgnd, rl_pgnd;
-  real rl_ibat, rl_vbat, rl_vtbat;
-  real rl_vin;  // converted value of vin to real 
-
-
-
+  real rl_vin, rl_vbat, rl_ibat, rl_vtbat, rl_pgnd;
+  real expected_ibat;
 
   BATCHARGER_64b uut (
-      .iforcedbat(ibat),  // output current to battery
-      .vsensbat(vbat), // voltage sensed (obtained at the battery as "voltage from iforcedbat integration" + ESR * iforcedbat)
-      .vin(vin), // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
-      .vbattemp(vtbat),	// voltage that represents the battery temperature -40ºC to 125ºC -> 0 to 0.5V	   
-      .en(en),  // block enable control
-      .sel(sel), // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
-      .dvdd(dvdd),  // digital supply
-      .dgnd(dgnd),  // digital ground
-      .pgnd(pgnd)  // power ground		       
-
+      .iforcedbat(ibat), 
+      .vsensbat(vbat),
+      .vin(vin),
+      .vbattemp(vtbat), 
+      .en(en), 
+      .sel(sel), 
+      .dvdd(dvdd), 
+      .dgnd(dgnd), 
+      .pgnd(pgnd)
   );
-
-/*
-  BATCHARGERlipo lipobattery (
-      .vbat (vbat),  // battery voltage (V)
-      .ibat (ibat),  // battery current (A)
-      .vtbat(vtbat)  // Battery temperature
-  );
-*/
-
 
   initial begin
-    rl_vin = 4.5;
-    rl_pgnd = 0.0;
-    sel[3:0] = 4'b1000;  // 450mAh selection     
-    rl_vtbat = 0.106; // Voltage corresponding to -5°C
-    rl_vbat = 0.25;
     en = 1'b1;
+    rl_pgnd = 0.0;
+    rl_vin = 4.5;  // Initialize input voltage
+    sel = 4'b1000; // Set battery capacity
 
-    #3000
-
-    if ($bitstoreal(ibat) != 0) begin
-        $display("Error: Charging at -5°C with iforcedbat = %f A.", $bitstoreal(ibat));
-    end else begin
-        $display("Correct: No charging at -5°C (iforcedbat = %f A).", $bitstoreal(ibat));
+    // Loop through a range of battery temperatures and voltages
+    for (rl_vtbat = 0.0; rl_vtbat <= 0.3; rl_vtbat = rl_vtbat + 0.1) begin
+      for (rl_vbat = 2.5; rl_vbat <= 4.2; rl_vbat = rl_vbat + 0.01) begin
+        #3000; // Time delay for each state
+        expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
+        if (!((expected_ibat - 0.005 < $bitstoreal(ibat)) && ($bitstoreal(ibat) < expected_ibat + 0.005))) begin
+          $display("Mismatch: Expected %f A, but got %f A at T=%f Vbat=%f",
+                    expected_ibat, $bitstoreal(ibat), rl_vtbat, rl_vbat);
+        end else begin
+          $display("Match: Current correct at T=%f, Vbat=%f", rl_vtbat, rl_vbat);
+        end
+      end
     end
-
-    #4000
-
-    rl_vtbat = 0.136; // Voltage corresponding to 5°C
-
-    #6000
-
-    if ($bitstoreal(ibat) == 0) begin
-      $display("Error: No charging at 5°C with iforcedbat = %f A.", $bitstoreal(ibat));
-    end else begin
-      $display("Correct: Charging at 5°C (iforcedbat = %f A).", $bitstoreal(ibat));
-    end
-
-    #7000
-
-    rl_vbat = 3.5;
-
-    #9000
-
-    $display("Forced current at 3.5V battery voltage: %f A", $bitstoreal(ibat));
-
-
-
-
-
-    #10000000;
-    #10000000 $finish;
-
+    $finish;
   end
 
+  // Always block to continuously check output current validity
+  always @(*) begin
+    if (en) begin
+      expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
+      if (!((expected_ibat - 0.005 < $bitstoreal(ibat)) && ($bitstoreal(ibat) < expected_ibat + 0.005))) begin
+        $display("Continuous check failed: Expected %f A, Got %f A", 
+                  expected_ibat, $bitstoreal(ibat));
+      end
+    end
+  end
 
-  //-- Signals conversion ---------------------------------------------------
-  initial assign rl_ibat = $bitstoreal(ibat);
-  initial assign rl_dvdd = $bitstoreal(dvdd);
-  initial assign rl_dgnd = $bitstoreal(dgnd);
-
+  // Conversion of real to binary for compatibility
   assign vbat = $realtobits(rl_vbat);
   assign vtbat = $realtobits(rl_vtbat);
   assign vin  = $realtobits(rl_vin);
   assign pgnd = $realtobits(rl_pgnd);
+
+  // Function to calculate the expected battery current based on state
+  function real calculate_expected_ibat;
+    input real vtbat, vbat, vin;
+    begin
+      if (vtbat < 0.121) begin // Too cold to charge
+        calculate_expected_ibat = 0.0;
+      end else if (vin < vbat + 0.2) begin // Insufficient input voltage
+        calculate_expected_ibat = 0.0;
+      end else if (vbat <= 3) begin
+        calculate_expected_ibat = 0.0450;
+      end else if (vbat > 3 && vbat < 3.8) begin
+        calculate_expected_ibat = 0.225;
+      end else if (vbat >= 3.8) begin
+        calculate_expected_ibat = ((4.2 - vbat) / 1.9);
+      end
+    end
+  endfunction
 
 endmodule
