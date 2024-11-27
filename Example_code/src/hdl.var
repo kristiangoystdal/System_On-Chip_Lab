@@ -1,4 +1,0 @@
-define WORK worklib
-include $XCELIUMHOME/tools/inca/files/hdl.var
-##include $CDS_INST_DIR/tools/inca/files/hdl.var
-define XRUNOPTS -vlog_ext +.lib,.src +mt

@@ -1,5 +1,0 @@
-irm -Rf ../worklib/* ../worklib/.*
-##
-xmvlog counter4bit_tb.v counter4bit.v
-xmelab -access +rwc counter4bit_tb
-xmsim -gui counter4bit_tb &

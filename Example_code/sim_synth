@@ -1,5 +1,0 @@
-rm -Rf ../worklib/*
-##
-xmvlog counter4bit_tb.v ../../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.v ../../verilog_libs/fsc0h_d_generic_core_30.lib
-xmelab -access +rwc counter4bit_tb
-xmsim -gui counter4bit_tb &
