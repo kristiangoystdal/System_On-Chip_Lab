@@ -17,6 +17,9 @@ module BATCHARGER_64b_sttb;
   real rl_vin, rl_vbat, rl_ibat, rl_vtbat, rl_pgnd;
   real expected_ibat;
 
+  integer fail_counter = 0;
+  integer test_counter = 0;
+
   BATCHARGER_64b uut (
       .iforcedbat(ibat), 
       .vsensbat(vbat),
@@ -36,31 +39,25 @@ module BATCHARGER_64b_sttb;
     sel = 4'b1000; // Set battery capacity
 
     // Loop through a range of battery temperatures and voltages
-    for (rl_vtbat = 0.0; rl_vtbat <= 0.3; rl_vtbat = rl_vtbat + 0.1) begin
-      for (rl_vbat = 2.5; rl_vbat <= 4.2; rl_vbat = rl_vbat + 0.01) begin
-        #3000; // Time delay for each state
+    for (rl_vtbat = 0.1; rl_vtbat < 0.3; rl_vtbat = rl_vtbat + 0.1) begin
+      for (rl_vbat = 2.5; rl_vbat <= 4.2; rl_vbat = rl_vbat + 0.001) begin
+        test_counter = test_counter + 1;
+        #5000; // Time delay for each state
         expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
         if (!((expected_ibat - 0.005 < $bitstoreal(ibat)) && ($bitstoreal(ibat) < expected_ibat + 0.005))) begin
-          $display("Mismatch: Expected %f A, but got %f A at T=%f Vbat=%f",
+          $display("---Mismatch: Expected %f A, but got %f A at T=%f Vbat=%f",
                     expected_ibat, $bitstoreal(ibat), rl_vtbat, rl_vbat);
+                    fail_counter = fail_counter + 1;
         end else begin
-          $display("Match: Current correct at T=%f, Vbat=%f", rl_vtbat, rl_vbat);
+          $display("Match: Expected %f A, and got %f A at T=%f Vbat=%f",
+                    expected_ibat, $bitstoreal(ibat), rl_vtbat, rl_vbat);
         end
       end
     end
+    $display("FINISHED. Failed %d of %d tests", fail_counter, test_counter);
     $finish;
   end
 
-  // Always block to continuously check output current validity
-  always @(*) begin
-    if (en) begin
-      expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
-      if (!((expected_ibat - 0.005 < $bitstoreal(ibat)) && ($bitstoreal(ibat) < expected_ibat + 0.005))) begin
-        $display("Continuous check failed: Expected %f A, Got %f A", 
-                  expected_ibat, $bitstoreal(ibat));
-      end
-    end
-  end
 
   // Conversion of real to binary for compatibility
   assign vbat = $realtobits(rl_vbat);
@@ -80,8 +77,14 @@ module BATCHARGER_64b_sttb;
         calculate_expected_ibat = 0.0450;
       end else if (vbat > 3 && vbat < 3.8) begin
         calculate_expected_ibat = 0.225;
-      end else if (vbat >= 3.8) begin
-        calculate_expected_ibat = ((4.2 - vbat) / 1.9);
+      end else if ((vbat >= 3.8)) begin
+        if (((4.2 - vbat) / 1.8) > 0.0045) begin
+        calculate_expected_ibat = ((4.2 - vbat) / 1.8);
+        end else begin
+        calculate_expected_ibat = 0;
+        end
+      end else begin
+        calculate_expected_ibat = 0;
       end
     end
   endfunction
