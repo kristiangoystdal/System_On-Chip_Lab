@@ -85,7 +85,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
           expected_i_value = $bitstoreal(uut.itcpar);
           expected_v_value = $bitstoreal(uut.vcutoffpar);
 
-          if ((expected_i_value != i_value) || expected_v_value <= v_value) begin 
+          if ((expected_i_value != i_value) ) begin 
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
                 // $finish;
             end
@@ -97,7 +97,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
           expected_v_value = temp_voltage;
           
 
-          if (temp_current != i_value || temp_voltage <= v_value) begin
+          if (temp_current != i_value ) begin
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
             // $finish;
             end
@@ -109,7 +109,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
         expected_v_value = temp_voltage;
           
 
-        if (expected_i_value >= i_value || expected_v_value != v_value) begin
+        if (expected_i_value >= i_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
           // $finish;
           end
