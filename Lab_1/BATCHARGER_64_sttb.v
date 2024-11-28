@@ -67,8 +67,8 @@ end
 real expected_i_value;
 real expected_v_value;
 reg [2:0] Step_id ;
-reg [63:0] temp_current;
-reg [63:0] temp_voltage;
+real temp_current = 0;
+real temp_voltage = 0;
 
 task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0] step_id);
     begin
@@ -93,25 +93,25 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         // CC (Constant Current) mode
       if (step_id == 3'b010) begin
-          expected_i_value = $bitstoreal(temp_current);
-          expected_v_value =  $bitstoreal(temp_voltage);
+          expected_i_value = temp_current;
+          expected_v_value = temp_voltage;
           
 
           if (temp_current != i_value || temp_voltage <= v_value) begin
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
-            $finish;
+            // $finish;
             end
         end
 
         // CV (Constant Voltage) mode
       if (step_id == 3'b100) begin
-        expected_i_value = $bitstoreal(temp_current);
-        expected_v_value = $bitstoreal(temp_voltage);
+        expected_i_value = temp_current;
+        expected_v_value = temp_voltage;
           
 
         if (expected_i_value >= i_value || expected_v_value != v_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
-          $finish;
+          // $finish;
           end
         end
     end
@@ -126,19 +126,23 @@ endtask
   initial assign rl_ibat = $bitstoreal(ibat);
   initial assign rl_dvdd = $bitstoreal(dvdd);
   initial assign rl_dgnd = $bitstoreal(dgnd);
-
+  
 
   assign vin  = $realtobits(rl_vin);
   assign pgnd = $realtobits(rl_pgnd);
 
   always @(posedge clk) begin
+    // temp_current = uut.rl_iforcedbat;
+    // temp_voltage = rl_vbat;
     
-    temp_current = $realtobits(uut.rl_iforcedbat);
-    temp_voltage = $realtobits(rl_vbat);
-    #1;
     Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I_V(uut.rl_iforcedbat, rl_vbat, Step_id);
+
+    #9
+    temp_current = uut.rl_iforcedbat;
+    temp_voltage = rl_vbat;
+
 end
 
 endmodule
