@@ -1,7 +1,7 @@
 `timescale 1 ns / 10 ps
 
 
-module BATCHARGER_64b_sttb;
+module BATCHARGER_64_sttb;
 
   wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
   wire [63:0] vbat;  // battery voltage (V)
