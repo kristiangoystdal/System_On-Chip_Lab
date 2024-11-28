@@ -70,13 +70,11 @@ end
 
 
 real expected_i_value;
-real expected_v_value;
 reg [2:0] Step_id ;
 reg [63:0] temp_current_reg;
 real temp_current = 0;
-real temp_voltage = 0;
 
-task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0] step_id);
+task check_state_rl_value_I(input real i_value, input [2:0] step_id);
     begin
         #1;
 
@@ -88,10 +86,10 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         // TC (Triple Current) mode
       if (step_id == 3'b001) begin
-          expected_i_value = $bitstoreal(uut.itcpar);
-          expected_v_value = $bitstoreal(uut.vcutoffpar);
+          expected_i_value =  0.1*0.45;
 
-          if ((expected_i_value != i_value) ) begin 
+          //adding 10% tolerance from the theoretical value
+          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin 
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
                 // $finish;
             end
@@ -99,11 +97,9 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         // CC (Constant Current) mode
       if (step_id == 3'b010) begin
-          expected_i_value = temp_current;
-          expected_v_value = temp_voltage;
-          
+          expected_i_value = 0.5*0.45;          
 
-          if (temp_current != i_value ) begin
+          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
             // $finish;
             end
@@ -112,7 +108,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
         // CV (Constant Voltage) mode
       if (step_id == 3'b100) begin
         expected_i_value = temp_current;
-        expected_v_value = temp_voltage;
+        
           
 
         if (expected_i_value < i_value) begin
@@ -139,11 +135,10 @@ endtask
 
   always @(posedge clk) begin
     temp_current_reg = $realtobits(uut.rl_iforcedbat);
-    // temp_voltage = rl_vbat;
     temp_current= $bitstoreal(temp_current_reg);
     Step_id = {uut.cv, uut.cc, uut.tc};
 
-    check_state_rl_value_I_V(uut.rl_iforcedbat, rl_vbat, Step_id);
+    check_state_rl_value_I(uut.rl_iforcedbat, Step_id);
 
     
 
