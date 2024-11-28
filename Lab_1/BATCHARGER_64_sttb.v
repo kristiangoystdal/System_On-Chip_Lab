@@ -45,9 +45,14 @@ module BATCHARGER_64_sttb;
 
 
 reg clk;
+reg clk1;
 
 always begin
-  #5 clk = ~clk;
+  #10 clk = ~clk;
+
+end
+always begin
+  #5 clk1 = ~clk1;
 end
 
   initial begin
@@ -139,11 +144,15 @@ endtask
 
     check_state_rl_value_I_V(uut.rl_iforcedbat, rl_vbat, Step_id);
 
-    #9
-    temp_current = uut.rl_iforcedbat;
-    temp_voltage = rl_vbat;
+    
 
 end
+
+always @(posedge clk1) begin
+  temp_current = uut.rl_iforcedbat;
+  temp_voltage = rl_vbat;
+  
+  end
 
 endmodule
 
