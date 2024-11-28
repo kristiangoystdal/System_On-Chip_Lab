@@ -115,7 +115,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
         expected_v_value = temp_voltage;
           
 
-        if (expected_i_value >= i_value) begin
+        if (expected_i_value < i_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
           // $finish;
           end
