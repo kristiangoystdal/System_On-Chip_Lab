@@ -1,28 +1,30 @@
-`timescale 1ns / 10ps
+`timescale 1 ns / 10 ps
 
 module BATCHARGER_64b_sttb;
 
-  // Signal Declarations
-  wire [63:0] iforcedbat;  // Current forced to battery
-  reg  [63:0] vsensbat;  // Voltage sensed at the battery
-  reg  [63:0] vin;  // Input voltage
-  reg  [63:0] vbattemp;  // Battery temperature voltage
-  reg         en;  // Enable signal
-  reg  [ 3:0] sel;  // Battery capacity selection
-  wire [63:0] dvdd, dgnd, pgnd;  // Digital and power ground wires
-  reg clk, rstz;  // Clock and reset signals
+  // Define the input and output signals
+  wire [63:0] vin;  // Input voltage
+  wire [63:0] vbat;  // Battery voltage
+  wire [63:0] ibat;  // Battery current
+  wire [63:0] vtbat;  // Battery temperature
+  wire [63:0] dvdd;  // Digital supply
+  wire [63:0] dgnd;  // Digital ground
+  wire [63:0] pgnd;  // Power ground
 
-  // Assign Values to Ground and Power Signals
-  assign dvdd = $realtobits(1.8);  // Digital supply: 1.8V
-  assign dgnd = $realtobits(0.0);  // Ground
-  assign pgnd = $realtobits(0.0);  // Ground
+  reg         en;  // Module enable signal
+  reg  [ 3:0] sel;  // Battery capacity selection bits
 
-  // Instantiate the DUT
-  BATCHARGER_64b_new uut (
-      .iforcedbat(iforcedbat),
-      .vsensbat(vsensbat),
+  real rl_vin, rl_vbat, rl_ibat, rl_vtbat, rl_pgnd;
+  real expected_ibat;
+
+  real tolerance = 0.005;  // Tolerance for current comparison
+  real rl_C = 0.45;  // Battery capacity in Ah
+
+  BATCHARGER_64b uut (
+      .iforcedbat(ibat),
+      .vsensbat(vbat),
       .vin(vin),
-      .vbattemp(vbattemp),
+      .vbattemp(vtbat),
       .en(en),
       .sel(sel),
       .dvdd(dvdd),
@@ -30,64 +32,68 @@ module BATCHARGER_64b_sttb;
       .pgnd(pgnd)
   );
 
-  // Clock Generation: 10ns clock period
-  always #5 clk = ~clk;
+  initial begin
+    en = 1'b1;
+    rl_pgnd = 0.0;
+    rl_vin = 4.5;  // Initialize input voltage
+    sel = 4'b1000;  // Set battery capacity
 
-  // Task for Signal Validation
-  task check_signal(input real expected_value, input real tolerance, input [8*50:1] signal_name,
-                    input integer step_id);
-    real actual_value;
-    begin
-      actual_value = $bitstoreal(iforcedbat);
-      if (actual_value < (expected_value - tolerance) || actual_value > (expected_value + tolerance)) begin
-        $display("Error at step %0d: %s out of range. Expected: %0f +/- %0f, Got: %0f", step_id,
-                 signal_name, expected_value, tolerance, actual_value);
-        $finish;
-      end else begin
-        $display("Pass at step %0d: %s within range. Expected: %0f +/- %0f, Got: %0f", step_id,
-                 signal_name, expected_value, tolerance, actual_value);
+    // Loop through a range of battery temperatures and voltages
+    for (rl_vtbat = 0.0; rl_vtbat <= 0.31; rl_vtbat = rl_vtbat + 0.1) begin
+      for (rl_vbat = 2.5; rl_vbat <= 4.2; rl_vbat = rl_vbat + 0.01) begin
+        #5000;  // Time delay for each state
+        expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
+        if (!((expected_ibat - tolerance < $bitstoreal(
+                ibat
+            )) && ($bitstoreal(
+                ibat
+            ) < expected_ibat + tolerance))) begin
+          $display("Mismatch: Expected %f A, but got %f A at T=%f Vbat=%f", expected_ibat,
+                   $bitstoreal(ibat), rl_vtbat, rl_vbat);
+        end else begin
+          $display("Match: Correct current, %f, at T=%f, Vbat=%f", expected_ibat, rl_vtbat,
+                   rl_vbat);
+        end
       end
     end
-  endtask
 
-  // Test Procedure
-  initial begin
-    // Initialize signals
-    clk      = 0;
-    rstz     = 0;
-    en       = 0;
-    sel      = 4'b0000;
-    vin      = $realtobits(4.5);  // Input voltage: 4.5V
-    vsensbat = $realtobits(3.7);  // Initial battery voltage: 3.7V
-    vbattemp = $realtobits(0.25);  // Battery temperature voltage: 0.25V
-
-    // Reset the system
-    #10 rstz = 1;
-
-    // Test Sequence
-    #10 en = 1;
-    sel = 4'b1010;  // Enable module, set capacity to 450mAh
-    #100 check_signal(0.0, 0.01, "iforcedbat", 1);  // Check initial charging current
-
-    // Simulate constant current charging
-    vsensbat = $realtobits(3.8);  // Battery voltage increases
-    #50 check_signal(0.8, 0.05, "iforcedbat", 2);  // Check CC charging current
-
-    // Simulate constant voltage charging
-    vsensbat = $realtobits(4.2);  // Battery reaches target voltage
-    #50 check_signal(0.05, 0.01, "iforcedbat", 3);  // Check reduced charging current
-
-    // High temperature scenario
-    vbattemp = $realtobits(0.5);  // High temperature voltage
-    #50 check_signal(0.0, 0.01, "iforcedbat", 4);  // Ensure charging stopped
-
-    // Disable the module
-    en = 0;
-    #50 check_signal(0.0, 0.01, "iforcedbat", 5);  // Ensure module disabled
-
-    // Final Message
-    $display("All tests passed successfully!");
+    #1000000 $display("Simulation complete");
     $finish;
   end
+
+  // Conversion of real to binary for compatibility
+  assign vbat  = $realtobits(rl_vbat);
+  assign vtbat = $realtobits(rl_vtbat);
+  assign vin   = $realtobits(rl_vin);
+  assign pgnd  = $realtobits(rl_pgnd);
+
+  // Conversion of binary to real for compatibility
+  always @(*) begin
+    rl_ibat = $bitstoreal(ibat);
+  end
+
+  // Function to calculate the expected battery current based on state
+  function real calculate_expected_ibat;
+    input real vtbat, vbat, vin;
+    begin
+      if (vtbat < 0.121 || vtbat > 0.265625) begin  // Too cold to charge
+        calculate_expected_ibat = 0.0;
+      end else if (vin < vbat + 0.2) begin  // Insufficient input voltage
+        calculate_expected_ibat = 0.0;
+      end else if (vbat <= 3) begin
+        calculate_expected_ibat = 0.1 * rl_C;
+      end else if (vbat > 3 && vbat < 3.8) begin
+        calculate_expected_ibat = 0.5 * rl_C;
+      end else if (vbat >= 3.8) begin
+        if (((4.2 - vbat) / 1.8) > 0.01 * rl_C) begin
+          calculate_expected_ibat = ((4.2 - vbat) / 1.8);
+        end else begin
+          calculate_expected_ibat = 0;
+        end
+      end
+    end
+  endfunction
+
+
 
 endmodule
