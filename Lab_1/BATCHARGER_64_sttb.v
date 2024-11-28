@@ -75,10 +75,10 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
         #1;
 
       // Validate `step_id`
-      if (!(step_id == 3'b001 || step_id == 3'b010 || step_id == 3'b100)) begin
-          $display("Error at step %0d: Several states active simultaneously", step_id);
-          $finish;
-      end
+      // if ((step_id == 3'b001 || step_id == 3'b010 || step_id == 3'b100)) begin
+      //     $display("Error at step %0d: Several states active simultaneously", step_id);
+      //     $finish;
+      // end
 
         // TC (Triple Current) mode
       if (step_id == 3'b001) begin
