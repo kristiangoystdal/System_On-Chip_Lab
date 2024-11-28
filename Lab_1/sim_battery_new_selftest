@@ -1,6 +1,4 @@
 rm -Rf ../worklib/*
-xmvlog BATCHARGER_64b_new.v BATCHARGERbg_64b.v BATCHARGERpower_64b.vp \
-       BATCHARGERsaradc_64b.v BATCHARGER_controller.v BATCHARGERlipo_64b.v \
-       BATCHARGER_64b_sttb.v
+xmvlog BATCHARGER_64b_new.v BATCHARGERbg_64b.v BATCHARGERpower_64b.vp BATCHARGERsaradc_64b.v BATCHARGER_controller.v BATCHARGERlipo_64b.v BATCHARGER_64b_sttb.v
 xmelab -access +rwc BATCHARGER_64b_sttb
 xmsim -gui BATCHARGER_64b_sttb &
