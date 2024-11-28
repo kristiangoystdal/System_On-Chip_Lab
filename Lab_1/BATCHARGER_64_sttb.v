@@ -1,7 +1,7 @@
 `timescale 1 ns / 10 ps
 
 
-module BATCHARGER_64b_tb;
+module BATCHARGER_64b_sttb;
 
   wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
   wire [63:0] vbat;  // battery voltage (V)
@@ -56,11 +56,7 @@ module BATCHARGER_64b_tb;
 
   end
 
-wire expected_i_value;
-wire expected_v_value;
-wire Step_id;
-reg [63:0]temp_current;
-reg [63:0]temp_voltage;
+
 
 // task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0] step_id);
 
@@ -110,6 +106,13 @@ reg [63:0]temp_voltage;
 
 
 //   endtask
+
+wire expected_i_value;
+wire expected_v_value;
+wire Step_id;
+reg [63:0]temp_current;
+reg [63:0]temp_voltage;
+
 task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0] step_id);
     begin
         #1;
@@ -120,42 +123,42 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
           $finish;
       end
 
-        // Handle CV (Constant Voltage) mode
+        // CV (Constant Voltage) mode
       if (step_id == 3'b001) begin
           expected_i_value = $bitstoreal(uut.itcpar);
           expected_v_value = $bitstoreal(uut.vcutoffpar);
 
-          if (expected_i_value != i_value || expected_v_value > v_value) begin 
+          if (expected_i_value != i_value || expected_v_value < v_value) begin 
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
                 $finish;
             end
         end
 
-        // Handle CC (Constant Current) mode
+        // CC (Constant Current) mode
       if (step_id == 3'b010) begin
           expected_i_value = temp_current;
           expected_v_value = temp_voltage;
+          
 
-          if (expected_i_value != i_value || expected_v_value < v_value) begin
-            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
+          if (temp_current != i_value || temp_voltage < v_value) begin
+            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
             $finish;
             end
         end
 
-        // Handle TC (Trickle Charge) mode
+        // CV (Constant Voltage) mode
       if (step_id == 3'b100) begin
-          expected_i_value = temp_current;
-          expected_v_value = temp_voltage;
+        expected_i_value = temp_current;
+        expected_v_value = temp_voltage;
+          
 
-          if (expected_i_value > i_value || expected_v_value != v_value) begin
-            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
-            $finish;
-            end
+        if (expected_i_value > i_value || expected_v_value != v_value) begin
+          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
+          $finish;
+          end
         end
     end
 endtask
-
-// Signal conversions
 
 
 
@@ -184,10 +187,10 @@ endmodule
 always @(posedge clk) begin
     temp_current = uut.rl_iforcedbat;
     temp_voltage = rl_vbat;
+    #1;
+    Step_id = {uut.cv, uut.cc, uut.tc};
 
-    step_id = {uut.cv, uut.cc, uut.tc};
-
-    check_state_rl_value_I_V(uut.r1_iforcedbat, rl_vbat, step_id);
+    check_state_rl_value_I_V(uut.r1_iforcedbat, rl_vbat, Step_id);
 end
 
 
