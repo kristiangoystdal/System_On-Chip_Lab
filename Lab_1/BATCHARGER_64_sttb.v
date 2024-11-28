@@ -72,6 +72,7 @@ end
 real expected_i_value;
 real expected_v_value;
 reg [2:0] Step_id ;
+reg [63:0] temp_current_reg;
 real temp_current = 0;
 real temp_voltage = 0;
 
@@ -137,9 +138,9 @@ endtask
   assign pgnd = $realtobits(rl_pgnd);
 
   always @(posedge clk) begin
-    // temp_current = uut.rl_iforcedbat;
+    temp_current_reg = $realtobits(uut.rl_iforcedbat);
     // temp_voltage = rl_vbat;
-    
+    temp_current= $bitstoreal(temp_current_reg);
     Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I_V(uut.rl_iforcedbat, rl_vbat, Step_id);
@@ -148,11 +149,11 @@ endtask
 
 end
 
-always @(posedge clk1) begin
-  temp_current = uut.rl_iforcedbat;
-  temp_voltage = rl_vbat;
+// always @(posedge clk1) begin
+//   temp_current = uut.rl_iforcedbat;
+//   temp_voltage = rl_vbat;
   
-  end
+//   end
 
 endmodule
 
