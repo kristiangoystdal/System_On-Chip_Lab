@@ -123,10 +123,10 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
           $finish;
       end
 
-        // CV (Constant Voltage) mode
+        // TC (Triple Current) mode
       if (step_id == 3'b001) begin
-          expected_i_value = $bitstoreal(uut.itcpar);
-          expected_v_value = $bitstoreal(uut.vcutoffpar);
+          assign expected_i_value = $bitstoreal(uut.itcpar);
+          assign expected_v_value = $bitstoreal(uut.vcutoffpar);
 
           if (expected_i_value != i_value || expected_v_value < v_value) begin 
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
@@ -136,8 +136,8 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         // CC (Constant Current) mode
       if (step_id == 3'b010) begin
-          expected_i_value = temp_current;
-          expected_v_value = temp_voltage;
+          assign expected_i_value = temp_current;
+          assign expected_v_value = temp_voltage;
           
 
           if (temp_current != i_value || temp_voltage < v_value) begin
@@ -148,8 +148,8 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         // CV (Constant Voltage) mode
       if (step_id == 3'b100) begin
-        expected_i_value = temp_current;
-        expected_v_value = temp_voltage;
+        assign expected_i_value = temp_current;
+        assign expected_v_value = temp_voltage;
           
 
         if (expected_i_value > i_value || expected_v_value != v_value) begin
@@ -185,10 +185,10 @@ endmodule
 //   check_state_rl_value_I_V(r1_ibat, r1_vbat, step_id);
 
 always @(posedge clk) begin
-    assign temp_current = uut.rl_iforcedbat;
-    assign temp_voltage = rl_vbat;
+    temp_current = uut.rl_iforcedbat;
+    temp_voltage = rl_vbat;
     #1;
-    assign Step_id = {uut.cv, uut.cc, uut.tc};
+    Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I_V(uut.r1_iforcedbat, rl_vbat, Step_id);
 end
