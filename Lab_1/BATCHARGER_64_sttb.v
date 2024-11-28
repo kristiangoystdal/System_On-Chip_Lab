@@ -99,7 +99,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
           if (temp_current != i_value || temp_voltage <= v_value) begin
             $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
-            // $finish;
+            $finish;
             end
         end
 
@@ -111,7 +111,7 @@ task check_state_rl_value_I_V(input real i_value, input real v_value, input [2:0
 
         if (expected_i_value >= i_value || expected_v_value != v_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
-          // $finish;
+          $finish;
           end
         end
     end
@@ -133,8 +133,8 @@ endtask
 
   always @(posedge clk) begin
     
-    temp_current = uut.rl_iforcedbat;
-    temp_voltage = rl_vbat;
+    temp_current = $realtobits(uut.rl_iforcedbat);
+    temp_voltage = $realtobits(rl_vbat);
     #1;
     Step_id = {uut.cv, uut.cc, uut.tc};
 
