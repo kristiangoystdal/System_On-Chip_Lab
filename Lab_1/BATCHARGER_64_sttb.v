@@ -185,10 +185,10 @@ endmodule
 //   check_state_rl_value_I_V(r1_ibat, r1_vbat, step_id);
 
 always @(posedge clk) begin
-    temp_current = uut.rl_iforcedbat;
-    temp_voltage = rl_vbat;
+    assign temp_current = uut.rl_iforcedbat;
+    assign temp_voltage = rl_vbat;
     #1;
-    Step_id = {uut.cv, uut.cc, uut.tc};
+    assign Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I_V(uut.r1_iforcedbat, rl_vbat, Step_id);
 end
