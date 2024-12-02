@@ -89,12 +89,8 @@ module BATCHARGERpower_64b_new (
         rl_iforcedbat = 0;
       end
 
-      // Calculate mirrored current
-      rl_imirr = rl_iforcedbat / 1000.0;
-
-      // Calculate vbatcurr
-      rl_resibat = rl_vref / rl_C;
-      rl_vbatcurr = rl_imirr * rl_resibat;
+      // Calculate the scaled mirrored current of iforcedbat (1000:1)
+      rl_vbatcurr = (rl_vref / rl_C) * rl_iforcedbat;
 
       // Convert real values to fixed-point
       iforcedbat = $realtobits(rl_iforcedbat);
