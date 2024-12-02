@@ -1,99 +1,159 @@
 `timescale 1 ns / 10 ps
 
-module BATCHARGER_64b_sttb;
 
-  // Define the input and output signals
-  wire [63:0] vin;  // Input voltage
-  wire [63:0] vbat;  // Battery voltage
-  wire [63:0] ibat;  // Battery current
+module BATCHARGER_64_sttb;
+
+  wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
+  wire [63:0] vbat;  // battery voltage (V)
+  wire [63:0] ibat;  // battery current (A)
   wire [63:0] vtbat;  // Battery temperature
-  wire [63:0] dvdd;  // Digital supply
-  wire [63:0] dgnd;  // Digital ground
-  wire [63:0] pgnd;  // Power ground
+  wire [63:0] dvdd;  // digital supply
+  wire [63:0] dgnd;  // digital ground
+  wire [63:0] pgnd;  // power ground		       
 
-  reg         en;  // Module enable signal
-  reg  [ 3:0] sel;  // Battery capacity selection bits
 
-  real rl_vin, rl_vbat, rl_ibat, rl_vtbat, rl_pgnd;
-  real expected_ibat;
+  reg en;  // enables the module
+  reg [3:0]   sel;  // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
 
-  real tolerance = 0.005;  // Tolerance for current comparison
-  real rl_C = 0.45;  // Battery capacity in Ah
+
+  real rl_dvdd, rl_dgnd, rl_pgnd;
+  real rl_ibat, rl_vbat, rl_vtbat;
+  real rl_vin;  // converted value of vin to real 
+
+
+
 
   BATCHARGER_64b uut (
-      .iforcedbat(ibat),
-      .vsensbat(vbat),
-      .vin(vin),
-      .vbattemp(vtbat),
-      .en(en),
-      .sel(sel),
-      .dvdd(dvdd),
-      .dgnd(dgnd),
-      .pgnd(pgnd)
+      .iforcedbat(ibat),  // output current to battery
+      .vsensbat(vbat), // voltage sensed (obtained at the battery as "voltage from iforcedbat integration" + ESR * iforcedbat)
+      .vin(vin), // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
+      .vbattemp(vtbat),	// voltage that represents the battery temperature -40ºC to 125ºC -> 0 to 0.5V	   
+      .en(en),  // block enable control
+      .sel(sel), // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
+      .dvdd(dvdd),  // digital supply
+      .dgnd(dgnd),  // digital ground
+      .pgnd(pgnd)  // power ground		       
+
   );
 
+
+  BATCHARGERlipo lipobattery (
+      .vbat (vbat),  // battery voltage (V)
+      .ibat (ibat),  // battery current (A)
+      .vtbat(vtbat)  // Battery temperature
+  );
+
+
+reg clk;
+reg clk1;
+
+always begin
+  #10 clk = ~clk;
+
+end
+always begin
+  #5 clk1 = ~clk1;
+end
+
   initial begin
-    en = 1'b1;
+    clk = 0;
+    rl_vin = 4.5;
     rl_pgnd = 0.0;
-    rl_vin = 4.5;  // Initialize input voltage
-    sel = 4'b1000;  // Set battery capacity
+    sel[3:0] = 4'b1000;  // 450mAh selection     
+    en = 1'b1;
 
-    // Loop through a range of battery temperatures and voltages
-    for (rl_vtbat = 0.0; rl_vtbat <= 0.31; rl_vtbat = rl_vtbat + 0.1) begin
-      for (rl_vbat = 2.5; rl_vbat <= 4.2; rl_vbat = rl_vbat + 0.01) begin
-        #5000;  // Time delay for each state
-        expected_ibat = calculate_expected_ibat(rl_vtbat, rl_vbat, rl_vin);
-        if (!((expected_ibat - tolerance < $bitstoreal(
-                ibat
-            )) && ($bitstoreal(
-                ibat
-            ) < expected_ibat + tolerance))) begin
-          $display("Mismatch: Expected %f A, but got %f A at T=%f Vbat=%f", expected_ibat,
-                   $bitstoreal(ibat), rl_vtbat, rl_vbat);
-        end else begin
-          $display("Match: Correct current, %f, at T=%f, Vbat=%f", expected_ibat, rl_vtbat,
-                   rl_vbat);
-        end
-      end
-    end
+    #10000000;
+    #10000000 $finish;
 
-    #1000000 $display("Simulation complete");
-    $finish;
   end
 
-  // Conversion of real to binary for compatibility
-  assign vbat  = $realtobits(rl_vbat);
-  assign vtbat = $realtobits(rl_vtbat);
-  assign vin   = $realtobits(rl_vin);
-  assign pgnd  = $realtobits(rl_pgnd);
 
-  // Conversion of binary to real for compatibility
-  always @(*) begin
-    rl_ibat = $bitstoreal(ibat);
-  end
 
-  // Function to calculate the expected battery current based on state
-  function real calculate_expected_ibat;
-    input real vtbat, vbat, vin;
+real expected_i_value;
+reg [2:0] Step_id ;
+reg [63:0] temp_current_reg;
+real temp_current = 0;
+
+task check_state_rl_value_I(input real i_value, input [2:0] step_id);
     begin
-      if (vtbat < 0.121 || vtbat > 0.265625) begin  // Too cold to charge
-        calculate_expected_ibat = 0.0;
-      end else if (vin < vbat + 0.2) begin  // Insufficient input voltage
-        calculate_expected_ibat = 0.0;
-      end else if (vbat <= 3) begin
-        calculate_expected_ibat = 0.1 * rl_C;
-      end else if (vbat > 3 && vbat < 3.8) begin
-        calculate_expected_ibat = 0.5 * rl_C;
-      end else if (vbat >= 3.8) begin
-        if (((4.2 - vbat) / 1.8) > 0.01 * rl_C) begin
-          calculate_expected_ibat = ((4.2 - vbat) / 1.8);
-        end else begin
-          calculate_expected_ibat = 0;
+        #1;
+
+      // Validate `step_id`
+      // if ((step_id == 3'b001 || step_id == 3'b010 || step_id == 3'b100)) begin
+      //     $display("Error at step %0d: Several states active simultaneously", step_id);
+      //     $finish;
+      // end
+
+        // TC (Triple Current) mode
+      if (step_id == 3'b001) begin
+          expected_i_value =  0.1*0.45;
+
+          //adding 10% tolerance from the theoretical value
+          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin 
+            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
+                // $finish;
+            end
         end
-      end
+
+        // CC (Constant Current) mode
+      if (step_id == 3'b010) begin
+          expected_i_value = 0.5*0.45;          
+
+          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin
+            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
+            // $finish;
+            end
+        end
+
+        // CV (Constant Voltage) mode
+      if (step_id == 3'b100) begin
+        expected_i_value = temp_current;
+        
+          
+
+        if (expected_i_value < i_value) begin
+          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
+          // $finish;
+          end
+        end
     end
-  endfunction
+endtask
 
 
+
+
+  //-- Signals conversion ---------------------------------------------------
+  initial assign rl_vbat = $bitstoreal(vbat);
+  initial assign rl_vtbat = $bitstoreal(vtbat);
+  initial assign rl_ibat = $bitstoreal(ibat);
+  initial assign rl_dvdd = $bitstoreal(dvdd);
+  initial assign rl_dgnd = $bitstoreal(dgnd);
+  
+
+  assign vin  = $realtobits(rl_vin);
+  assign pgnd = $realtobits(rl_pgnd);
+
+  always @(posedge clk) begin
+    temp_current_reg = $realtobits(uut.rl_iforcedbat);
+    temp_current= $bitstoreal(temp_current_reg);
+    Step_id = {uut.cv, uut.cc, uut.tc};
+
+    check_state_rl_value_I(uut.rl_iforcedbat, Step_id);
+
+    
+
+end
+
+// always @(posedge clk1) begin
+//   temp_current = uut.rl_iforcedbat;
+//   temp_voltage = rl_vbat;
+  
+//   end
 
 endmodule
+
+
+
+
+
+

@@ -115,7 +115,7 @@ module BATCHARGER_64b (
 
 
 
-  BATCHARGERpower_64b_new BATCHpower (
+  BATCHARGERpower_64b BATCHpower (
       .iforcedbat(iforcedbat),
       .vbatcurr(vbatcurr),
       .vsensbat(vsensbat),
