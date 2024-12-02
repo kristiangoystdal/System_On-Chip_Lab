@@ -10,8 +10,8 @@ module BATCHARGERpower_64b_tb;
   wire [63:0] vref;  // voltage reference (vref = 0.5V)
   wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
   wire [63:0] ibias1u;  // reference current	(ibias1u = 1uA)
-  reg [7:0]   icc; // constant current mode output current value icc=8'b1111_1111 -> iforced = 2A; ex: icc=8'b11011111 -> iforced = 1.75A (0.5C)
-  reg [7:0]   itc; //  trickle current mode output current value itc=8'b1111_1111 -> iforced = 2A; ex: itc=8'b00101100 -> iforced = 0.35A (0.1C)
+  reg [7:0]   icc; // constant current mode output current value icc=8'b1111_1111 -> iforced = C; ex: icc=8'b01111111 & C=0.4A -> iforced = 0.2A (0.5C)
+  reg [7:0]   itc; //  trickle current mode output current value itc=8'b1111_1111 -> iforced = C; ex: itc=8'b00011001 & C=0.4A -> iforced = 0.04A (0.1C)
   reg [7:0] vcv;  // constant voltage target value vcv = Vtarget*255/5 = 51*Vtarget
   reg cc;  // enables constant current charging mode
   reg tc;  // enables trickle  current charging mode 
@@ -40,7 +40,7 @@ module BATCHARGERpower_64b_tb;
 
   real rl_icc;
   real rl_itc;
-  real rl_vvc;
+  real rl_vcv;
 
 
   BATCHARGERpower_64b uut (
@@ -67,13 +67,13 @@ module BATCHARGERpower_64b_tb;
 
 
   initial begin
-
+    sel[3:0] = 4'b0111;  // C=400mAh     
     rl_vsensbat = 3.2;
     rl_vref = 0.5;
     rl_vin = 5.0;
     rl_ibias1u = 1.0e-6;
-    icc[7:0]=8'b11011111; // constant current mode output current value icc=8'b11011111 -> iforced = 1.75A (0.5C)
-    itc[7:0] = 8'b00101100;
+    icc[7:0]=8'b01111111; // constant current mode output current value icc=8'b01111111 -> iforced = 0.5C
+    itc[7:0] = 8'b00011001;
     vcv[7:0] = 8'b10111100;  // 8'b10111100 => 3,7V 
     cc = 1'b0;  // enables constant current charging mode
     tc = 1'b0;  // enables trickle  current charging mode 
@@ -81,7 +81,7 @@ module BATCHARGERpower_64b_tb;
     en = 1'b1;  // enables the module
     #100
       $display(
-          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=1.75A tc=0,35A) output current is: %f A",
+          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=0.2A tc=0,04A) output current is: %f A",
           cc,
           tc,
           cv,
@@ -92,7 +92,7 @@ module BATCHARGERpower_64b_tb;
     cv = 1'b0;  // enables constant voltage charging mode
     #100
       $display(
-          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=1.75A tc=0,35A) output current is: %f A",
+          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=0.2A tc=0,04A) output current is: %f A",
           cc,
           tc,
           cv,
@@ -103,7 +103,7 @@ module BATCHARGERpower_64b_tb;
     cv = 1'b0;  // enables constant voltage charging mode
     #100
       $display(
-          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=1.75A tc=0,35A) output current is: %f A",
+          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=0.2A tc=0,04A) output current is: %f A",
           cc,
           tc,
           cv,
@@ -114,7 +114,7 @@ module BATCHARGERpower_64b_tb;
     cv = 1'b1;  // enables constant voltage charging mode
     #100
       $display(
-          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=1.75A tc=0,35A) output current is: %f A",
+          "cc=%b, tc=%b, cv=%b, (cv_voltage=3,7V cc=0.2A tc=0,04A) output current is: %f A",
           cc,
           tc,
           cv,
