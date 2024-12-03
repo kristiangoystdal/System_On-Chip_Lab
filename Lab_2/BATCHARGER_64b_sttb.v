@@ -1,7 +1,7 @@
 `timescale 1 ns / 10 ps
 
 
-module BATCHARGER_64_sttb;
+module BATCHARGER_64b_sttb;
 
   wire [63:0] vin; // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
   wire [63:0] vbat;  // battery voltage (V)
@@ -44,16 +44,16 @@ module BATCHARGER_64_sttb;
   );
 
 
-reg clk;
-reg clk1;
+  reg clk;
+  reg clk1;
 
-always begin
-  #10 clk = ~clk;
+  always begin
+    #10 clk = ~clk;
 
-end
-always begin
-  #5 clk1 = ~clk1;
-end
+  end
+  always begin
+    #5 clk1 = ~clk1;
+  end
 
   initial begin
     clk = 0;
@@ -69,14 +69,14 @@ end
 
 
 
-real expected_i_value;
-reg [2:0] Step_id ;
-reg [63:0] temp_current_reg;
-real temp_current = 0;
+  real expected_i_value;
+  reg [2:0] Step_id;
+  reg [63:0] temp_current_reg;
+  real temp_current = 0;
 
-task check_state_rl_value_I(input real i_value, input [2:0] step_id);
+  task check_state_rl_value_I(input real i_value, input [2:0] step_id);
     begin
-        #1;
+      #1;
 
       // Validate `step_id`
       // if ((step_id == 3'b001 || step_id == 3'b010 || step_id == 3'b100)) begin
@@ -84,40 +84,43 @@ task check_state_rl_value_I(input real i_value, input [2:0] step_id);
       //     $finish;
       // end
 
-        // TC (Triple Current) mode
+      // TC (Triple Current) mode
       if (step_id == 3'b001) begin
-          expected_i_value =  0.1*0.45;
+        expected_i_value = 0.1 * 0.45;
 
-          //adding 10% tolerance from the theoretical value
-          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin 
-            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
-                // $finish;
-            end
+        //adding 10% tolerance from the theoretical value
+        if ((expected_i_value * 1.1) < i_value || expected_i_value * 0.9 > i_value) begin
+          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
+                   expected_i_value, i_value);
+          // $finish;
         end
+      end
 
-        // CC (Constant Current) mode
+      // CC (Constant Current) mode
       if (step_id == 3'b010) begin
-          expected_i_value = 0.5*0.45;          
+        expected_i_value = 0.5 * 0.45;
 
-          if ((expected_i_value*1.1)< i_value || expected_i_value*0.9 >i_value) begin
-            $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, temp_current, i_value);
-            // $finish;
-            end
+        if ((expected_i_value * 1.1) < i_value || expected_i_value * 0.9 > i_value) begin
+          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
+                   temp_current, i_value);
+          // $finish;
         end
+      end
 
-        // CV (Constant Voltage) mode
+      // CV (Constant Voltage) mode
       if (step_id == 3'b100) begin
         expected_i_value = temp_current;
-        
-          
+
+
 
         if (expected_i_value < i_value) begin
-          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id, expected_i_value, i_value);
+          $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
+                   expected_i_value, i_value);
           // $finish;
-          end
         end
+      end
     end
-endtask
+  endtask
 
 
 
@@ -128,27 +131,27 @@ endtask
   initial assign rl_ibat = $bitstoreal(ibat);
   initial assign rl_dvdd = $bitstoreal(dvdd);
   initial assign rl_dgnd = $bitstoreal(dgnd);
-  
+
 
   assign vin  = $realtobits(rl_vin);
   assign pgnd = $realtobits(rl_pgnd);
 
   always @(posedge clk) begin
     temp_current_reg = $realtobits(uut.rl_iforcedbat);
-    temp_current= $bitstoreal(temp_current_reg);
+    temp_current = $bitstoreal(temp_current_reg);
     Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I(uut.rl_iforcedbat, Step_id);
 
-    
 
-end
 
-// always @(posedge clk1) begin
-//   temp_current = uut.rl_iforcedbat;
-//   temp_voltage = rl_vbat;
-  
-//   end
+  end
+
+  // always @(posedge clk1) begin
+  //   temp_current = uut.rl_iforcedbat;
+  //   temp_voltage = rl_vbat;
+
+  //   end
 
 endmodule
 
