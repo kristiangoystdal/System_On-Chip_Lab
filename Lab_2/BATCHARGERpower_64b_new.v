@@ -50,25 +50,41 @@ module BATCHARGERpower_64b_new (
   wire vref_ok;
 
   // Check if the supply voltages are within acceptable ranges
-  assign supply_ok = ((avdd) > 0) && (dvdd > 0) && (dgnd == 0) && (agnd == 0) && (pgnd == 0);
+  assign supply_ok = ($bitstoreal(
+      avdd
+  ) > 0) && ($bitstoreal(
+      dvdd
+  ) > 0) && ($bitstoreal(
+      dgnd
+  ) == 0) && ($bitstoreal(
+      agnd
+  ) == 0) && ($bitstoreal(
+      pgnd
+  ) == 0);
 
   // Check if the bias current is within acceptable ranges
   assign ibias_ok = ($bitstoreal(ibias1u) >= IBIASMIN) && ($bitstoreal(ibias1u) <= IBIASMAX);
 
   // Check if the input voltage is within acceptable ranges
-  assign vin_ok = ($bitstoreal(vin) >= VINMIN) && ($bitstoreal(vin - vsensbat) >= DROPMIN);
+  assign vin_ok = ($bitstoreal(
+      vin
+  ) >= VINMIN) && ($bitstoreal(
+      vin
+  ) - $bitstoreal(
+      vsensbat
+  ) >= DROPMIN);
 
   // Check if the reference voltage is within acceptable ranges
   assign vref_ok = ($bitstoreal(vref) >= VREFMIN) && ($bitstoreal(vref) <= VREFMAX);
 
   always @(*) begin
-    if (en) begin
-      // Convert input values to real
-      rl_vref = $bitstoreal(vref);
-      rl_vsensbat = $bitstoreal(vsensbat);
-      rl_vin = $bitstoreal(vin);
-      rl_ibias1u = $bitstoreal(ibias1u);
+    // Convert input values to real
+    rl_vref = $bitstoreal(vref);
+    rl_vsensbat = $bitstoreal(vsensbat);
+    rl_vin = $bitstoreal(vin);
+    rl_ibias1u = $bitstoreal(ibias1u);
 
+    if (en && vin_ok && vref_ok && ibias_ok && supply_ok) begin
       // Calculate battery capacity
       rl_C = 0.050 + (sel[3] * 0.400) + (sel[2] * 0.200) + (sel[1] * 0.100) + (sel[0] * 0.050);
 
