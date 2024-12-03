@@ -43,7 +43,6 @@ module BATCHARGER_64b_sttb;
       .vtbat(vtbat)  // Battery temperature
   );
 
-
   reg clk;
   reg clk1;
 
@@ -64,10 +63,7 @@ module BATCHARGER_64b_sttb;
 
     #10000000;
     #10000000 $finish;
-
   end
-
-
 
   real expected_i_value;
   reg [2:0] Step_id;
@@ -78,17 +74,11 @@ module BATCHARGER_64b_sttb;
     begin
       #1;
 
-      // Validate `step_id`
-      // if ((step_id == 3'b001 || step_id == 3'b010 || step_id == 3'b100)) begin
-      //     $display("Error at step %0d: Several states active simultaneously", step_id);
-      //     $finish;
-      // end
-
       // TC (Triple Current) mode
       if (step_id == 3'b001) begin
         expected_i_value = 0.1 * 0.45;
 
-        //adding 10% tolerance from the theoretical value
+        // Check if the current is within the expected range (10% tolerance)
         if ((expected_i_value * 1.1) < i_value || expected_i_value * 0.9 > i_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
                    expected_i_value, i_value);
@@ -100,6 +90,7 @@ module BATCHARGER_64b_sttb;
       if (step_id == 3'b010) begin
         expected_i_value = 0.5 * 0.45;
 
+        // Check if the current is within the expected range (10% tolerance)
         if ((expected_i_value * 1.1) < i_value || expected_i_value * 0.9 > i_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
                    temp_current, i_value);
@@ -111,8 +102,7 @@ module BATCHARGER_64b_sttb;
       if (step_id == 3'b100) begin
         expected_i_value = temp_current;
 
-
-
+        // Check if the current is lower than the expected value
         if (expected_i_value < i_value) begin
           $display("Error at step %0d: Expected i_value = %f, Got i_value = %f", step_id,
                    expected_i_value, i_value);
@@ -123,15 +113,12 @@ module BATCHARGER_64b_sttb;
   endtask
 
 
-
-
   //-- Signals conversion ---------------------------------------------------
   initial assign rl_vbat = $bitstoreal(vbat);
   initial assign rl_vtbat = $bitstoreal(vtbat);
   initial assign rl_ibat = $bitstoreal(ibat);
   initial assign rl_dvdd = $bitstoreal(dvdd);
   initial assign rl_dgnd = $bitstoreal(dgnd);
-
 
   assign vin  = $realtobits(rl_vin);
   assign pgnd = $realtobits(rl_pgnd);
@@ -142,17 +129,7 @@ module BATCHARGER_64b_sttb;
     Step_id = {uut.cv, uut.cc, uut.tc};
 
     check_state_rl_value_I(uut.rl_iforcedbat, Step_id);
-
-
-
   end
-
-  // always @(posedge clk1) begin
-  //   temp_current = uut.rl_iforcedbat;
-  //   temp_voltage = rl_vbat;
-
-  //   end
-
 endmodule
 
 
