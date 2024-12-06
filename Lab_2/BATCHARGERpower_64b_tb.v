@@ -68,7 +68,7 @@ module BATCHARGERpower_64b_tb;
 
   initial begin
     sel[3:0] = 4'b0111;  // C=400mAh     
-    rl_vsensbat = 3.2;
+    rl_vsensbat = 3.5;
     rl_vref = 0.5;
     rl_vin = 5.0;
     rl_ibias1u = 1.0e-6;
