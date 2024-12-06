@@ -1,0 +1,5 @@
+rm -Rf ../worklib/*
+##
+xmvlog BATCHARGER_controller_tb.v ../../SYNTHESIS_SCAN/BATCHARGER/BATCHARGER_controller_synth.v ../verilog_libs/fsc0h_d_generic_core_30.lib
+xmelab -access +rwc BATCHARGER_controller_tb
+xmsim -gui BATCHARGER_controller_tb &
