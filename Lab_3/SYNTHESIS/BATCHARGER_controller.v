@@ -107,7 +107,7 @@ module BATCHARGER_controller (
   end
 
   // State update logic (sequential)
-  always @(posedge clk or posedge rstz) begin
+  always @(posedge clk or negedge rstz) begin
     if (!rstz) begin
       current_state <= START;  // Reset state to START
       tpreset       <= 11'b0;  // Reset time counter

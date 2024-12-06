@@ -107,8 +107,17 @@ module BATCHARGER_controller (
   end
 
   // State update logic (sequential)
-  always @(posedge clk) begin
-    if (rstz) begin
+  always @(posedge clk or negedge rstz) begin
+    if (!rstz) begin
+      current_state <= START;  // Reset state to START
+      tpreset       <= 11'b0;  // Reset time counter
+      tc            <= 1'b0;  // Disable trickle mode
+      cc            <= 1'b0;  // Disable constant current mode
+      cv            <= 1'b0;  // Disable constant voltage mode
+      imonen        <= 1'b0;  // Disable current monitor
+      vmonen        <= 1'b0;  // Disable voltage monitor
+      timeout       <= 0;  // Reset timeout
+    end else begin
       if (tpreset >= tmax_scaled) begin
         timeout <= 1;  // Signal timeout when tpreset exceeds tmax
       end else begin
@@ -122,19 +131,6 @@ module BATCHARGER_controller (
       end
 
       current_state <= next_state;  // Update current state
-    end
-  end
-
-  always @(negedge rstz) begin
-    if (!rstz) begin
-      current_state <= START;  // Reset state to START
-      tpreset       <= 11'b0;  // Reset time counter
-      tc            <= 1'b0;  // Disable trickle mode
-      cc            <= 1'b0;  // Disable constant current mode
-      cv            <= 1'b0;  // Disable constant voltage mode
-      imonen        <= 1'b0;  // Disable current monitor
-      vmonen        <= 1'b0;  // Disable voltage monitor
-      timeout       <= 0;  // Reset timeout
     end
   end
 endmodule
