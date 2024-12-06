@@ -1,0 +1,125 @@
+module BATCHARGERpower_64b (
+       output [63:0] iforcedbat, // output current to battery
+       output [63:0] vbatcurr, // scaled mirrored current of iforcedbat (1000:1) x R ; R=Vref/C  (C is battery capacity)
+       input [63:0]  vsensbat, // voltage sensed (obtained at the battery as "voltage from iforcedbat integration" + ESR * iforcedbat )			    
+       input [63:0]  vref, // voltage reference (vref = 0.5V)
+       input [63:0]  vin, // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
+       input [63:0]  ibias1u, // reference current	(ibias1u = 1uA)
+       input [7:0]   icc, // constant current mode output current value icc=8'b1111_1111 -> iforced = 2A; ex: icc=8'b11011111 -> iforced = 1.75A (0.5C)
+       input [7:0]   itc, //  trickle current mode output current value itc=8'b1111_1111 -> iforced = 2A; ex: itc=8'b00101100 -> iforced = 0.35A (0.1C)
+       input [7:0]   vcv, // constant voltage target value vcv = Vtarget*255/5 = 51*Vtarget
+       input 	     cc, // enables constant current charging mode
+       input 	     tc, // enables trickle  current charging mode 
+       input 	     cv, // enables constant voltage charging mode
+       input 	     en, // enables the module
+       input [3:0]   sel, // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
+       inout [63:0]  avdd, // analog supply to other modules
+       inout [63:0]  dvdd, // digital supply to other modules
+       inout [63:0]  dgnd, // digital ground
+       inout [63:0]  agnd, // analog ground
+       inout [63:0]  pgnd // power ground
+); // enables the module
+			    
+
+   parameter IBIASMAX = 1.1e-6;
+   parameter IBIASMIN = 0.9e-6; // current limits for ibias1u acceptance
+   parameter VINMIN = 3; // minimum vin
+   parameter DROPMIN = 0.2; // minimum difference between vin and vsensbat
+   parameter VREFMIN = 0.45;
+   parameter VREFMAX = 0.55; // voltage limits for vref acceptance
+   
+
+  
+   real rl_vref;         // converted value of vref to real
+   real rl_imirr;      // scaled mirrored current of iforcedbat (1000:1)
+   real rl_iforcedbat;         // iforcedbat real value
+   real rl_vsensbat;         // converted value of vsensbat to real 
+   real rl_vin;         // converted value of vin to real 
+   real rl_ibias1u;         // converted value of ibias1u to real 
+   real rl_resibat;
+   real rl_vbatcurr;
+   real rl_C;       // [Ah] battery capacity
+   real rl_Rch;     // [Ohm] constant voltage mode resistence: zero current step if Rch = (vcv - vpreset) / icc; Ex (4.2-3.8)/0.21 = 1.9 Ohm
+   
+   
+   real rl_icc;
+   real rl_itc;
+   real rl_vcv;
+
+   wire supply_ok;
+   wire ibias_ok;
+   wire vin_ok;
+   wire vref_ok;
+
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+TOL34iZiAPXdUed0tIOjBo6u12WGDH857vdTznEc+eKeqXjmgFqBzST5ff1cXlOt
+w2mpYEbkZPMAbbcU1xZRDpO/QHklSmCdniJjYn26jSejtW31yNSkHBQoPYCLDH+D
+FZnSOirZ9hRjA1KZSur+fWOorwkgRdR+YPNOXPgpvKXUn4gV47yjew==
+//pragma protect end_key_block
+//pragma protect digest_block
+ViHisGHUHymPBfCG5hLOdRwzcWA=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+
+//pragma protect end_data_block
+//pragma protect digest_block
+FckR4aoHUwmt+Jye01gy20cltnA=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
