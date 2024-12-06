@@ -1,0 +1,4 @@
+# rm -Rf ../worklib/*
+xmvlog BATCHARGERpower_64b.v BATCHARGERpower_64b_tb.v
+xmelab -access +rwc BATCHARGERpower_64b_tb
+xmsim -gui BATCHARGERpower_64b_tb &
