@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module BATCHARGERpower_64b (
        output [63:0] iforcedbat, // output current to battery
        output [63:0] vbatcurr, // scaled mirrored current of iforcedbat (1000:1) x R ; R=Vref/C  (C is battery capacity)
