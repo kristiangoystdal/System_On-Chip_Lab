@@ -29,9 +29,9 @@ module BATCHARGER_controller (
     inout dvdd,  // Digital supply
     inout dgnd,  // Digital ground
 
-    input se, // Select enable
-    input si, // Select input
-    output so // Select output
+    input  se,  // Select enable
+    input  si,  // Select input
+    output so   // Select output
 
 );
 
@@ -48,6 +48,14 @@ module BATCHARGER_controller (
 
   // State transition logic (combinational)
   always @(*) begin
+    cc = 0;
+    tc = 0;
+    cv = 0;
+    imonen = 0;
+    vmonen = 0;
+    tmonen = 0;
+    timeout = 0;
+
     case (current_state)
       START: begin
         if (en) begin
@@ -70,7 +78,11 @@ module BATCHARGER_controller (
           next_state = CC;  // Move to CC state if voltage exceeds cutoff
           tc = 0;  // Disable trickle mode
           cc = 1;  // Enable constant current mode
-        end else next_state = TC;  // Otherwise, remain in TC state
+        end else begin
+          next_state = TC;  // Otherwise, remain in TC state
+          tc = 1;  // Enable trickle mode
+          vmonen = 1;  // Enable voltage monitor
+        end
       end
 
       CC: begin
@@ -80,7 +92,11 @@ module BATCHARGER_controller (
           cv = 1;  // Enable constant voltage mode
           vmonen = 0;  // Disable voltage monitor
           imonen = 1;  // Enable current monitor
-        end else next_state = CC;  // Otherwise, remain in CC state
+        end else begin
+          next_state = CC;  // Otherwise, remain in CC state
+          cc = 1;  // Enable constant current mode
+          vmonen = 1;  // Enable voltage monitor
+        end
       end
 
       CV: begin
@@ -89,7 +105,11 @@ module BATCHARGER_controller (
           next_state = FINISH;  // Move to FINISH state if current or time criteria met
           cv = 0;  // Disable constant voltage mode
           imonen = 0;  // Disable current monitor
-        end else next_state = CV;  // Otherwise, remain in CV state
+        end else begin
+          next_state = CV;  // Otherwise, remain in CV state
+          cv = 1;  // Enable constant voltage mode
+          imonen = 1;  // Enable current monitor
+        end
       end
 
       FINISH: begin
@@ -105,7 +125,7 @@ module BATCHARGER_controller (
       end
 
       default: begin
-        next_state = START;  // Default to WAIT state
+        next_state = START;  // Default to START state
       end
     endcase
   end
@@ -113,14 +133,16 @@ module BATCHARGER_controller (
   // State update logic (sequential)
   always @(posedge clk or negedge rstz) begin
     if (!rstz) begin
-      current_state <= START;  // Reset state to START
-      tpreset       <= 11'b0;  // Reset time counter
-      tc            <= 1'b0;  // Disable trickle mode
-      cc            <= 1'b0;  // Disable constant current mode
-      cv            <= 1'b0;  // Disable constant voltage mode
-      imonen        <= 1'b0;  // Disable current monitor
-      vmonen        <= 1'b0;  // Disable voltage monitor
-      timeout       <= 0;  // Reset timeout
+      current_state <= START;
+      tpreset       <= 0;
+      // Reset all outputs
+      tc            <= 0;
+      cc            <= 0;
+      cv            <= 0;
+      imonen        <= 0;
+      vmonen        <= 0;
+      tmonen        <= 0;
+      timeout       <= 0;
     end else begin
       if (tpreset >= tmax_scaled) begin
         timeout <= 1;  // Signal timeout when tpreset exceeds tmax
@@ -129,10 +151,11 @@ module BATCHARGER_controller (
       end
 
       if (current_state == TC || current_state == CC || current_state == CV) begin
-        tpreset <= tpreset + 1;  // Increment time counter
+        tpreset <= tpreset + 1;
       end else begin
-        tpreset <= 11'b0;  // Reset time counter
+        tpreset <= 0;
       end
+
 
       current_state <= next_state;  // Update current state
     end

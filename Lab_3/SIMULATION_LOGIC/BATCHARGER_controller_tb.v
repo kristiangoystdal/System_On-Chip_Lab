@@ -25,11 +25,9 @@ module BATCHARGER_controller_tb;
   wire dvdd;  // digital supply
   wire dgnd;  // digital ground
 
-  wire se;
-  wire si;
+  reg se;
+  reg si;
   wire so;
-
-
 
   parameter start = 0, wait1 = 1, end1 = 2, ccmode = 3, tcmode = 4, cvmode = 5;
 
@@ -66,6 +64,8 @@ module BATCHARGER_controller_tb;
     vtok = 0;
     rstz = 0;  // active 0 reset at the begining
     en = 0;  // disable the controller at the begining
+    si = 0;  // scan input
+    se = 0;  // scan enable
 
     vbat[7:0] = 8'b10011001 ; // Vbat=3V -> after resistor divider: 0.3V -> adc with Vref=0.5V:  vabt=8'b10011001 
     ibat[7:0] = 8'b01100110;  // 8 bits data from adc with battery current: 0.2*C
@@ -79,7 +79,7 @@ module BATCHARGER_controller_tb;
 
 
 
-    #12 rstz = 1;  // reset end
+    #10 rstz = 1;  // reset end
     en   = 1;  // enable the controller
     vtok = 1;  // voltage and temperature values are valid
 
@@ -102,7 +102,7 @@ module BATCHARGER_controller_tb;
     $display("cv mode ok");
 
     $display("waiting timeout");
-    wait (uut.timeout);
+    // wait (uut.timeout);
     $display("timeout ok");
 
     #100 vbat[7:0] = 8'b11000110;  // Vbat=preset -1 to return to cc mode

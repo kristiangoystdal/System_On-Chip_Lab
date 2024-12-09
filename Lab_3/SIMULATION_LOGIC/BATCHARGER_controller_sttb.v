@@ -98,8 +98,11 @@ module BATCHARGER_controller_sttb;
     en   = 1;
     vtok = 1;  // Release reset, enable controller
 
-    check_state(3'b001, 0,
-                "Waiting for valid temperature and voltage"); // Step 0: Waiting for valid temperature and voltage
+    #20
+      check_state(
+          3'b001,
+          0,
+          "Waiting for valid temperature and voltage"); // Step 0: Waiting for valid temperature and voltage
     #100 tbat = 8'b01100101;
 
     // Check trickle mode

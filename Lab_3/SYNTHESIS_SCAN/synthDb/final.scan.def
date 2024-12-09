@@ -1,0 +1,36 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN BATCHARGER_controller ;
+
+SCANCHAINS 1 ;
+  - DFT_chain_1_seg1_clk_rising 
+    + PARTITION p_clk_rising 
+      MAXBITS 19
+    + START PIN si
+    + FLOATING 
+       current_state_reg[0] ( IN TD ) ( OUT Q ) 
+       current_state_reg[1] ( IN TD ) ( OUT Q ) 
+       current_state_reg[2] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[0] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[1] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[2] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[3] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[4] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[5] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[6] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[7] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[8] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[9] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[10] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[11] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[12] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[13] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[14] ( IN TD ) ( OUT Q ) 
+       tpreset_reg[15] ( IN TD ) ( OUT Q ) 
+    + STOP PIN so
+;
+
+END SCANCHAINS 
+END DESIGN 
