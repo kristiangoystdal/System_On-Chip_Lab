@@ -25,8 +25,8 @@ module BATCHARGER_controller_sttb;
   wire       dvdd;  // Digital supply
   wire       dgnd;  // Digital ground
 
-  wire       se;
-  wire       si;
+  reg        se;
+  reg        si;
   wire       so;
 
   // Instantiate the DUT
@@ -82,10 +82,12 @@ module BATCHARGER_controller_sttb;
     vtok = 0;
     rstz = 0;
     en = 0;
+    si = 0;
+    se = 0;
 
     vbat = 8'b10011001;   // Initial Vbat = 3V
     ibat = 8'b01100110;   // Initial Ibat = 0.2C
-    tbat = 8'b00110110;   // Initial Tbat = 54°C
+    tbat = 8'b10001111;   // Initial Tbat = 54°C
     vcutoff = 8'b10100011;  // Vcutoff = 3.2V
     vpreset = 8'b11000111;  // Vpreset = 3.9V
     tempmin = 8'b00101110;  // Tempmin = -10°C
@@ -98,7 +100,7 @@ module BATCHARGER_controller_sttb;
     en   = 1;
     vtok = 1;  // Release reset, enable controller
 
-    #20
+    #10
       check_state(
           3'b001,
           0,

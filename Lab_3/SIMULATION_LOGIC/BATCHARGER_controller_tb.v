@@ -78,7 +78,6 @@ module BATCHARGER_controller_tb;
     iend[7:0] = 8'b00110011;  // charge current div by 10 to be used as charging end criteria: 0.1C 
 
 
-
     #10 rstz = 1;  // reset end
     en   = 1;  // enable the controller
     vtok = 1;  // voltage and temperature values are valid
@@ -102,7 +101,7 @@ module BATCHARGER_controller_tb;
     $display("cv mode ok");
 
     $display("waiting timeout");
-    // wait (uut.timeout);
+    wait (uut.timeout);
     $display("timeout ok");
 
     #100 vbat[7:0] = 8'b11000110;  // Vbat=preset -1 to return to cc mode
