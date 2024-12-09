@@ -24,6 +24,9 @@ module BATCHARGER_controller_sttb;
   reg vtok;     // Valid temperature and voltage signal
   wire dvdd;    // Digital supply
   wire dgnd;    // Digital ground
+  wire si;
+  wire se;
+  wire so;
 
   // Instantiate the DUT
   BATCHARGER_controller uut (
@@ -47,7 +50,10 @@ module BATCHARGER_controller_sttb;
       .en(en),
       .vtok(vtok),
       .dvdd(dvdd),
-      .dgnd(dgnd)
+      .dgnd(dgnd),
+      .si  (si  ),
+      .se  (se  ),
+      .so  (so  )
   );
 
   // Clock generation

@@ -1,0 +1,69 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 19.14-s108_1, built Tue Jul 07 08:22:44 PDT 2020
+Options: -no_gui 
+Date:    Fri Dec 06 12:38:36 2024
+Host:    fatima2.novalocal (x86_64 w/Linux 3.10.0-1160.99.1.el7.x86_64) (1core*4cpus*4physical cpus*Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz 16384KB) (16265948KB)
+PID:     31852
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (9 seconds elapsed).
+
+WARNING: This version of the tool is 1612 days old.
+@genus:root: 1> source synth.tcl
+Sourcing './synth.tcl' (Fri Dec 06 12:39:18 WET 2024)...
+#@ Begin verbose source synth.tcl
+@file(synth.tcl) 1: source ./synth_initial.tcl
+Sourcing './synth_initial.tcl' (Fri Dec 06 12:39:18 WET 2024)...
+#@ Begin verbose source synth_initial.tcl
+@file(synth_initial.tcl) 4: set DIG_DIR "~/DIGITAL"
+@file(synth_initial.tcl) 5: set RTL_DIR "$DIG_DIR/SIMULATION/CHARGER/src"
+@file(synth_initial.tcl) 6: set LIB_DIR "/opt/ic_tools/pdk/faraday/umc130/HS/fsc0h_d/2009Q1v3.0/GENERIC_CORE/FrontEnd/synopsys"
+@file(synth_initial.tcl) 7: set script_dir "$DIG_DIR/SYNTHESIS_SCAN/CHARGER"
+@file(synth_initial.tcl) 9: set_db init_lib_search_path $LIB_DIR
+  Setting attribute of root '/': 'init_lib_search_path' = /opt/ic_tools/pdk/faraday/umc130/HS/fsc0h_d/2009Q1v3.0/GENERIC_CORE/FrontEnd/synopsys
+@file(synth_initial.tcl) 10: set_db init_hdl_search_path $RTL_DIR 
+  Setting attribute of root '/': 'init_hdl_search_path' = ~/DIGITAL/SIMULATION/CHARGER/src
+@file(synth_initial.tcl) 15: read_libs fsc0h_d_generic_core_ss1p08v125c.lib 
+
+Threads Configured:3
+
+  Message Summary for Library fsc0h_d_generic_core_ss1p08v125c.lib:
+  *****************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 1
+  *****************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'fsc0h_d_generic_core_ss1p08v125c.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTHD' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTHD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'CKLDHD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'CKLDHD' must have an output pin.
+@file(synth_initial.tcl) 17: read_hdl -v2001 BATCHARGER_controller_scan.v
+    input 		 si,
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ')', found 'input' in file './BATCHARGER_controller_scan.v' on line 31, column 9.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+    input 		 si,
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'input' in file './BATCHARGER_controller_scan.v' on line 31, column 9.
+#@ End verbose source synth_initial.tcl
+#@ End verbose source synth.tcl
+1
+@genus:root: 2> exit

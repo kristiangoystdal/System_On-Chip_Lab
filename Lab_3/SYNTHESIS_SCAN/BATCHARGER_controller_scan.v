@@ -27,7 +27,10 @@ module BATCHARGER_controller (
     input en,  // Enables the module
     input rstz,  // System reset
     inout dvdd,  // Digital supply
-    inout dgnd  // Digital ground
+    inout dgnd,  // Digital ground
+    input 		 si,
+	  input 		 se,
+	  output 		 so
 
 );
 

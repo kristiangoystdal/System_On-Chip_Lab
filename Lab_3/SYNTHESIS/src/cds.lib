@@ -1,2 +1,0 @@
-define worklib ../worklib
-include $XCELIUMHOME/tools/inca/files/cds.lib

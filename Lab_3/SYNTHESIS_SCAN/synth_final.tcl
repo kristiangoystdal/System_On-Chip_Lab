@@ -12,8 +12,8 @@ report_power > $OUT_DIR/power_report
 #############
 # Outputs
 #
-write_hdl -language v2001 > $OUT_DIR/BATCHARGER_controller_synth.v
-write_sdc -strict > $OUT_DIR/BATCHARGER_controller_synth.sdc
-write_db $OUT_DIR/BATCHARGER_controller_synth.db
+write_hdl -language v2001 > $OUT_DIR/charger_controller_synth.v
+write_sdc -strict > $OUT_DIR/charger_controller_synth.sdc
+write_db $OUT_DIR/charger_controller_synth.db
 #
 #############
