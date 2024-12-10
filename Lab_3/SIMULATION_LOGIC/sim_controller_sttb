@@ -1,0 +1,5 @@
+rm -Rf ../worklib/*
+##
+xmvlog BATCHARGER_controller_sttb.v BATCHARGER_controller.v
+xmelab -access +rwc BATCHARGER_controller_sttb
+xmsim -gui BATCHARGER_controller_sttb &
