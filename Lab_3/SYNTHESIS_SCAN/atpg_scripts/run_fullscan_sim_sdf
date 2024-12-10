@@ -29,7 +29,7 @@ xrun \
    +sdf_file+DEFAULT.sdf \
    +xmerror+CUSFNF \
    +define+TIMING \
-   +xmlibdirname+$WORKDIR/Inca_libs_13_59_19 \
+   +xmlibdirname+$WORKDIR/Inca_libs_22_44_57 \
    -l $WORKDIR/ncverilog_FULLSCAN_TIMED.log \
   -v ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src \
 $WORKDIR/BATCHARGER_controller.test_netlist.v \

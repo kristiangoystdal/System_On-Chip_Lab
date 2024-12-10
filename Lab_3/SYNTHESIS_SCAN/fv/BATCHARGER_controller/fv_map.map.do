@@ -96,30 +96,25 @@ add mapped point dgnd dgnd
 
 
 //Sequential Pins
-add mapped point cc/q cc_reg/Q 
-add mapped point cv/q cv_reg/Q 
-add mapped point imonen/q imonen_reg/Q 
-add mapped point tc/q tc_reg/Q 
-add mapped point vmonen/q vmonen_reg/Q 
 add mapped point current_state[0]/q current_state_reg[0]/Q 
 add mapped point current_state[1]/q current_state_reg[1]/Q 
 add mapped point current_state[2]/q current_state_reg[2]/Q 
-add mapped point tpreset[0]/q tpreset_reg[0]/Q 
-add mapped point tpreset[1]/q tpreset_reg[1]/Q 
-add mapped point tpreset[2]/q tpreset_reg[2]/Q 
-add mapped point tpreset[3]/q tpreset_reg[3]/Q 
-add mapped point tpreset[4]/q tpreset_reg[4]/Q 
-add mapped point tpreset[5]/q tpreset_reg[5]/Q 
-add mapped point tpreset[6]/q tpreset_reg[6]/Q 
-add mapped point tpreset[7]/q tpreset_reg[7]/Q 
-add mapped point tpreset[8]/q tpreset_reg[8]/Q 
+add mapped point tpreset[11]/q tpreset_reg[11]/Q 
+add mapped point tpreset[15]/q tpreset_reg[15]/Q 
+add mapped point tpreset[13]/q tpreset_reg[13]/Q 
 add mapped point tpreset[9]/q tpreset_reg[9]/Q 
 add mapped point tpreset[10]/q tpreset_reg[10]/Q 
-add mapped point tpreset[11]/q tpreset_reg[11]/Q 
-add mapped point tpreset[12]/q tpreset_reg[12]/Q 
-add mapped point tpreset[13]/q tpreset_reg[13]/Q 
 add mapped point tpreset[14]/q tpreset_reg[14]/Q 
-add mapped point tpreset[15]/q tpreset_reg[15]/Q 
+add mapped point tpreset[12]/q tpreset_reg[12]/Q 
+add mapped point tpreset[7]/q tpreset_reg[7]/Q 
+add mapped point tpreset[8]/q tpreset_reg[8]/Q 
+add mapped point tpreset[6]/q tpreset_reg[6]/Q 
+add mapped point tpreset[0]/q tpreset_reg[0]/Q 
+add mapped point tpreset[3]/q tpreset_reg[3]/Q 
+add mapped point tpreset[2]/q tpreset_reg[2]/Q 
+add mapped point tpreset[1]/q tpreset_reg[1]/Q 
+add mapped point tpreset[4]/q tpreset_reg[4]/Q 
+add mapped point tpreset[5]/q tpreset_reg[5]/Q 
 
 
 
