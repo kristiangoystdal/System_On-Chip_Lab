@@ -51,7 +51,7 @@ module BATCHARGER_controller (
   always @(*) begin
     case (current_state)
       START: begin
-        if (en) begin
+        if (vtok) begin
           next_state = WAIT;  // If enabled, move to WAIT state
         end else begin
           next_state = START;  // Otherwise, stay in START state
@@ -59,7 +59,7 @@ module BATCHARGER_controller (
       end
 
       WAIT: begin
-        if (tok) begin
+        if (tempmin < tbat && tbat < tempmax) begin
           next_state = TC;  // Move to TC state if temperature is valid
         end else begin
           next_state = WAIT;  // Otherwise, stay in WAIT state
@@ -109,66 +109,55 @@ module BATCHARGER_controller (
   end
 
   always @(current_state) begin
+    imonen <= 1;
+    vmonen <= 1;
+    tmonen <= 1;
     case (current_state)
       START: begin
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        imonen <= 0;
-        vmonen <= 0;
-        tmonen <= 0;
-        so <= 1;  // Update select output
-
+        // imonen <= 1;
+        // vmonen <= 1;
+        // tmonen <= 1;
       end
       WAIT: begin
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        imonen <= 0;
-        vmonen <= 0;
-        tmonen <= 1;
-        so <= 0;  // Update select output
-
+        // imonen <= 0;
+        // vmonen <= 0;
+        // tmonen <= 1;
       end
       TC: begin
         cc <= 0;
         tc <= 1;
         cv <= 0;
-        imonen <= 0;
-        vmonen <= 1;
-        tmonen <= 1;
-        so <= 1;  // Update select output
-
+        // imonen <= 0;
+        // vmonen <= 1;
+        // tmonen <= 1;
       end
       CC: begin
         cc <= 1;
         tc <= 0;
         cv <= 0;
-        imonen <= 0;
-        vmonen <= 1;
-        tmonen <= 1;
-        so <= 0;  // Update select output
 
       end
       CV: begin
         cc <= 0;
         tc <= 0;
         cv <= 1;
-        imonen <= 1;
-        vmonen <= 0;
-        tmonen <= 1;
-        so <= 1;  // Update select output
-
+        // imonen <= 1;
+        // vmonen <= 0;
+        // tmonen <= 1;
       end
       FINISH: begin
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        imonen <= 0;
-        vmonen <= 0;
-        tmonen <= 0;
-        so <= 0;  // Update select output
-
+        // imonen <= 0;
+        // vmonen <= 0;
+        // tmonen <= 0;
       end
       default: begin
         cc <= 0;
@@ -177,27 +166,16 @@ module BATCHARGER_controller (
         imonen <= 0;
         vmonen <= 0;
         tmonen <= 0;
-        so <= 1;  // Update select output
-
       end
     endcase
   end
 
 
   // State update logic (sequential)
-  always @(posedge clk or negedge rstz) begin
-    if (!rstz) begin
+  always @(posedge clk or negedge rstz or negedge vtok) begin
+    if (!rstz || !vtok) begin
       current_state <= START;  // Reset state to START
       tpreset       <= 0;  // Reset time counter
-      // tc            <= 1'b0;  // Disable trickle mode
-      // cc            <= 1'b0;  // Disable constant current mode
-      // cv            <= 1'b0;  // Disable constant voltage mode
-      // imonen        <= 1'b0;  // Disable current monitor
-      // vmonen        <= 1'b0;  // Disable voltage monitor
-      // tmonen        <= 1'b0;  // Disable temperature monitor
-      // timeout       <= 0;  // Reset timeout
-      tok           <= 0;
-      // so            <= 0;
     end else begin
       if (tpreset >= tmax_scaled) begin
         timeout <= 1;  // Signal timeout when tpreset exceeds tmax
@@ -211,9 +189,6 @@ module BATCHARGER_controller (
         tpreset <= 0;  // Reset time counter
       end
 
-      // tok <= (^tbat === 1'bx) ? 1'b0 : (tempmin < tbat && tbat < tempmax ? 1'b1 : 1'b0);
-
-      tok <= 1;
       current_state <= next_state;  // Update current state
     end
   end

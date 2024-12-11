@@ -1,0 +1,116 @@
+Starting Command: build_testmode 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_testmode -modedef FULLSCAN -assignfile /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.FULLSCAN.pinassign -testmode FULLSCAN -workdir /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 19.12-s004_1, built Dec 04 2019 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_testmode_FULLSCAN_121124145505-824003000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Dec 11 14:55:05 2024  WET
+            Host machine is fatima.novalocal, x86_64 running Linux 3.10.0-1160.99.1.el7.x86_64.
+            This job is process number 28519.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.FULLSCAN.pinassign
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_testmode_FULLSCAN_121124145505-824003000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+MODEDEFPATH set to:  /opt/ic_tools/cad/modus19_12_hf000/tools/tb/defaults/rules/modedef 
+TDRPATH set to: /opt/ic_tools/cad/modus19_12_hf000/tools/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 97.95% active logic,  2.05% inactive logic and  0.00% constraint logic.   [end THM_814] 
+INFO (TTM-357): There are 1 scan chains which are controllable and observable.   [end TTM_357] 
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+There are no PPIs for Test Mode:  FULLSCAN
+
+Information for Test Mode:  FULLSCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  FULLSCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        0           0           0 
+ Finite State    (FSM)           0           0           0 
+
+INFO (TTM-800): build_testmode has created mode FULLSCAN. [end TTM_800] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          2  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          1  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          0  TI    (Test Inhibit)              Pins
+          1  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          1  SI    (Scan Input)                Pins
+          1  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+         18      PI  +SC                                  rstz / rstz
+          0      PI  -EC  -SC                             clk / clk
+         19      PI  +SE                                  se / se
+         20      PI   SI                                  si / si
+         83      PO   SO                                  so / so
+
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.37
+               Elapsed Time =   0:00:09.11
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 97.95% active logic,  2.05% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 1 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+      1 INFO (TTM-800): build_testmode has created mode FULLSCAN.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

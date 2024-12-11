@@ -18,7 +18,7 @@ xrun \
    +xmoverride_timescale \
    +xmseq_udp_delay+2ps \
    +libext+.v+.V+.z+.Z+.gz \
-   +xmlibdirname+$WORKDIR/Inca_libs_22_44_57 \
+   +xmlibdirname+$WORKDIR/Inca_libs_13_38_26 \
    -l $WORKDIR/ncverilog_FULLSCAN.log \
   -v ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src \
 $WORKDIR/BATCHARGER_controller.test_netlist.v \

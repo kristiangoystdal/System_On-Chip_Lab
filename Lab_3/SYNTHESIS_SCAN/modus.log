@@ -1,0 +1,526 @@
+
+ 
+Copyright (C) 2002-2019 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+Version : 19.12-s004_1, built Dec 04 2019 (linux26_64)
+Options : -no_gui
+Date    : Wed, December 11 14:54:37 2024
+Host    : fatima.novalocal (x86_64 Linux 3.10.0-1160.99.1.el7.x86_64) (1*Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz 16384KB)
+OS      : CentOS Linux release 7.9.2009 (Core)
+@modus:root:/ 1>  source ./atpg_scripts/runmodus.atpg.tcl
+#@ Begin verbose source ./atpg_scripts/runmodus.atpg.tcl
+@file(./atpg_scripts/runmodus.atpg.tcl) 13: set_db workdir ./atpg_scripts;
+@file(./atpg_scripts/runmodus.atpg.tcl) 14: set   WORKDIR [get_db workdir]
+@file(./atpg_scripts/runmodus.atpg.tcl) 17: set_option stdout     summary;                                # Only print a summary for each command to the terminal
+@file(./atpg_scripts/runmodus.atpg.tcl) 19: set ::env(CDS_LIC_REPORT) yes
+@file(./atpg_scripts/runmodus.atpg.tcl) 21: source  $::env(Install_Dir)/bin/64bit/test_checks.tcl;    # Load test_checks.tcl from Modus installation - provides check_log below
+#@ Begin verbose source /opt/ic_tools/cad/modus19_12_hf000/tools/tb/bin/64bit/test_checks.tcl
+@file(/opt/ic_tools/cad/modus19_12_hf000/tools/tb/bin/64bit/test_checks.tcl) 4: proc check_log {infile}  {
+
+    global STOP_ON_MSG_SEV
+    global LOGDIR
+
+    set SEPARATOR "-------------------------------------------------------------------------------"
+
+    puts $SEPARATOR
+
+    if { [info exists LOGDIR] } {
+       # Get LOGDIR from global variable - Do Nothing
+    } else {
+       # Default value
+       set LOGDIR [get_db workdir]/testresults/logs
+    }
+
+    if { [info exists STOP_ON_MSG_SEV] } {
+       # Get STOP_ON_MSG_SEV from global variable
+
+       # Verify set to valid value
+        if { $STOP_ON_MSG_SEV eq "ERROR" } {
+           # Continue Valid
+       } elseif { $STOP_ON_MSG_SEV eq "WARNING_SEVERE" } {
+          # Continue Valid
+       } elseif { $STOP_ON_MSG_SEV eq "WARNING" } {
+          # Continue Valid
+       } else {
+          puts "ERROR: Global variable STOP_ON_MSG_SEV set to invalid value $STOP_ON_MSG_SEV. Valid values are WARNING, WARNING_SEVERE, or ERROR."
+          exit -1
+       }
+
+    } else {
+       # Do Nothing if global variable not set
+       puts "WARNING: check_log proc is ignored. STOP_ON_MSG_SEV not set. "
+       return 0
+    }
+
+
+   puts "Checking Log: $infile"
+
+   if [ file exists $LOGDIR/$infile ] {
+      #---------------------------------------------------
+      # tac   - Print file in reverse to allow only looking at last log if appended
+      # sed   - Stop printing when (TDA-009) found. Used to identify start of last log if logs are appended
+      # egrep - Lines conntaining "ERROR (???-???): ?..."
+      #
+      # egrep/grep uses its exit status to indicate presence/absence of a match. If no matches the exit status is 1
+      # Tcl's exec treats any non-zero exist status as an execption.
+      # Therfore a catch is used to store the results in a variable.
+      #
+      # Do not look for "ERROR" at start of line because "-log summary" includes only a summary which includes the number of messages first.
+      # The space detailed characters in the search string are intended to prevent detecting design nodes containing the string.
+      #---------------------------------------------------
+
+      # Always check for Errors (always stop on errors)
+      # matchStatus = 0 if command succeeded = found a match for egrep
+      set matchStatus [catch {exec tac $LOGDIR/$infile | sed -e {/(TDA-009):/q} | egrep {ERROR \([A-Z]+-[0-9]+\): .+}}]
+      if {$matchStatus == 0} {
+         puts "ERROR found. STOP_ON_MSG_SEVERITY exceeded. Processing Terminated."
+         exit -1
+      }
+      #--------------------------------------------------
+      # Check for Warning Severe if set to WARNING_SEVERE or WARNING (otherwise don't stop)
+      if {($STOP_ON_MSG_SEV eq "WARNING_SEVERE") || ($STOP_ON_MSG_SEV eq "WARNING")} {
+         set matchStatus [catch {exec tac $LOGDIR/$infile | sed -e {/(TDA-009):/q} | egrep {WARNING \([A-Z]+-[0-9]+\): \[Severe\] .+}}]
+         if {$matchStatus == 0} {
+            puts "WARNING \[Severe\] found. STOP_ON_MSG_SEVERITY exceeded. Processing Terminated."
+            exit -1
+         }
+      }
+      #---------------------------------------------------
+      # Check for Warning if set to Warning (otherwise don't stop)
+      if {$STOP_ON_MSG_SEV eq "WARNING"} {
+         set matchStatus [catch {exec tac $LOGDIR/$infile | sed -e {/(TDA-009):/q} | egrep {WARNING \([A-Z]+-[0-9]+\): .+}}]
+         if {$matchStatus == 0} {
+            puts "WARNING found. STOP_ON_MSG_SEVERITY exceeded. Processing Terminated."
+            exit -1
+         }
+      }
+      #---------------------------------------------------
+      # STOP_ON_MSG_SEV not exceeded, continue processing
+      puts "STOP_ON_MSG_SEVERITY not exceeded. Processing Continues."
+      puts $SEPARATOR
+      return 0
+
+   } else {
+       puts "ERROR: check_log unable to find specified log at $LOGDIR/$infile"
+       exit -1
+   }
+
+}
+#@ End verbose source /opt/ic_tools/cad/modus19_12_hf000/tools/tb/bin/64bit/test_checks.tcl
+@file(./atpg_scripts/runmodus.atpg.tcl) 22: set STOP_ON_MSG_SEV ERROR;                                # Messagee severity for check_log to stop at (ERROR, WARNING_SEVERE, WARNING)
+@file(./atpg_scripts/runmodus.atpg.tcl) 23: set LOGDIR          $WORKDIR/testresults/logs;            # Location of logs for check_log
+@file(./atpg_scripts/runmodus.atpg.tcl) 25: file delete -force $WORKDIR/tbdata;                       # Delete Test Database
+@file(./atpg_scripts/runmodus.atpg.tcl) 26: file delete -force $WORKDIR/testresults;                  # Delete Test Output Files/Logs
+@file(./atpg_scripts/runmodus.atpg.tcl) 33: build_model \
+    -cell	 BATCHARGER_controller \
+    -techlib	 ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src \
+    -designsource	 $WORKDIR/BATCHARGER_controller.test_netlist.v \
+    -allowmissingmodules	 no \
+
+check_log log_build_model
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. Please set the context and circuit state after completion of the command. [end TUI_772] 
+
+Starting Command: build_model 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+
+            -designtop BATCHARGER_controller
+            -TECHLIB ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_model_121124145441-752271000
+            -STDOUT summary
+            -DESIGNSOURCE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v
+          + -allowmissingmodules no
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      1 WARNING (TEI-110): Pin 'flag' of 'cell dffrsb_udp' has no external net connection for any usage in the design. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'.   
+     10 WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21112' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value.  
+      2 WARNING (TLM-108): Bidi primary output net 'dgnd' of 'cell BATCHARGER_controller' has no dotting function(DFN) properties specified.  Input option 'defaultDFN' set to 'T' is used to model the net.   
+
+  WARNING [Severe] Messages...
+      4 WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   0   1   X   0   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Checking Log: log_build_model
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 44: build_testmode \
+    -testmode	 FULLSCAN \
+    -assignfile	 $WORKDIR/BATCHARGER_controller.FULLSCAN.pinassign \
+    -modedef	 FULLSCAN \
+ 
+Starting Command: build_testmode 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -ASSIGNFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.FULLSCAN.pinassign
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_testmode_FULLSCAN_121124145505-824003000
+            -MODEDEF FULLSCAN
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (THM-814): Testmode contains 97.95% active logic,  2.05% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-357): There are 1 scan chains which are controllable and observable.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+      1 INFO (TTM-800): build_testmode has created mode FULLSCAN.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 49: check_log log_build_testmode_FULLSCAN
+-------------------------------------------------------------------------------
+Checking Log: log_build_testmode_FULLSCAN
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 54: report_test_structures \
+    -testmode	 FULLSCAN \
+ 
+Starting Command: report_test_structures 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_report_test_structures_FULLSCAN_121124145516-107306000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 57: check_log log_report_test_structures_FULLSCAN
+-------------------------------------------------------------------------------
+Checking Log: log_report_test_structures_FULLSCAN
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 62: verify_test_structures \
+    -messagecount	 TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10 \
+    -testmode	 FULLSCAN \
+ 
+Starting Command: verify_test_structures 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -messagecount TSV-016=10,TSV-024=10,TSV-315=10,TSV-027=10
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_verify_test_structures_FULLSCAN_121124145520-855463000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 19 bit positions, which is 100% of the average scan chain length 19 (based on 19 total scan chain bits and 1 valid scan chains).    
+      1 INFO (TSV-378): Scan chain beginning at 'pin si' and ending at 'pin so' is controllable and observable. The length of the scan chain is 19 bit positions.    
+      1 INFO (TSV-567): There are 1 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 1 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Wed Dec 11 14:55:21 2024     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 66: check_log log_verify_test_structures_FULLSCAN
+-------------------------------------------------------------------------------
+Checking Log: log_verify_test_structures_FULLSCAN
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 71: build_faultmodel \
+    -includedynamic	 no \
+ 
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. Please set the context and circuit state after completion of the command. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_faultmodel_121124145536-173264000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 74: check_log log_build_faultmodel
+-------------------------------------------------------------------------------
+Checking Log: log_build_faultmodel
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 79: create_logic_tests \
+    -experiment	 BATCHARGER_controller_atpg \
+    -testmode	 FULLSCAN \
+
+check_log log_create_logic_tests_FULLSCAN_BATCHARGER_controller_atpg
+Starting Command: create_logic_tests 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+            -EXPERIMENT BATCHARGER_controller_atpg
+
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_create_logic_tests_FULLSCAN_BATCHARGER_controller_atpg_121124145541-910160000
+            -STDOUT summary
+[end TDA_009]
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      1       1        160     6.58%    6.58%         2272           00:05.79    [end TDA_220] 
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      1       1         20     7.40%    7.40%         2252           00:07.60    [end TDA_220] 
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):     16      16       1127    53.74%   53.74%         1125           00:09.30    [end TDA_220] 
+INFO (TDA-220):     32      32        387    69.71%   69.71%          736           00:09.35    [end TDA_220] 
+INFO (TDA-220):     48      48        179    77.08%   77.08%          557           00:09.40    [end TDA_220] 
+INFO (TDA-220):     64      64        144    83.00%   83.00%          413           00:09.43    [end TDA_220] 
+INFO (TDA-220):     80      80        129    88.31%   88.31%          284           00:09.46    [end TDA_220] 
+INFO (TDA-220):     96      96         77    91.48%   91.48%          207           00:09.50    [end TDA_220] 
+INFO (TDA-220):    112     112         65    94.16%   94.16%          142           00:09.53    [end TDA_220] 
+INFO (TDA-220):    128     127         46    96.05%   96.05%           96           00:09.55    [end TDA_220] 
+INFO (TDA-220):    144     143         36    97.53%   97.53%           60           00:09.57    [end TDA_220] 
+INFO (TDA-220):    148     147         30    98.77%   98.77%           30           00:09.58    [end TDA_220] 
+INFO (TDA-220):    153     152          8    99.09%   99.09%           22           00:09.58    [end TDA_220] 
+INFO (TDA-220):    154     152          0    99.09%   99.09%           22           00:09.86    [end TDA_220] 
+INFO (TDA-220):    162     159         14    99.67%   99.67%            8           00:10.17    [end TDA_220] 
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+     21 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):    162     159          0    99.67%   99.67%            8           00:10.17     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      6 INFO (TTC-110): Starting Scan Test generation                                                    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Checking Log: log_create_logic_tests_FULLSCAN_BATCHARGER_controller_atpg
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 88: write_toggle_gram \
+    -experiment	 BATCHARGER_controller_atpg \
+    -testmode	 FULLSCAN \
+
+#-------------------------------------------------------------------------------
+Starting Command: write_toggle_gram 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+            -EXPERIMENT BATCHARGER_controller_atpg
+
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_write_toggle_gram_FULLSCAN_BATCHARGER_controller_atpg_121124145557-436446000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      5 INFO (TBM-054): Scan Shift Toggle report categorized by SEQUENCE  
+      1 INFO (TBM-088): The total number of test to be analyzed for scan is 161 and for capture is 160.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+  WARNING Messages...
+      1 WARNING (TBM-099):The switching percentage has exceeded the threshold value of 30 percent, in the current testmode. High switching can impact the power numbers at the tester.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 95: write_vectors \
+    -inexperiment	 BATCHARGER_controller_atpg \
+    -testmode	 FULLSCAN \
+    -language	 verilog \
+    -scanformat	 parallel \
+
+check_log log_write_vectors_FULLSCAN_BATCHARGER_controller_atpg
+Starting Command: write_vectors 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT BATCHARGER_controller_atpg
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_write_vectors_FULLSCAN_BATCHARGER_controller_atpg_121124145602-404339000
+            -STDOUT summary
+            -scanformat parallel
+          + -language verilog
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      4 INFO (TVE-003): Verilog write vectors output file will be: /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/verilog/cycleMap.FULLSCAN.BATCHARGER_controller_atpg.    
+      2 INFO (TVE-004): Reading test section 1.1.  Test section type equals scan.    
+      2 INFO (TVE-005): Created 42 total cycles, of which 4 are test cycles, 38 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      2 INFO (TVE-008): Created 19 total measures, of which 0 are PO measures and 19 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE SUMMARY REPORT  
+      3 INFO (TVE-103): There was no specified TEST offset for this clock 'pin clk'.  A default clock offset of 8.000000 ns will be used.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Checking Log: log_write_vectors_FULLSCAN_BATCHARGER_controller_atpg
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 106: commit_tests \
+    -inexperiment	 BATCHARGER_controller_atpg \
+    -testmode	 FULLSCAN 
+INFO (TUI-772): The command 'commit_tests' will release the currently acquired resources. Please set the context and circuit state after completion of the command. [end TUI_772] 
+
+Starting Command: commit_tests 
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT BATCHARGER_controller_atpg
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_commit_tests_FULLSCAN_BATCHARGER_controller_atpg_121124145623-267713000
+            -STDOUT summary
+[end TDA_009]
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment BATCHARGER_controller_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.14.7 (Relative test numbers 1 thru 161).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment BATCHARGER_controller_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.14.7 (Relative test numbers 1 to 161).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 110: check_log log_commit_tests_FULLSCAN_BATCHARGER_controller_atpg
+-------------------------------------------------------------------------------
+Checking Log: log_commit_tests_FULLSCAN_BATCHARGER_controller_atpg
+STOP_ON_MSG_SEVERITY not exceeded. Processing Continues.
+-------------------------------------------------------------------------------
+@file(./atpg_scripts/runmodus.atpg.tcl) 112: exit
