@@ -1,0 +1,87 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.cc}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.cv}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.dgnd}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.dvdd}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.ibat[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.iend[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.imonen}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.rstz}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.se}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.si}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.so}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tbat[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tc}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tempmax[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tempmin[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tmax[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.tmonen}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.vbat[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.vcutoff[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.vmonen}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.vpreset[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_controller_sttb.vtok}]}
+	} ]]
+
+waveform xview limits 0 23152000ps
