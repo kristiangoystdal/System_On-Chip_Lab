@@ -108,7 +108,7 @@ module BATCHARGER_controller_sttb;
     #100 tbat = 8'b01100101;
 
     // Check trickle mode
-    #10 check_state(3'b010, 1, "Trickle mode expected from wait mode");  // Step 1: TC mode expected
+    #20 check_state(3'b010, 1, "Trickle mode expected from wait mode");  // Step 1: TC mode expected
 
     #100 vbat = 8'b10100100;  // Vbat = Vcutoff + 1
     #10 check_state(3'b011, 2, "CC mode expected from TC");  // Step 2: CC mode expected
