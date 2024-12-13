@@ -2,9 +2,9 @@
 # Paths
 #
 set DIG_DIR "~/DIGITAL"
-set RTL_DIR "$DIG_DIR/SIMULATION/COUNTER4BIT/src"
+set RTL_DIR "$DIG_DIR/SIMULATION/BATCHARGER/src"
 set LIB_DIR "/opt/ic_tools/pdk/faraday/umc130/HS/fsc0h_d/2009Q1v3.0/GENERIC_CORE/FrontEnd/synopsys"
-set script_dir "$DIG_DIR/SYNTHESIS/COUNTER4BIT"
+set script_dir "$DIG_DIR/SYNTHESIS/BATCHARGER"
 #
 set_db init_lib_search_path $LIB_DIR
 set_db init_hdl_search_path $RTL_DIR 
@@ -14,7 +14,7 @@ set_db init_hdl_search_path $RTL_DIR
 #
 read_libs fsc0h_d_generic_core_ss1p08v125c.lib 
 #
-read_hdl -v2001 counter4bit.v
+read_hdl -v2001 BATCHARGER_controller.v
 #
 ######################
 # Elaboration

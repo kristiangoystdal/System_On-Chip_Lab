@@ -1,0 +1,173 @@
+Starting Command: build_model 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_model -cell BATCHARGER_controller -designtop BATCHARGER_controller -allowmissingmodules no -workdir /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts -designsource /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v -stdout summary -techlib ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 19.12-s004_1, built Dec 04 2019 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_model_121124145441-752271000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Dec 11 14:54:41 2024  WET
+            Host machine is fatima.novalocal, x86_64 running Linux 3.10.0-1160.99.1.el7.x86_64.
+            This job is process number 28460.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+
+            -designtop BATCHARGER_controller
+            -TECHLIB ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_model_121124145441-752271000
+            -STDOUT summary
+            -DESIGNSOURCE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v
+          + -allowmissingmodules no
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
+
+
+Search Order  1:  "/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v"
+Search Order  2:  "../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src"
+
+
+
+Reading Verilog data from /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v
+
+Verilog Parser complete - 1 modules, 0 gates, 0 user defined primitives.
+
+
+Reading Verilog file ../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src
+
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21112' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21293' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21458' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21727' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21954' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '22139' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ_PD' with a real number value found on line '22140' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '30000' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '22319' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '22519' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '22737' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value. [end TEI_207] 
+Verilog Parser complete - 420 modules, 1215 gates, 11 user defined primitives.
+
+
+
+INFO (TEI-196): Build Model - Hierarchical Model Build starting: [end TEI_196] 
+
+WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   0   1   X   0   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. [end TEI_240] 
+WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   0   1   X   1   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. [end TEI_240] 
+WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   1   1   X   0   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. [end TEI_240] 
+WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   1   1   X   1   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. [end TEI_240] 
+WARNING (TEI-110): Pin 'flag' of 'cell dffrsb_udp' has no external net connection for any usage in the design. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'.  [end TEI_110] 
+
+
+Number of blocks in the hierarchical model is: 1,337.
+
+Number of technology library cell instances in the hierarchical model is: 293.
+
+
+INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
+
+
+
+INFO (TEI-198): Build Model - Flat Model Build starting: [end TEI_198] 
+
+ defaultTIE = X
+ defaultDFN = T
+
+WARNING (TLM-108): Bidi primary output net 'dgnd' of 'cell BATCHARGER_controller' has no dotting function(DFN) properties specified.  Input option 'defaultDFN' set to 'T' is used to model the net.  [end TLM_108] 
+WARNING (TLM-108): Bidi primary output net 'dvdd' of 'cell BATCHARGER_controller' has no dotting function(DFN) properties specified.  Input option 'defaultDFN' set to 'T' is used to model the net.  [end TLM_108] 
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+          1,337  Blocks                         976  Blocks
+          4,261  Pins                           976  Nodes
+          2,638  Nets
+
+Primary Inputs:                      Primary Outputs:
+         78  Input Only                         7  Output Only
+          2  Input/Output                       2  Input/Output
+         80  Total Inputs                       9  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+         19  Tied to 0                          0  Two-State
+         38  Tied to 1                          2  Three-State
+          0  Tied to X                          2  Total Dotted Nets
+         57  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+         40  MUX2s
+          0  Latches
+
+
+         19  Rising  Edge Flop w/Set and Reset-Dominant Port
+         19  Total Flops
+
+        293  Technology Library Cell Instances
+
+[end TLM_055] 
+Optimization removed logic for 1 of 51 cells in this design.
+
+Optimization removed a total of 0 tied Latch Ports.
+Optimization removed a total of 0 non-controlling inputs.
+Optimization removed a total of 19 dangling logic nodes.
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           97,260,784  bytes
+
+                      CPU Time =    0:00:01.41
+                  Elapsed Time =    0:00:21.55                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      1 WARNING (TEI-110): Pin 'flag' of 'cell dffrsb_udp' has no external net connection for any usage in the design. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'.   
+     10 WARNING (TEI-207): Parameter 'THZ' with a real number value found on line '21112' of file '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'. A positive integer value is expected. Processing continues using '399999' for the parameter value.  
+      2 WARNING (TLM-108): Bidi primary output net 'dgnd' of 'cell BATCHARGER_controller' has no dotting function(DFN) properties specified.  Input option 'defaultDFN' set to 'T' is used to model the net.   
+
+  WARNING [Severe] Messages...
+      4 WARNING (TEI-240): [Severe] Processing User Defined Primitive 'dffrsb_udp', simulation of state table row '6', input states ' X   0   1   X   0   1  ' resulted in a value of ' 1  '. A value of ' X  ' was specified in the state table. Generated logic or User Defined Primitive state table may be incorrect. Cell contents file: '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src'.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

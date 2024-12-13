@@ -1,0 +1,108 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.Step_id[2:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.clk1}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.dgnd[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.dvdd[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.expected_i_value}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 0 -max 0.22869606575957674 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.ibat[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.pgnd[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_dgnd}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_dvdd}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 0 -max 1.2 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_ibat}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 0 -max 0.22869606575957674 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_pgnd}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_vbat}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 2.9468692543720829 -max 4.1886555014184719 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_vin}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 4.0499999999999998 -max 4.9500000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.rl_vtbat}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 0.12121212121212122 -max 0.18533497368505131 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.se}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.sel[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.si}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.so}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.temp_current}]}
+	} ]]
+waveform format $id -trace analogLinear
+waveform axis range $id -for default -min 0 -max 0.22869606575957674 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.temp_current_reg[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.vbat[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.vin[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {BATCHARGER_64b_sttb.vtbat[63:0]}]}
+	} ]]
+
+waveform xview limits 0 20000000000ps

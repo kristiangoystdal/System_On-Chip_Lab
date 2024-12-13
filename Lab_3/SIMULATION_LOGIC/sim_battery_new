@@ -1,0 +1,4 @@
+rm -Rf ../worklib/*
+xmvlog BATCHARGER_64b.v BATCHARGERbg_64b.v BATCHARGERpower_64b.v BATCHARGERsaradc_64b.v ../../SYNTHESIS_SCAN/BATCHARGER/BATCHARGER_controller_synth.v BATCHARGERlipo_64b.v BATCHARGER_64b_tb.v ../verilog_libs/fsc0h_d_generic_core_30.lib
+xmelab -access +rwc BATCHARGER_64b_tb
+xmsim -gui BATCHARGER_64b_tb &

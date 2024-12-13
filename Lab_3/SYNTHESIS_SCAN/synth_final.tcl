@@ -8,6 +8,7 @@ set OUT_DIR "./"
 #
 report_timing > $OUT_DIR/timing_report
 report_power > $OUT_DIR/power_report
+report_area > $OUT_DIR/area_report
 #
 #############
 # Outputs
