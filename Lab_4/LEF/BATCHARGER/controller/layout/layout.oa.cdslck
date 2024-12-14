@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      ist1112497
 HostName                       fatima.novalocal
-ProcessIdentifier              24386
-ProcessCreationTime_UTC        1734085316
-ProcessCreationTime_Readable   Fri Dec 13 10:21:56 2024 WET
+ProcessIdentifier              14935
+ProcessCreationTime_UTC        1734112083
+ProcessCreationTime_Readable   Fri Dec 13 17:48:03 2024 WET
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/BATCHARGER/controller/layout/layout.oa.cdslck
-TimeEditLocked                 Fri Dec 13 10:32:52 2024 WET
+FilePathUsedToEditLock         /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/BATCHARGER/controller/layout/layout.oa.cdslck.dirlck
+TimeEditLocked                 Fri Dec 13 17:54:26 2024 WET
