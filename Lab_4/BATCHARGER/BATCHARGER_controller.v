@@ -40,8 +40,6 @@ module BATCHARGER_controller (
 
   parameter vmax = 8'b11010110;  // Maximum voltage for constant current mode
 
-  reg tok;  // Temperature valid signal
-
   // State transition logic (combinational)
   always @(*) begin
     case (current_state)
@@ -64,7 +62,7 @@ module BATCHARGER_controller (
       end
 
       TC: begin
-        if (vbat > vcutoff && vtok) begin
+        if (vbat > vcutoff) begin
           next_state = CC;  // Voltage exceeds cutoff
         end else begin
           next_state = TC;  // Otherwise, stay in TC state
@@ -112,25 +110,16 @@ module BATCHARGER_controller (
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        // imonen <= 1;
-        // vmonen <= 1;
-        // tmonen <= 1;
       end
       WAIT: begin
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        // imonen <= 0;
-        // vmonen <= 0;
-        // tmonen <= 1;
       end
       TC: begin
         cc <= 0;
         tc <= 1;
         cv <= 0;
-        // imonen <= 0;
-        // vmonen <= 1;
-        // tmonen <= 1;
       end
       CC: begin
         cc <= 1;
@@ -142,17 +131,11 @@ module BATCHARGER_controller (
         cc <= 0;
         tc <= 0;
         cv <= 1;
-        // imonen <= 1;
-        // vmonen <= 0;
-        // tmonen <= 1;
       end
       FINISH: begin
         cc <= 0;
         tc <= 0;
         cv <= 0;
-        // imonen <= 0;
-        // vmonen <= 0;
-        // tmonen <= 0;
       end
       default: begin
         cc <= 0;
