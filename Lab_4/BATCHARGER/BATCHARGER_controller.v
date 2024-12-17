@@ -40,6 +40,9 @@ module BATCHARGER_controller (
 
   parameter vmax = 8'b11010110;  // Maximum voltage for constant current mode
 
+  // pragma protect
+  // pragma protect begin
+
   // State transition logic (combinational)
   always @(*) begin
     case (current_state)
@@ -171,3 +174,5 @@ module BATCHARGER_controller (
     end
   end
 endmodule
+
+// pragma protect end
