@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Abstract Options File
-;; Abstract_Generator version sub-version  IC6.1.8-64b.500.32  on Dec 13 12:53:54 2024
+;; Abstract_Generator version sub-version  IC6.1.8-64b.500.32  on Dec 17 17:11:12 2024
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 absSetOption( "DateTimeLog"                "false")
@@ -110,7 +110,7 @@ absSetOption( "ReadOnlyTechnology"         "true")
 absSetOption( "numOfPointsInEllipseOrDonut" "64")
 
 
-absSelectBin("Core" )
+absDeselectBin("Core" )
 absSetBinOption( "Core" "PinsTextPinMap"             "")
 absSetBinOption( "Core" "PinsPowerNames"             "^((V(DD|CC))|(v(dd|cc)))(!)?$")
 absSetBinOption( "Core" "PinsGroundNames"            "^((VSS|GND)|(vss|gnd))(!)?$")
@@ -701,7 +701,7 @@ absSetBinOption( "Corner" "VerifyConfigFile"           "")
 absSetBinOption( "Corner" "VerifyTargetGeom"           "")
 absSetBinOption( "Corner" "VerifyTargetIgnore"         "EXCHANGEFORMATS-USER-525\nEXCHANGEFORMATS-USER-392\nEXCHANGEFORMATS-USER-34\nno clock net")
 
-absDeselectBin("Block" )
+absSelectBin("Block" )
 absSetBinOption( "Block" "PinsTextPinMap"             "")
 absSetBinOption( "Block" "PinsPowerNames"             "^((V(DD|CC))|(v(dd|cc)))(!)?$")
 absSetBinOption( "Block" "PinsGroundNames"            "^((VSS|GND)|(vss|gnd))(!)?$")

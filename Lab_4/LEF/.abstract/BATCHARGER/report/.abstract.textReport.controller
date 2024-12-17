@@ -8,17 +8,17 @@ Time taken by the abstract generator processes:
 **************************************************************************
 Process                            Real Time(sec)            CPU Time(sec)
 **************************************************************************
-Pins                               0.036                     0.020     
-Extract                            0.021                     0.010     
-Final pin creation                 0.379                     0.100     
-Blockage creation                  0.073                     0.030     
-Abstract view creation             0.808                     0.040     
+Pins                               0.043                     0.040     
+Extract                            0.017                     0.010     
+Final pin creation                 0.155                     0.130     
+Blockage creation                  0.036                     0.040     
+Abstract view creation             0.207                     0.060     
 **************************************************************************
 
 
 *******************************************************************************
-Extracted nets:     84
-Extracted shapes:   84
+Extracted nets:     87
+Extracted shapes:   87
 *******************************************************************************
 
 

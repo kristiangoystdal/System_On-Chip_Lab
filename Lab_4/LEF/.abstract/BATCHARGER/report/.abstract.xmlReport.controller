@@ -9,37 +9,37 @@
         <h1>Time taken by the abstract generator processes:</h1>
         <process>
             <name>Pins</name>
-            <real_time>0.036</real_time>
-            <cpu_time>0.020</cpu_time>
+            <real_time>0.043</real_time>
+            <cpu_time>0.040</cpu_time>
         </process>
         <process>
             <name>Extract</name>
-            <real_time>0.021</real_time>
+            <real_time>0.017</real_time>
             <cpu_time>0.010</cpu_time>
         </process>
         <process>
             <name>Final pin creation</name>
-            <real_time>0.379</real_time>
-            <cpu_time>0.100</cpu_time>
+            <real_time>0.155</real_time>
+            <cpu_time>0.130</cpu_time>
         </process>
         <process>
             <name>Blockage creation</name>
-            <real_time>0.073</real_time>
-            <cpu_time>0.030</cpu_time>
+            <real_time>0.036</real_time>
+            <cpu_time>0.040</cpu_time>
         </process>
         <process>
             <name>Abstract view creation</name>
-            <real_time>0.808</real_time>
-            <cpu_time>0.040</cpu_time>
+            <real_time>0.207</real_time>
+            <cpu_time>0.060</cpu_time>
         </process>
     </process_info>
     <nets_info>
         <h1>Time taken to extract nets, where the real time is greater than 5 seconds:</h1>
         <nets_stats>
             <h2>Extracted nets: </h2>
-            <nets_count>84</nets_count>
+            <nets_count>87</nets_count>
             <h3>Extracted shapes: </h3>
-            <shape_count>84</shape_count>
+            <shape_count>87</shape_count>
         </nets_stats>
     </nets_info>
     <blockage_info>

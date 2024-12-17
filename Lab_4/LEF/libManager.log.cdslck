@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      ist1112497
 HostName                       fatima.novalocal
-ProcessIdentifier              15115
-ProcessCreationTime_UTC        1734112091
-ProcessCreationTime_Readable   Fri Dec 13 17:48:11 2024 WET
+ProcessIdentifier              25297
+ProcessCreationTime_UTC        1734453413
+ProcessCreationTime_Readable   Tue Dec 17 16:36:53 2024 WET
 AppIdentifier                  /opt/ic_tools/cad/ic618_hf320/tools/dfII/bin/64bit/libManager
 OSType                         lnx86
 ReasonForPlacingEditLock       log file
 FilePathUsedToEditLock         /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/libManager.log
-TimeEditLocked                 Fri Dec 13 17:53:03 2024 WET
+TimeEditLocked                 Tue Dec 17 16:37:31 2024 WET
