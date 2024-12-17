@@ -1,0 +1,120 @@
+Starting Command: commit_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment BATCHARGER_controller_atpg -testmode FULLSCAN -workdir /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 19.12-s004_1, built Dec 04 2019 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_commit_tests_FULLSCAN_BATCHARGER_controller_atpg_121124145623-267713000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Dec 11 14:56:23 2024  WET
+            Host machine is fatima.novalocal, x86_64 running Linux 3.10.0-1160.99.1.el7.x86_64.
+            This job is process number 28790.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+            -TESTMODE FULLSCAN
+
+            -INEXPERIMENT BATCHARGER_controller_atpg
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_commit_tests_FULLSCAN_BATCHARGER_controller_atpg_121124145623-267713000
+            -STDOUT summary
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+         201408 /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/TBDbin.FULLSCAN.BATCHARGER_controller_atpg
+
+INFO (TBD-807): Experiment BATCHARGER_controller_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.14.7 (Relative test numbers 1 thru 161).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                   ---- ATCov ----   ---------------- Testmode Faults --------------------  ------------------ Global Faults --------------------
+                 Testmode Global      Total     Tested   Possibly  Redundant   Untested      Total     Tested   Possibly  Redundant   Untested
+
+Total Static         0.00   0.00       2432          0          0          0       2432       2432          0          0          0       2432
+Collapsed Static     0.00   0.00       1537          0          0          0       1537       1537          0          0          0       1537
+PI Static            0.00   0.00        158          0          0          0        158        158          0          0          0        158
+PO Static            0.00   0.00         18          0          0          0         18         18          0          0          0         18
+
+Total Dynamic                             0
+
+Parametric        
+
+IDDq                 0.00   0.00       2432          0                             2432       2432          0                             2432
+
+Path                 0.00   0.00          0          0                                0          0          0                                0
+
+
+
+Testmode and Global statistics after commit_tests
+
+                   ---- ATCov ----   ---------------- Testmode Faults --------------------  ------------------ Global Faults --------------------
+                 Testmode Global      Total     Tested   Possibly  Redundant   Untested      Total     Tested   Possibly  Redundant   Untested
+
+Total Static        99.67  99.67       2432       2422          0          2          8       2432       2422          0          2          8
+Collapsed Static    99.48  99.48       1537       1528          0          1          8       1537       1528          0          1          8
+PI Static           97.47  97.47        158        154          0          0          4        158        154          0          0          4
+PO Static           77.78  77.78         18         14          0          0          4         18         14          0          0          4
+
+Total Dynamic                             0
+
+Parametric        
+
+IDDq                 0.00   0.00       2432          0                             2432       2432          0                             2432
+
+Path                 0.00   0.00          0          0                                0          0          0                                0
+
+
+INFO (TBD-810): Experiment BATCHARGER_controller_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.14.7 (Relative test numbers 1 to 161).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 2
+  tester loops    = 2
+  test procedures = 16
+  test sequence   = 161
+  init sequencess = 2
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+         201408 /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/TBDbin.FULLSCAN 
+         102400 /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,823,248  bytes
+
+                      CPU Time =    0:00:00.04
+                  Elapsed Time =    0:00:05.29                    [end TDA_001]
+
+     Date Ended:  Wednesday Dec 11 14:56:29 2024  WET
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment BATCHARGER_controller_atpg odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.14.7 (Relative test numbers 1 thru 161).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment BATCHARGER_controller_atpg is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.14.7 (Relative test numbers 1 to 161).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,3 @@
+SOURCE=/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/BATCHARGER_controller.test_netlist.v
+TECHLIB=../../SIMULATION/verilog_libs/fsc0h_d_generic_core_21.lib.src
+RUNDIR=/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/
