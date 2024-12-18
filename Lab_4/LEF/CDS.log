@@ -1,0 +1,1946 @@
+\# Program start time:     UTC 2024.12.17 16:36:41.778
+\# Local time: WET (UTC+00:00) 2024.12.17 16:36:41.778
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 05/03/2023 09:48 (sjfhw317) $
+\o Hierarchy:		/opt/ic_tools/cad/ic618_hf320/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.32  (64-bit addresses)
+\# Command line:	/opt/ic_tools/cad/ic618_hf320/tools/dfII/bin/64bit/virtuoso
+\# Host name (type):	fatima.novalocal (x86_64)
+\# Operating system:	Linux 3.10.0-1160.99.1.el7.x86_64 #1 SMP Wed Sep 13 14:19:20 UTC 2023
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	localhost:33.0 (1280x720)
+\# Available geometry:			TL(0:0) BR(1279:719)
+\# X server:			Colin Harrison
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 60900031)
+\# X resource pool:	base 0xa00000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        645 MB
+\# Available memory:	      7,259 MB
+\# System memory:	     15,885 MB
+\# Maximum memory size:	     15,433 MB
+\# Max mem available:	      7,452 MB
+\# Initial memory used:	        193 MB
+\#        process size:	      1,802 MB
+\# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 4.00/4.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ist1112497
+\o Working Directory:	fatima.novalocal:/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER
+\# Process Id:		25114
+\o 
+\o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\# Memory report: using         300 MB, process size 1,915 MB at UTC 2024.12.17 16:36:46.323
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [16:36:42.190385] Configured Lic search path (22.01-s002): 5280@ofelia.tagus.ist.utl.pt
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
+\o Calibre MGC_HOME not set
+\o END OF USER CUSTOMIZATION
+\p > 
+\w *WARNING* could not load font "-*-courier-medium-r-*-*-12-*", using font "fixed"
+\# Loading perfDiag...
+\# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
+\o Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 25114' to open it when Virtuoso freezes.
+\# (PerfDiag): Loading backtrace from /opt/ic_tools/cad/ic618_hf320/tools/lib/64bit/cdnslibunwind.so
+\a hiResizeWindow(window(1) list(228:193 1023:386))
+\r t
+\# Available memory:          7,141 MB at UTC 2024.12.17 16:36:52.752
+\# Memory report: Maximum memory size now 7,536 MB at UTC 2024.12.17 16:36:52.752
+\# Thread usage report: 10 active threads, active load 1.40 at UTC 2024.12.17 16:36:52.752
+\a ddsOpenLibManager()
+\# [16:37:31.014587] Periodic Lic check successful
+\# [16:37:31.014617] Feature usage summary:
+\# [16:37:31.014619] 111
+\r t
+\i ddsServOpen("BATCHARGER" "controller" "layout" "edit" nil)
+\o Loading le.cxt 
+\w *WARNING* could not load font "-*-helvetica-medium-r-*-*-12-*", using font "fixed"
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\# Memory report: using         405 MB, process size 2,037 MB at UTC 2024.12.17 16:37:39.702
+\# Displaying modal dbox "_icLicLicenseQuestionDBox", title "Next License"
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\p > 
+\a hiDBoxUser(_icLicLicenseQuestionDBox nil 1)
+\r t
+\# Displaying modal dbox "_icLicLicenseQuestionDBox", title "Next License"
+\p > 
+\a hiDBoxUser(_icLicLicenseQuestionDBox nil 1)
+\r t
+\# Current Window: window(2)
+\o Loading umc13mmrf/libInit.il ...
+\o 	Loading umc13mmrf/loadCxt.ile ... done!
+\o 	Loading context 'umc13mmrf' from library 'umc13mmrf' ... done!
+\o 	Loading context 'pdkUtils' from library 'umc13mmrf' ... done!
+\o 	Loading context 'Util' from library 'umc13mmrf' ... done!
+\o 	Loading context 'userUtil' from library 'umc13mmrf' ... done!
+\o 	Loading context 'oxf_cb' from library 'umc13mmrf' ... done!
+\o 	Loading umc13mmrf/display.drf ... done!
+\o 	Loading umc13mmrf/libInitCustomExit.il ... Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\o Loading adexl.cxt 
+\# Memory report: using         523 MB, process size 2,270 MB at UTC 2024.12.17 16:37:46.048
+\o Loading vdsil.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\w *WARNING* Font name -*-helvetica-medium-r-*-*-12-* is invalid 
+\o Loading drdEdit.cxt 
+\o Loading rte.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading devCheck.cxt 
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o done!
+\o Loaded umc13mmrf/libInit.il successfully!
+\o Loading label display file for library umc13mmrf
+\o Loading cdf.cxt 
+\o Loading soi.cxt 
+\o Loading vfoCmd.cxt 
+\o Loading wsp.cxt 
+\o Load shared object file /opt/ic_tools/cad/assura416_hf111/tools.lnx86/assura/lib/64bit/libavview.so
+\o Version:  @(#)$CDS: libavview.so version av4.1:Production:dfII6.1.8-64b:IC6.1.8-64b.500.17 03/26/21 10:28 (sjfhw780) $
+\o Version:  Assura:"6.1.8", layout editor:"6.1.8"
+\o The QRC UI context file was successfully loaded
+\o Loading sna.cxt
+\w *WARNING* hiEnableMenuItem: menu item not in the menu.
+\w *WARNING* hiDisableMenuItem: Can't find qrcP2PRAnalysisItem in menu qrcMenu.
+\o INFO: Adding Quantus SND Analysis into Assura Menu
+\o Loading mpt.cxt 
+\o Loading vb.cxt 
+\o Loading see.cxt 
+\o Loading oi.cxt 
+\o Loading treeAssistant.cxt 
+\o Loading nt.cxt 
+\o Loading asst.cxt 
+\o Loading simui.cxt 
+\# Memory report: Maximum memory size now 7,706 MB at UTC 2024.12.17 16:37:52.076
+\o Loading hsm.cxt 
+\o Loading ia.cxt 
+\o Loading vca.cxt 
+\o Loading atd.cxt 
+\a when(dwindow('ptePaletteAssistant1) hiMapWindow(dwindow('ptePaletteAssistant1)))
+\r t
+\a hiResizeWindow(swindow(1) list(128:0 1028:689))
+\r t
+\a hiResizeWindow(swindow(1) list(0:40 1280:697))
+\r t
+\a mouseSingleSelectPt()
+\i -5.4:-7
+\r nil
+\a hiZoomInAtMouse()
+\i -2.5:-3.6
+\r t
+\a hiZoomInAtMouse()
+\i -2.5:-3.6
+\r t
+\a hiZoomInAtMouse()
+\i -2.5:-3.5
+\r t
+\a hiZoomInAtMouse()
+\i -2.5:-3.5
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i -2.3:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i -2.2:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i -2.2:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i -2.2:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i -2.3:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i -2.3:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i 0.3:-2.9
+\r t
+\a hiZoomOutAtMouse()
+\i 0.3:-2.9
+\r t
+\a hiZoomOutAtMouse()
+\i 0.2:-3.2
+\r t
+\a hiZoomOutAtMouse()
+\i 0.3:-3.6
+\r t
+\a hiZoomOutAtMouse()
+\i 0.3:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i 0.2:-3.5
+\r t
+\a hiZoomInAtMouse()
+\i 15.7:-7.4
+\r t
+\a hiZoomInAtMouse()
+\i 15.2:-6.4
+\r t
+\a hiZoomInAtMouse()
+\i 15.2:-6.2
+\r t
+\a hiZoomInAtMouse()
+\i 15.2:-6.2
+\r t
+\a hiZoomInAtMouse()
+\i 15.2:-6.2
+\r t
+\a hiZoomOutAtMouse()
+\i 10.7:-6.6
+\r t
+\a hiZoomOutAtMouse()
+\i 10.7:-6.6
+\r t
+\a hiZoomInAtMouse()
+\i 0.2:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 0.2:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 0.2:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 0.2:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 0.2:-2.6
+\r t
+\a pteShowUsedLPP(t)
+\r t
+\a pteSetActiveLpp("ME2 pin")
+\r nil
+\a pteSetActiveLpp("ME3 pin")
+\r nil
+\a pteSetActiveLpp("prBoundary drawing")
+\r nil
+\a hiZoomOutAtMouse()
+\i -0.5:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i -0.6:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i -0.6:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i -0.6:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i -0.5:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i -0.5:-3.2
+\r t
+\a hiZoomOutAtMouse()
+\i -0.6:-3.1
+\r t
+\a hiZoomInAtMouse()
+\i -0.5:-3.1
+\r t
+\a hiZoomInAtMouse()
+\i -6.8:-13.7
+\r t
+\a hiZoomInAtMouse()
+\i -4.1:-8.8
+\r t
+\a hiZoomInAtMouse()
+\i -3.9:-5
+\r t
+\a hiZoomInAtMouse()
+\i 0.8:-3.9
+\r t
+\a hiZoomOutAtMouse()
+\i 0.8:-4
+\r t
+\a hiZoomOutAtMouse()
+\i 0.7:-4
+\r t
+\a hiZoomOutAtMouse()
+\i 0.8:-4
+\r t
+\a hiZoomOutAtMouse()
+\i 0.6:-4
+\r t
+\a hiZoomInAtMouse()
+\i 7.6:-13.5
+\r t
+\a leSelBoxOrStretch()
+\i -3.1:-12.1
+\i -3.1:-12.1
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 6.2:0.1
+\r t
+\r t
+\a leSelBoxOrStretch()
+\i 64.4:-19.6
+\i 64.4:-19.6
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 49:0.9
+\r t
+\r t
+\a mouseSingleSelectPt()
+\i 64.8:-14.4
+\r nil
+\a mouseSingleSelectPt()
+\i 56.7:-26.7
+\r nil
+\a mouseSingleSelectPt()
+\i 56.5:-27.5
+\r t
+\a _lxHiMousePopUp()
+\o Loading apAssist.cxt 
+\i 56.3:-27.4
+\r nil
+\# Memory report: Maximum memory size now 7,532 MB at UTC 2024.12.17 16:39:41.106
+\a hiPopupDown(_cxtMenu)
+\r t
+\a leHiEditProp()
+\r t
+\# Memory report: Maximum memory size now 7,383 MB at UTC 2024.12.17 16:39:50.752
+\a geiPlSetPropValue("editorNum0" "attribute" "Width" "double" 56.32)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Height" "double" 56.32)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Bottom" "double" -56.32)
+\r t
+\# Memory report: Maximum memory size now 7,141 MB at UTC 2024.12.17 16:43:00.751
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a hiZoomInAtMouse()
+\i 55.9:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56:-3.4
+\r t
+\a hiZoomInAtMouse()
+\i 56.3:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i 56.3:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i 56.3:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i 56.4:-3.5
+\r t
+\a hiZoomOutAtMouse()
+\i 56.4:-3.4
+\r t
+\a hiZoomOutAtMouse()
+\i 56.3:-3.6
+\r t
+\a hiZoomOutAtMouse()
+\i 56.2:-3.6
+\r t
+\a hiZoomOutAtMouse()
+\i 56.2:-3.7
+\r t
+\a hiZoomOutAtMouse()
+\i 56.2:-3.7
+\r t
+\a hiZoomInAtMouse()
+\i 58.2:-0.2
+\r t
+\a hiZoomInAtMouse()
+\i 58.2:-0.2
+\r t
+\a hiZoomInAtMouse()
+\i 58.2:-0.2
+\r t
+\a hiZoomInAtMouse()
+\i 58.2:-0.2
+\r t
+\a hiZoomInAtMouse()
+\i 56.3:-0.7
+\r t
+\a mouseSingleSelectPt()
+\i 57:-1.8
+\r nil
+\a leSelBoxOrStretch()
+\i 55.9:-2.6
+\i 55.9:-2.6
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 56.5:-0.2
+\r t
+\r t
+\a leSelBoxOrStretch()
+\i 56.1:-0.4
+\i 56.1:-0.4
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 56.1:-0.4
+\r t
+\r t
+\a leHiEditProp()
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0)
+\r t
+\# Available memory:          6,415 MB at UTC 2024.12.17 16:43:29.837
+\a geiPlSetPropValue("editorNum0" "attribute" "Right" "double" 56.32)
+\r t
+\# Memory report: Maximum memory size now 6,894 MB at UTC 2024.12.17 16:43:49.751
+\a geiPlSetPropValue("editorNum0" "attribute" "Left" "double" 56.12)
+\r t
+\a geiPlInvokePlistAction("editorNum0" "apply")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a hiZoomOutAtMouse()
+\i 52.3:-2.2
+\r t
+\a hiZoomOutAtMouse()
+\i 52.4:-2.2
+\r t
+\a hiZoomOutAtMouse()
+\i 52.6:-2.1
+\r t
+\a hiZoomOutAtMouse()
+\i 52.6:-2
+\r t
+\a hiZoomOutAtMouse()
+\i 52.5:-2.1
+\r t
+\a hiZoomOutAtMouse()
+\i 52.5:-2.1
+\r t
+\a hiZoomOutAtMouse()
+\i 50.6:-3
+\r t
+\a hiZoomInAtMouse()
+\i -18.2:-63.1
+\r t
+\a hiZoomInAtMouse()
+\i 4.1:-55.3
+\r t
+\a hiZoomInAtMouse()
+\i 1.9:-57.5
+\r t
+\a leSelBoxOrStretch()
+\i -2.8:-52.3
+\i -2.8:-52.3
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 37.7:-59.6
+\r t
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomInAtMouse()
+\i 3.4:-57.9
+\r t
+\a hiZoomOutAtMouse()
+\i 3.6:-57.5
+\r t
+\a hiZoomOutAtMouse()
+\i 3.6:-57.5
+\r t
+\a hiZoomOutAtMouse()
+\i 3.6:-57.5
+\r t
+\a hiZoomInAtMouse()
+\i 4:-55.9
+\r t
+\a hiZoomInAtMouse()
+\i 4:-56
+\r t
+\a leHiEditProp()
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Bottom" "double" -56.32)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Top" "double" -56.12)
+\r t
+\a geiPlInvokePlistAction("editorNum0" "apply")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a hiZoomOutAtMouse()
+\i 5.2:-57
+\r t
+\a hiZoomOutAtMouse()
+\i 5.2:-56.9
+\r t
+\a hiZoomOutAtMouse()
+\i 5.3:-57
+\r t
+\a hiZoomOutAtMouse()
+\i 5.2:-56.9
+\r t
+\a hiZoomOutAtMouse()
+\i 17:-51.1
+\r t
+\a hiZoomOutAtMouse()
+\i 17.6:-50.3
+\r t
+\a hiZoomOutAtMouse()
+\i -36.7:-64.8
+\r t
+\a hiZoomOutAtMouse()
+\i -256.3:-122.9
+\r t
+\a hiZoomInAtMouse()
+\i 21.9:-15.4
+\r t
+\a hiZoomInAtMouse()
+\i 25.3:-28.5
+\r t
+\a leZoomToSelSet()
+\r t
+\a hiZoomOutAtMouse()
+\i 7.8:-55.3
+\r t
+\a hiZoomOutAtMouse()
+\i 7.8:-55.3
+\r t
+\a hiZoomOutAtMouse()
+\i 7.8:-55.3
+\r t
+\a hiZoomOutAtMouse()
+\i 7.8:-55.3
+\r t
+\a mouseSingleSelectPt()
+\i 47.9:-39.9
+\r t
+\a mouseSingleSelectPt()
+\i 57.1:-47.3
+\r nil
+\a leZoomToSelSet()
+\p > 
+\a leZoomToSelSet()
+\p > 
+\a mouseAddPt(t)
+\i 48.783:-56.526
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a mouseAddPt(t)
+\i 43.741:-40.807
+\r t
+\a mouseAddPt(t)
+\i 70.137:-71.948
+\r t
+\r nil
+\a mouseSingleSelectPt()
+\i 32.2:-34
+\r t
+\a leZoomToSelSet()
+\r t
+\a mouseSingleSelectPt()
+\i 64.8:-25.1
+\r nil
+\a hiZoomInAtMouse()
+\i 24.5:-50.8
+\r t
+\a hiZoomInAtMouse()
+\i 25:-51.3
+\r t
+\a hiZoomOutAtMouse()
+\i 17.8:-49.7
+\r t
+\a hiZoomOutAtMouse()
+\i 17.5:-49.7
+\r t
+\a hiZoomOutAtMouse()
+\i 6.2:-54.1
+\r t
+\a hiZoomInAtMouse()
+\i 7.2:-57.5
+\r t
+\a hiZoomInAtMouse()
+\i 6.3:-58.5
+\r t
+\a hiZoomInAtMouse()
+\i 6.8:-57.3
+\r t
+\a hiZoomInAtMouse()
+\i 6.8:-57.3
+\r t
+\a hiZoomOutAtMouse()
+\i 18.1:-56.6
+\r t
+\a hiZoomInAtMouse()
+\i 18.1:-56.6
+\r t
+\a hiZoomOutAtMouse()
+\i 19.8:-56.5
+\r t
+\a hiZoomInAtMouse()
+\i 19.7:-56.5
+\r t
+\a hiZoomInAtMouse()
+\i 20.2:-56.4
+\r t
+\a hiZoomInAtMouse()
+\i 20.2:-56.4
+\r t
+\a hiZoomInAtMouse()
+\i 20.2:-56.4
+\r t
+\a hiZoomOutAtMouse()
+\i 18.5:-55.9
+\r t
+\a hiZoomInAtMouse()
+\i 18.4:-55.8
+\r t
+\a hiZoomOutAtMouse()
+\i 18.8:-56
+\r t
+\a leSelBoxOrStretch()
+\i 19.8:-56
+\i 19.8:-56
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 18.7:-56.5
+\r t
+\r t
+\a leHiCopy()
+\p > 
+\a mouseAddPt(t)
+\i 18.794:-56.227
+\r t
+\a mouseAddPt(t)
+\i 20.004:-56.204
+\r t
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Terminal Name" "string" "si")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 1)
+\r t
+\# Memory report: Maximum memory size now 7,389 MB at UTC 2024.12.17 16:46:07.751
+\a geiPlSetPropValue("editorNum0" "attribute" "Terminal Name" "string" "se")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 2)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Terminal Name" "string" "so")
+\r t
+\a geiPlChangePlistCategory("editorNum0" "property")
+\r t
+\a geiPlChangePlistCategory("editorNum0" "connectivity")
+\r t
+\a geiPlSetPropValue("editorNum0" "connectivity" "I/O Type" "cyclic" 1)
+\r t
+\a geiPlChangePlistCategory("editorNum0" "attribute")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "apply")
+\r t
+\a geiPlChangePlistCategory("editorNum0" "connectivity")
+\r t
+\a geiPlChangePlistCategory("editorNum0" "attribute")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a hiZoomOutAtMouse()
+\i 19.7:-56.5
+\r t
+\a hiZoomOutAtMouse()
+\i 19.7:-56.4
+\r t
+\a hiZoomOutAtMouse()
+\i 19.3:-56.6
+\r t
+\a hiZoomOutAtMouse()
+\i 19:-56.6
+\r t
+\a hiZoomOutAtMouse()
+\i 17.5:-56.5
+\r t
+\a hiZoomInAtMouse()
+\i 13.9:-47.4
+\r t
+\a hiZoomOutAtMouse()
+\i 13.9:-47.4
+\r t
+\a hiZoomOutAtMouse()
+\i 13.9:-47.4
+\r t
+\a hiZoomOutAtMouse()
+\i 13.9:-47.3
+\r t
+\a hiZoomInAtMouse()
+\i 37.4:-19
+\r t
+\a hiZoomInAtMouse()
+\i 37.4:-19
+\r t
+\a hiZoomOutAtMouse()
+\i 37.4:-19
+\r t
+\a leHiSplit()
+\p > 
+\a _deUpdateMenu('maskLayoutTools 2)
+\r t
+\a _deUpdateMenu('maskLayoutTools 2)
+\r t
+\# Memory report: using         623 MB, process size 2,383 MB at UTC 2024.12.17 16:47:17.764
+\a absOpenAdvancedAbstract(t)
+\o Loading iAG.cxt 
+\r t
+\a _abstractMainDialog_loadOptions_IL()
+\r t
+\o INFO (ABS-19020): Starting @(#)$CDS: virtuoso version 6.1.8-64b 05/03/2023 09:48 (sjfhw317) $, sub-version  IC6.1.8-64b.500.32 , on Linux 2.6.32-431.11.2.el6.x86_64
+\o INFO (ABS-10500): Library BATCHARGER Opening /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/BATCHARGER
+\o INFO (ABS-10011): Verifying Technology Data ...
+\o INFO (ABS-10012): Layer summary: 8 metal layer(s), 7 via layer(s), 2 poly layer(s), and 1 diff layer(s) found
+\o INFO (ABS-20023): Via summary: 7 valid via(s) found
+\o INFO (ABS-10503): Loading options for library BATCHARGER from file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.
+\o INFO (ABS-10501): Library BATCHARGER Loading 1 cells
+\o INFO (ABS-10502): Library BATCHARGER Loaded 1 cells
+\o INFO (ABS-10507): Library BATCHARGER opened
+\o INFO (ABS-10503): Loading options for library BATCHARGER from file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.
+\a _abstractMainDialog_createPinsChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_boundarySignalStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_boundaryPinStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_setSignalPinGrouping_IL( "Single" )
+\r t
+\a _abstractMainDialog_setPowerPinGrouping_IL( "Single" )
+\r t
+\a _abstractMainDialog_setSignalPinGrouping_IL( "Overlap" )
+\r t
+\a _abstractMainDialog_setPowerPinGrouping_IL( "Overlap" )
+\r t
+\a _abstractMainDialog_fractureBlockagesStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_fracturePinsStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_runAbstract_IL()
+\r t
+\o MPS: mpssImport failed because requested service is local to this process
+\o INFO (IAG-910003): Abstract generation is completed for the selected cells 'controller'. 
+\# Memory report: Maximum memory size now 7,242 MB at UTC 2024.12.17 16:51:37.752
+\# Memory report: Maximum memory size now 7,095 MB at UTC 2024.12.17 16:52:07.752
+\# Memory report: Maximum memory size now 6,954 MB at UTC 2024.12.17 16:53:37.752
+\a leHiCreateBus()
+\o Loading pinSolutions.cxt 
+\w *WARNING* (LE-105024): Switching to first valid routing layer ("PO1").
+\p > 
+\a hiZoomOutAtMouse()
+\i 22.3:-38.5
+\r t
+\a hiZoomOutAtMouse()
+\i 22.2:-54.2
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-65.8
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-64.8
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-64.6
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-64.5
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-64.4
+\r t
+\a hiZoomInAtMouse()
+\i 22.3:-64.4
+\r t
+\a hiZoomOutAtMouse()
+\i 21.9:-63.2
+\r t
+\a hiZoomOutAtMouse()
+\i 21.9:-63.2
+\r t
+\a hiZoomOutAtMouse()
+\i 21.9:-63.2
+\r t
+\a hiZoomInAtMouse()
+\i 22:-63.3
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\r nil
+\a hiZoomInAtMouse()
+\i 20.3:-62.3
+\r t
+\a hiZoomOutAtMouse()
+\i 20.3:-62.3
+\r t
+\a hiZoomOutAtMouse()
+\i 20.3:-62.3
+\r t
+\a hiZoomOutAtMouse()
+\i 20.2:-62.1
+\r t
+\a hiZoomOutAtMouse()
+\i 20.2:-61.9
+\r t
+\a hiZoomInAtMouse()
+\i 18.8:-59.4
+\r t
+\a hiZoomInAtMouse()
+\i 6.1:-34.2
+\r t
+\a hiZoomInAtMouse()
+\i 5.8:-33.7
+\r t
+\a mouseSingleSelectPt()
+\i -5.2:-41.3
+\r nil
+\a leSelBoxOrStretch()
+\i -1.4:-52.2
+\i -1.4:-52.2
+\p > 
+\a addPoint(hiGetCommandPoint())
+\i 29.4:-58.1
+\r t
+\r t
+\a leHiCreateChoiceOfPin()
+\p > 
+\a lePinForm->keepFirstTermName->value= t
+\r t
+\a lePinForm->keepFirstTermName->value= nil
+\r nil
+\a lePinForm->keepFirstTermName->value= t
+\r t
+\a lePinForm->keepFirstTermName->value= nil
+\r nil
+\a lePinForm->createPinLabel->value= t
+\r t
+\a lePinForm->pinLabelPlacementMode->value="auto"
+\r "auto"
+\a lePinForm->pinLabelPlacementMode->value="manual"
+\r "manual"
+\a leiDisplayPinNameDisplayForm()
+\r t
+\a le0PinSetNameDisplayForm->pinTextLayerChoice2->value="Same As Pin"
+\r "Same As Pin"
+\a hiFormCancel(le0PinSetNameDisplayForm) 
+\r t
+\a hiiSetCurrentForm('lePinForm)
+\r t
+\a hiiToggleEnterForm(lePinForm) 
+\r t
+\a leHiEditProp()
+\r t
+\a mouseAddPt(t)
+\i 6.782:-28.733
+\w *WARNING* (LE-103471): Cannot create pin because the terminal name has not been specified. Specify the
+\w terminal name for the pin to be created.
+\r t
+\a mouseAddPt(t)
+\i 4.442:-41.151
+\w *WARNING* (LE-103471): Cannot create pin because the terminal name has not been specified. Specify the
+\w terminal name for the pin to be created.
+\r t
+\a geSelectAllFig()
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "cancel")
+\r t
+\a cancelEnterFun()
+\r t
+\r nil
+\a leHiEditProp()
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 0)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 0)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 1)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "en")
+\r t
+\a leHiEditProp()
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 1)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 2)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 3)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 1)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 3)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 4)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 5)
+\r t
+\# Memory report: Maximum memory size now 7,185 MB at UTC 2024.12.17 16:58:14.752
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 6)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 7)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 8)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 9)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 10)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 11)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 12)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 13)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 14)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 15)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 16)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmin_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 17)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 18)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 19)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 20)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\# Memory report: Maximum memory size now 6,977 MB at UTC 2024.12.17 16:59:54.752
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 21)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 22)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 23)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 24)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 25)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tempmax_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 26)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 27)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 28)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 29)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 30)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 31)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 32)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 33)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 34)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmax_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 35)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 36)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 37)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 38)
+\r t
+\# Memory report: Maximum memory size now 6,836 MB at UTC 2024.12.17 17:02:10.751
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 39)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 40)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 41)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 42)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "iend_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 43)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tc")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 44)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 45)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "cc")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 46)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "cv")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 47)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "imonen")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 48)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vmonen")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 49)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tmonen")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 50)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vtok")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 51)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 52)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 53)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 54)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 55)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 56)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 57)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 58)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 59)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "ibat_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 60)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 61)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 62)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 63)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 64)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 65)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 66)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 67)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 68)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vbat_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 69)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 70)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_4")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 71)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_5")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 72)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_6")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 74)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_2")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 73)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_3")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 75)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_1")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 76)
+\r t
+\# Memory report: Maximum memory size now 6,582 MB at UTC 2024.12.17 17:09:38.752
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "tbat_0")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 77)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vcutoff_7")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 78)
+\r t
+\# Available memory:          5,724 MB at UTC 2024.12.17 17:09:48.751
+\# Memory report: Maximum memory size now 6,433 MB at UTC 2024.12.17 17:09:48.752
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "dvdd")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 79)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "dgnd")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 80)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "clk")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\# Memory report: Maximum memory size now 6,825 MB at UTC 2024.12.17 17:09:58.364
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 81)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "rstz")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 82)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "si")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 83)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "se")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 84)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "so")
+\r t
+\# Displaying modal dbox "dBox", title "Edit Properties"
+\p > 
+\a hiDBoxOK(dBox)
+\r t
+\a _lePlTreeClickObject("editorNum0" "None" 0 85)
+\r t
+\a geiPlSetPropValue("editorNum0" "attribute" "Pin Name" "string" "vpreset_0")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "apply")
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a leHiEditProp()
+\r t
+\a geiPlInvokePlistAction("editorNum0" "done")
+\r t
+\a mouseSingleSelectPt()
+\i -6.2:-39.4
+\r nil
+\a leHiSplit()
+\p > 
+\a leHiSave()
+\# Current Window: window(2) Window cellview: BATCHARGER:controller:layout  Application: Layout
+\r t
+\a _abstractMainDialog_closeEvent_IL()
+\r t
+\o INFO (ABS-19021): Finished sub-version  IC6.1.8-64b.500.32 
+\o INFO (ABS-10508): Library BATCHARGER closing /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/BATCHARGER
+\o INFO (ABS-10509): Saving existing options file for library BATCHARGER to /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.prev
+\o INFO (ABS-10511): Saving current option settings for library BATCHARGER to the file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.
+\o INFO (ABS-10515): Library BATCHARGER closed
+\o INFO (ABS-10529): Abstract Generation finished for Library BATCHARGER 
+\a absOpenAdvancedAbstract(t)
+\r t
+\a _abstractMainDialog_loadOptions_IL()
+\r t
+\o INFO (ABS-19020): Starting @(#)$CDS: virtuoso version 6.1.8-64b 05/03/2023 09:48 (sjfhw317) $, sub-version  IC6.1.8-64b.500.32 , on Linux 2.6.32-431.11.2.el6.x86_64
+\o INFO (ABS-10500): Library BATCHARGER Opening /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/BATCHARGER
+\o Loading layers.cxt 
+\o INFO (ABS-10011): Verifying Technology Data ...
+\o INFO (ABS-10012): Layer summary: 8 metal layer(s), 7 via layer(s), 2 poly layer(s), and 1 diff layer(s) found
+\o INFO (ABS-20023): Via summary: 7 valid via(s) found
+\o INFO (ABS-10503): Loading options for library BATCHARGER from file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.
+\o INFO (ABS-10501): Library BATCHARGER Loading 1 cells
+\o INFO (ABS-10502): Library BATCHARGER Loaded 1 cells
+\o INFO (ABS-10507): Library BATCHARGER opened
+\o INFO (ABS-10503): Loading options for library BATCHARGER from file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/.abstract/BATCHARGER/.abstract.options.
+\a _abstractMainDialog_createPinsChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_boundarySignalStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_boundaryPinStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_setSignalPinGrouping_IL( "Single" )
+\r t
+\a _abstractMainDialog_setPowerPinGrouping_IL( "Single" )
+\r t
+\a _abstractMainDialog_setSignalPinGrouping_IL( "Overlap" )
+\r t
+\a _abstractMainDialog_setPowerPinGrouping_IL( "Overlap" )
+\r t
+\a _abstractMainDialog_fractureBlockagesStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_fracturePinsStateChanged_IL( "2" )
+\r t
+\a _abstractMainDialog_runAbstract_IL()
+\r t
+\# Memory report: using         783 MB, process size 2,541 MB at UTC 2024.12.17 17:11:16.497
+\o INFO (IAG-910003): Abstract generation is completed for the selected cells 'controller'. 
+\# Memory report: Maximum memory size now 7,020 MB at UTC 2024.12.17 17:11:47.752
+\# Available memory:          6,585 MB at UTC 2024.12.17 17:11:57.752
+\# Memory report: Maximum memory size now 7,368 MB at UTC 2024.12.17 17:11:57.752
+\# Memory report: Maximum memory size now 7,692 MB at UTC 2024.12.17 17:12:57.752
+\# Memory report: Maximum memory size now 7,421 MB at UTC 2024.12.17 17:16:17.752
+\# Memory report: Maximum memory size now 7,911 MB at UTC 2024.12.17 17:23:57.752
+\i ddsServOpen("BATCHARGER" "controller" "abstract" "edit" nil)
+\# Current Window: window(3)
+\a when(dwindow('ptePaletteAssistant2) hiMapWindow(dwindow('ptePaletteAssistant2)))
+\r t
+\a hiResizeWindow(swindow(2) list(128:0 1028:689))
+\r t
+\a hiResizeWindow(swindow(2) list(0:40 1280:697))
+\r t
+\a hiZoomInAtMouse()
+\i -0.8:0.3
+\r t
+\a hiZoomInAtMouse()
+\i 0.6:-0.9
+\r t
+\a hiZoomInAtMouse()
+\i 0.6:-0.9
+\r t
+\a hiZoomOutAtMouse()
+\i 0.6:-0.9
+\r t
+\a hiZoomInAtMouse()
+\i 1.3:-2
+\r t
+\a hiZoomInAtMouse()
+\i 0.1:-2.4
+\r t
+\a hiZoomInAtMouse()
+\i 0.1:-2.4
+\r t
+\a hiZoomOutAtMouse()
+\i 0.1:-2.4
+\r t
+\a hiZoomInAtMouse()
+\i -0.2:-2.5
+\r t
+\a hiZoomOutAtMouse()
+\i -0.2:-2.5
+\r t
+\a hiZoomOutAtMouse()
+\i -0.2:-2.5
+\r t
+\a hiZoomOutAtMouse()
+\i -0.1:-2.5
+\r t
+\a hiZoomInAtMouse()
+\i 1.6:-0.6
+\r t
+\a hiZoomInAtMouse()
+\i 1.6:-0.6
+\r t
+\a hiZoomOutAtMouse()
+\i 1.8:-0.4
+\r t
+\a pteShowUsedLPP(t)
+\r t
+\a pteSetActiveLpp("ME2 net")
+\r nil
+\a pteSetVisible("ME2 net" nil "Layers")
+\r t
+\a pteSetVisible("ME2 net" t "Layers")
+\r t
+\a pteSetVisible("ME2 net" nil "Layers")
+\r t
+\a pteSetVisible("ME2 net" t "Layers")
+\r t
+\a pteSetVisible("ME3 net" nil "Layers")
+\r t
+\a pteSetVisible("ME3 net" t "Layers")
+\r t
+\a pteSetVisible("ME3 net" nil "Layers")
+\r t
+\a pteSetVisible("ME3 net" t "Layers")
+\r t
+\a hiZoomOutAtMouse()
+\i 4.5:-2.5
+\r t
+\a hiZoomOutAtMouse()
+\i 4.5:-2.6
+\r t
+\a hiZoomOutAtMouse()
+\i -0.6:-4.7
+\r t
+\a hiZoomOutAtMouse()
+\i -0.7:-4.7
+\r t
+\a hiZoomInAtMouse()
+\i 27.9:-59.9
+\r t
+\a hiZoomInAtMouse()
+\i 28.1:-59.8
+\r t
+\a hiZoomInAtMouse()
+\i 28.4:-57.5
+\r t
+\a hiZoomInAtMouse()
+\i 19.3:-56.5
+\r t
+\a pteSetVisible("ME2 net" nil "Layers")
+\r t
+\a pteSetVisible("ME2 net" t "Layers")
+\r t
+\a hiZoomOutAtMouse()
+\i 25.5:-53.9
+\r t
+\a hiZoomOutAtMouse()
+\i 25.5:-53.9
+\r t
+\a hiZoomOutAtMouse()
+\i 25.5:-53.8
+\r t
+\a hiZoomOutAtMouse()
+\i 57.6:-43.3
+\r t
+\a hiZoomOutAtMouse()
+\i 57.6:-43.4
+\r t
+\a hiZoomInAtMouse()
+\i 57.1:-3
+\r t
+\a hiZoomInAtMouse()
+\i 57.1:-3
+\r t
+\a hiZoomInAtMouse()
+\i 57.1:-3
+\r t
+\a hiZoomInAtMouse()
+\i 56.6:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 56.6:-2.6
+\r t
+\a hiZoomInAtMouse()
+\i 56.6:-2.6
+\r t
+\a hiZoomOutAtMouse()
+\i 56.5:-3.1
+\r t
+\a hiZoomOutAtMouse()
+\i 56.5:-3.2
+\r t
+\a hiZoomOutAtMouse()
+\i 47.6:-12.2
+\r t
+\a hiZoomInAtMouse()
+\i 56.1:-1.9
+\r t
+\a hiZoomInAtMouse()
+\i 56.3:-1.9
+\r t
+\a hiZoomInAtMouse()
+\i 56.3:-1.9
+\r t
+\a pteSetVisible("ME3 net" nil "Layers")
+\r t
+\a pteSetVisible("ME3 net" t "Layers")
+\r t
+\a pteSetVisible("ME3 net" nil "Layers")
+\r t
+\a pteSetVisible("ME3 net" t "Layers")
+\r t
+\a pteSetVisible("ME3 net" nil "Layers")
+\r t
+\a pteSetVisible("ME3 net" t "Layers")
+\r t
+\a hiCloseWindow(swindow(2))
+\# Current Window: window(2) Window cellview: BATCHARGER:controller:layout  Application: Layout
+\r t
+\a _hiSetCurrentWinNum(2)
+\r t
+\a prtLEFOutCB()
+\o Loading lefdef.cxt 
+\p > 
+\a hiiSetCurrentForm('ldLEFOutForm)
+\r t
+\a ldLEFOutForm->ldLEFOutFileNameField->value="c"
+\r "c"
+\a ldLEFOutForm->ldLEFOutFileNameField->value="controller"
+\r "controller"
+\a ldLEFOutForm->ldLEFOutCellsField->value="controller"
+\r "controller"
+\a ldLEFOutForm->ldLEFOutViewsField->value="abstract"
+\r "abstract"
+\a hiFormDone(ldLEFOutForm)
+\o Dec 17 17:31:42 2024: Begin writing LEF file "/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/controller"
+\o lefout -lef /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/controller -lib BATCHARGER -cells \"controller\" -views \"abstract\" -ver 5.7
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.10s.
+\o INFO (DB-120008): oaSocket connection timeout value was set to 2 seconds.
+\o 
+\o ********************************************************************************
+\o Product   : Virtuoso(R) LEF Out 
+\o Program   : @(#)$CDS: lefout version 6.1.8-64b 05/03/2023 09:42 (sjfhw317) $
+\o SubVersion: sub-version  IC6.1.8-64b.500.32 
+\o Started at: 17-Dec-2024  17:31:43
+\o User Name : ist1112497
+\o Host Name : fatima.novalocal
+\o Directory : /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER
+\o DB Version: 	20230503 (SJ)
+\o CADENCE Design Systems, Inc.
+\o ********************************************************************************
+\o Running: lefout -lib BATCHARGER -cells "controller" -views "abstract" -lef /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER/controller -ver 5.7
+\o Loading umc13mmrf/libInit.il ...
+\o 	Loading umc13mmrf/loadCxt.ile ... done!
+\o 	Loading context 'umc13mmrf' from library 'umc13mmrf' ... done!
+\o 	Loading context 'pdkUtils' from library 'umc13mmrf' ... done!
+\o 	Loading context 'Util' from library 'umc13mmrf' ... done!
+\o 	Loading context 'userUtil' from library 'umc13mmrf' ... done!
+\o 	Loading context 'oxf_cb' from library 'umc13mmrf' ... done!
+\o 	Loading umc13mmrf/display.drf ... done!
+\o 	Loading umc13mmrf/libInitCustomExit.il ... done!
+\o Loaded umc13mmrf/libInit.il successfully!
+\o WARNING: (OALEFDEF-50144): NONDEFAULTRULE virtuosoDefaultExtractorSetup: LAYER TMV_RDL: invalid definition. This rule will be ignored. Ensure all layers in the valid routing layers constraint have a minWidth constraint defined and are metal or poly-routing material.
+\o WARNING: (OALEFDEF-50144): NONDEFAULTRULE virtuosoDefaultSetup: LAYER PO1: invalid definition. This rule will be ignored. Ensure all layers in the valid routing layers constraint have a minWidth constraint defined and are metal or poly-routing material.
+\o 
+\o Elapsed Time: 1.4s
+\o 
+\o lefout translation completed (errors: 0, warnings: 2).
+\# Displaying non-modal dbox "lefdefSaveDBox", title "PopUp Message"
+\r t
+\r t
+\a hiDBoxOK(lefdefSaveDBox)
+\r t

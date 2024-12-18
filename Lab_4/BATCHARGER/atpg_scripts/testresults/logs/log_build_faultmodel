@@ -1,0 +1,121 @@
+Starting Command: build_faultmodel 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_faultmodel -includedynamic no -workdir /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 19.12-s004_1, built Dec 04 2019 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_faultmodel_121124145536-173264000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Dec 11 14:55:36 2024  WET
+            Host machine is fatima.novalocal, x86_64 running Linux 3.10.0-1160.99.1.el7.x86_64.
+            This job is process number 28684.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts
+
+            -LOGFILE /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/testresults/logs/log_build_faultmodel_121124145536-173264000
+            -STDOUT summary
+            -includedynamic no
+[end TDA_009]
+INFO (TFW-117): Modus checked out a modus_atpg license.  [end TFW_117] 
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count            2
+Global Ignored Dynamic Fault Count           0
+
+
+                            Global Statistics
+
+                 -- ATCov --   ------------- Global Faults ----------------------
+                   Global      Total     Tested   Possibly  Redundant   Untested
+
+Total Static         0.00       2432          0          0          0       2432
+Collapsed Static     0.00       1537          0          0          0       1537
+PI Static            0.00        158          0          0          0        158
+PO Static            0.00         18          0          0          0         18
+
+Total Dynamic                      0
+
+Parametric        
+
+IDDq                 0.00       2432          0                             2432
+
+
+
+INFO (TFM-103): Creating faultStatus file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: FULLSCAN
+
+                   ---- ATCov ----   ---------------- Testmode Faults --------------------  ------------------ Global Faults --------------------
+                 Testmode Global      Total     Tested   Possibly  Redundant   Untested      Total     Tested   Possibly  Redundant   Untested
+
+Total Static         0.00   0.00       2432          0          0          0       2432       2432          0          0          0       2432
+Collapsed Static     0.00   0.00       1537          0          0          0       1537       1537          0          0          0       1537
+PI Static            0.00   0.00        158          0          0          0        158        158          0          0          0        158
+PO Static            0.00   0.00         18          0          0          0         18         18          0          0          0         18
+
+Total Dynamic                             0
+
+Parametric        
+
+IDDq                 0.00   0.00       2432          0                             2432       2432          0                             2432
+
+Path                 0.00   0.00          0          0                                0          0          0                                0
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active    #Faults    #Active  #Inactive
+Total Static       100.00       2432       2432          0
+Collapsed Static   100.00       1537       1537          0
+PI Static          100.00        158        158          0
+PO Static          100.00         18         18          0
+
+Total Dynamic                      0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      FULLSCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,427,984  bytes
+
+                      CPU Time =    0:00:00.04
+                  Elapsed Time =    0:00:03.23                    [end TDA_001]
+
+     Date Ended:  Wednesday Dec 11 14:55:40 2024  WET
+
+INFO (TFW-119): Modus checked in a modus_atpg license.  [end TFW_119] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS_SCAN/BATCHARGER/atpg_scripts/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
