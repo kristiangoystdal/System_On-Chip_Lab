@@ -1,0 +1,1076 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+  LAYER LEF58_TYPE STRING ;
+  LAYER LEF58_SPACING STRING ;
+  LAYER LEF58_WIDTH STRING ;
+END PROPERTYDEFINITIONS
+
+UNITS
+  DATABASE MICRONS 1000 ;
+END UNITS
+MANUFACTURINGGRID 0.005 ;
+LAYER OVERLAP
+  TYPE OVERLAP ;
+END OVERLAP
+
+LAYER NWEL
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE NWELL ;" ;
+  PROPERTY LEF58_SPACING "SPACING 1 ;" ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.63 ;" ;
+END NWEL
+
+LAYER NPLUS
+  TYPE IMPLANT ;
+  WIDTH 0.24 ;
+  SPACING 0.24 ;
+  AREA 0.1764 ;
+END NPLUS
+
+LAYER PPLUS
+  TYPE IMPLANT ;
+  WIDTH 0.24 ;
+  SPACING 0.24 ;
+  AREA 0.1764 ;
+END PPLUS
+
+LAYER DIFF
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE DIFFUSION ;" ;
+  PROPERTY LEF58_SPACING "SPACING 0.2 ;" ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.16 ;" ;
+END DIFF
+
+LAYER PO1
+  TYPE MASTERSLICE ;
+END PO1
+
+LAYER CONT
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.16 ;
+END CONT
+
+LAYER ME1
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  WIDTH 0.16 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.759 
+    WIDTH 0 0.16 0.26 
+    WIDTH 1.759 0.26 0.26 ;
+  SPACING 0.16 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME1
+
+LAYER VI1
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END VI1
+
+LAYER ME2
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  WIDTH 0.2 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.999 
+    WIDTH 0 0.2 0.28 
+    WIDTH 1.999 0.28 0.28 ;
+  SPACING 0.2 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME2
+
+LAYER VI2
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END VI2
+
+LAYER ME3
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  WIDTH 0.2 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.999 
+    WIDTH 0 0.2 0.28 
+    WIDTH 1.999 0.28 0.28 ;
+  SPACING 0.2 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME3
+
+LAYER VI3
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END VI3
+
+LAYER ME4
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  WIDTH 0.2 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.999 
+    WIDTH 0 0.2 0.28 
+    WIDTH 1.999 0.28 0.28 ;
+  SPACING 0.2 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME4
+
+LAYER VI4
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END VI4
+
+LAYER ME5
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  WIDTH 0.2 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.999 
+    WIDTH 0 0.2 0.28 
+    WIDTH 1.999 0.28 0.28 ;
+  SPACING 0.2 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME5
+
+LAYER VI5
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END VI5
+
+LAYER ME6
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  WIDTH 0.2 ;
+  AREA 0.1024 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.999 
+    WIDTH 0 0.2 0.28 
+    WIDTH 1.999 0.28 0.28 ;
+  SPACING 0.2 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.07 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME6
+
+LAYER VI6
+  TYPE CUT ;
+  SPACING 0.4 ;
+  WIDTH 0.4 ;
+END VI6
+
+LAYER ME7
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  WIDTH 0.4 ;
+  AREA 0.33 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 1.599 
+    WIDTH 0 0.4 0.5 
+    WIDTH 1.599 0.5 0.5 ;
+  SPACING 0.4 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.027 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME7
+
+LAYER VI7
+  TYPE CUT ;
+  SPACING 0.75 ;
+  WIDTH 0.6 ;
+END VI7
+
+LAYER ME8
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  WIDTH 1.5 ;
+  AREA 2.25 ;
+  SPACINGTABLE
+    PARALLELRUNLENGTH 0 
+    WIDTH 0 1.5 ;
+  SPACING 1.5 SAMENET ;
+  MAXWIDTH 25 ;
+  RESISTANCE RPERSQ 0.015 ;
+  MINIMUMDENSITY 20 ;
+  DENSITYCHECKWINDOW 400 400 ;
+  DENSITYCHECKSTEP 200 ;
+END ME8
+
+LAYER TMV_RDL
+  TYPE CUT ;
+  SPACING 2 ;
+  WIDTH 4 ;
+END TMV_RDL
+
+LAYER AL_RDL
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  WIDTH 3 ;
+  SPACING 1.6 ;
+  SPACING 1.6 SAMENET ;
+END AL_RDL
+
+MAXVIASTACK 4 RANGE ME1 ME8 ;
+VIARULE M2_M1 GENERATE DEFAULT
+  LAYER ME1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME2 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI1 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.48 BY 0.48 ;
+END M2_M1
+
+VIARULE M3_M2 GENERATE DEFAULT
+  LAYER ME2 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME3 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI2 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.48 BY 0.48 ;
+END M3_M2
+
+VIARULE M4_M3 GENERATE DEFAULT
+  LAYER ME3 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME4 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI3 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.48 BY 0.48 ;
+END M4_M3
+
+VIARULE M5_M4 GENERATE DEFAULT
+  LAYER ME4 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME5 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI4 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.48 BY 0.48 ;
+END M5_M4
+
+VIARULE M6_M5 GENERATE DEFAULT
+  LAYER ME5 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME6 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI5 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.48 BY 0.48 ;
+END M6_M5
+
+VIARULE M7_M6 GENERATE DEFAULT
+  LAYER ME6 ;
+    ENCLOSURE 0 0 ;
+  LAYER ME7 ;
+    ENCLOSURE 0 0 ;
+  LAYER VI6 ;
+    RECT -0.2 -0.2 0.2 0.2 ;
+    SPACING 0.9 BY 0.9 ;
+END M7_M6
+
+VIARULE M8_M7 GENERATE DEFAULT
+  LAYER ME7 ;
+    ENCLOSURE 0.2 0.2 ;
+  LAYER ME8 ;
+    ENCLOSURE 0.45 0.45 ;
+  LAYER VI7 ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+    SPACING 1.35 BY 1.35 ;
+END M8_M7
+
+VIARULE L2_M8 GENERATE
+  LAYER ME8 ;
+    ENCLOSURE 0.6 0.6 ;
+  LAYER AL_RDL ;
+    ENCLOSURE 0.5 0.5 ;
+  LAYER TMV_RDL ;
+    RECT -2 -2 2 2 ;
+    SPACING 6 BY 6 ;
+END L2_M8
+
+VIARULE M1_PACTIVE GENERATE
+  LAYER DIFF ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER CONT ;
+    RECT -0.08 -0.08 0.08 0.08 ;
+    SPACING 0.36 BY 0.36 ;
+END M1_PACTIVE
+
+VIARULE M1_NWEL GENERATE
+  LAYER DIFF ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER CONT ;
+    RECT -0.08 -0.08 0.08 0.08 ;
+    SPACING 0.36 BY 0.36 ;
+END M1_NWEL
+
+VIARULE M1_NACTIVE GENERATE
+  LAYER DIFF ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER CONT ;
+    RECT -0.08 -0.08 0.08 0.08 ;
+    SPACING 0.36 BY 0.36 ;
+END M1_NACTIVE
+
+VIARULE M1_POLY GENERATE
+  LAYER PO1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER ME1 ;
+    ENCLOSURE 0.06 0.06 ;
+  LAYER CONT ;
+    RECT -0.08 -0.08 0.08 0.08 ;
+    SPACING 0.36 BY 0.36 ;
+END M1_POLY
+
+MACRO controller
+  CLASS BLOCK ;
+  ORIGIN 0 56.251 ;
+  FOREIGN controller 0 -56.251 ;
+  SIZE 56.251 BY 56.251 ;
+  SYMMETRY X Y R90 ;
+  PIN vcutoff_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 0.7 -56.251 0.9 -56.051 ;
+    END
+  END vcutoff_0
+  PIN en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 0.3 -56.251 0.5 -56.051 ;
+    END
+  END en
+  PIN vcutoff_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 1.9 -56.251 2.1 -56.051 ;
+    END
+  END vcutoff_3
+  PIN vcutoff_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 1.5 -56.251 1.7 -56.051 ;
+    END
+  END vcutoff_2
+  PIN vcutoff_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 1.1 -56.251 1.3 -56.051 ;
+    END
+  END vcutoff_1
+  PIN vcutoff_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 2.3 -56.251 2.5 -56.051 ;
+    END
+  END vcutoff_4
+  PIN vcutoff_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 2.7 -56.251 2.9 -56.051 ;
+    END
+  END vcutoff_5
+  PIN vcutoff_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.1 -56.251 3.3 -56.051 ;
+    END
+  END vcutoff_6
+  PIN vcutoff_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.5 -56.251 3.7 -56.051 ;
+    END
+  END vcutoff_7
+  PIN vpreset_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.9 -56.251 4.1 -56.051 ;
+    END
+  END vpreset_0
+  PIN vpreset_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 4.3 -56.251 4.5 -56.051 ;
+    END
+  END vpreset_1
+  PIN vpreset_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 4.7 -56.251 4.9 -56.051 ;
+    END
+  END vpreset_2
+  PIN vpreset_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.1 -56.251 5.3 -56.051 ;
+    END
+  END vpreset_3
+  PIN vpreset_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.5 -56.251 5.7 -56.051 ;
+    END
+  END vpreset_4
+  PIN vpreset_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.9 -56.251 6.1 -56.051 ;
+    END
+  END vpreset_5
+  PIN vpreset_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 6.3 -56.251 6.5 -56.051 ;
+    END
+  END vpreset_6
+  PIN vpreset_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 6.7 -56.251 6.9 -56.051 ;
+    END
+  END vpreset_7
+  PIN tempmin_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.1 -56.251 7.3 -56.051 ;
+    END
+  END tempmin_0
+  PIN tempmin_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.5 -56.251 7.7 -56.051 ;
+    END
+  END tempmin_1
+  PIN tempmin_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.1 -56.251 9.3 -56.051 ;
+    END
+  END tempmin_5
+  PIN tempmin_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.9 -56.251 8.1 -56.051 ;
+    END
+  END tempmin_2
+  PIN tempmin_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 8.7 -56.251 8.9 -56.051 ;
+    END
+  END tempmin_4
+  PIN tempmin_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 8.3 -56.251 8.5 -56.051 ;
+    END
+  END tempmin_3
+  PIN tempmin_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.5 -56.251 9.7 -56.051 ;
+    END
+  END tempmin_6
+  PIN tempmin_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.9 -56.251 10.1 -56.051 ;
+    END
+  END tempmin_7
+  PIN tempmax_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 10.3 -56.251 10.5 -56.051 ;
+    END
+  END tempmax_0
+  PIN tempmax_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 10.7 -56.251 10.9 -56.051 ;
+    END
+  END tempmax_1
+  PIN tempmax_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 11.1 -56.251 11.3 -56.051 ;
+    END
+  END tempmax_2
+  PIN tempmax_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 11.5 -56.251 11.7 -56.051 ;
+    END
+  END tempmax_3
+  PIN tempmax_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 11.9 -56.251 12.1 -56.051 ;
+    END
+  END tempmax_4
+  PIN tempmax_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 12.3 -56.251 12.5 -56.051 ;
+    END
+  END tempmax_5
+  PIN tempmax_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 12.7 -56.251 12.9 -56.051 ;
+    END
+  END tempmax_6
+  PIN tempmax_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 13.1 -56.251 13.3 -56.051 ;
+    END
+  END tempmax_7
+  PIN tmax_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 13.5 -56.251 13.7 -56.051 ;
+    END
+  END tmax_0
+  PIN tmax_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 13.9 -56.251 14.1 -56.051 ;
+    END
+  END tmax_1
+  PIN tmax_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 14.3 -56.251 14.5 -56.051 ;
+    END
+  END tmax_2
+  PIN tmax_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 14.7 -56.251 14.9 -56.051 ;
+    END
+  END tmax_3
+  PIN tmax_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 15.1 -56.251 15.3 -56.051 ;
+    END
+  END tmax_4
+  PIN tmax_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 15.5 -56.251 15.7 -56.051 ;
+    END
+  END tmax_5
+  PIN tmax_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 15.9 -56.251 16.1 -56.051 ;
+    END
+  END tmax_6
+  PIN tmax_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 16.3 -56.251 16.5 -56.051 ;
+    END
+  END tmax_7
+  PIN iend_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 16.7 -56.251 16.9 -56.051 ;
+    END
+  END iend_0
+  PIN iend_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 17.1 -56.251 17.3 -56.051 ;
+    END
+  END iend_1
+  PIN iend_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 17.5 -56.251 17.7 -56.051 ;
+    END
+  END iend_2
+  PIN iend_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 17.9 -56.251 18.1 -56.051 ;
+    END
+  END iend_3
+  PIN iend_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 18.3 -56.251 18.5 -56.051 ;
+    END
+  END iend_4
+  PIN iend_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 18.7 -56.251 18.9 -56.051 ;
+    END
+  END iend_5
+  PIN iend_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 19.1 -56.251 19.3 -56.051 ;
+    END
+  END iend_6
+  PIN iend_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 19.5 -56.251 19.7 -56.051 ;
+    END
+  END iend_7
+  PIN cc
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -0.9 56.251 -0.7 ;
+    END
+  END cc
+  PIN tc
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -0.5 56.251 -0.3 ;
+    END
+  END tc
+  PIN cv
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -1.3 56.251 -1.1 ;
+    END
+  END cv
+  PIN imonen
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -1.7 56.251 -1.5 ;
+    END
+  END imonen
+  PIN vmonen
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -2.1 56.251 -1.9 ;
+    END
+  END vmonen
+  PIN tmonen
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME3 ;
+        RECT 56.051 -2.5 56.251 -2.3 ;
+    END
+  END tmonen
+  PIN vtok
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 1.9 -0.2 2.1 0 ;
+    END
+  END vtok
+  PIN ibat_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 2.3 -0.2 2.5 0 ;
+    END
+  END ibat_0
+  PIN ibat_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 2.7 -0.2 2.9 0 ;
+    END
+  END ibat_1
+  PIN ibat_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.1 -0.2 3.3 0 ;
+    END
+  END ibat_2
+  PIN ibat_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.5 -0.2 3.7 0 ;
+    END
+  END ibat_3
+  PIN ibat_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 3.9 -0.2 4.1 0 ;
+    END
+  END ibat_4
+  PIN ibat_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 4.3 -0.2 4.5 0 ;
+    END
+  END ibat_5
+  PIN ibat_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 4.7 -0.2 4.9 0 ;
+    END
+  END ibat_6
+  PIN ibat_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.1 -0.2 5.3 0 ;
+    END
+  END ibat_7
+  PIN vbat_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.5 -0.2 5.7 0 ;
+    END
+  END vbat_0
+  PIN vbat_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 5.9 -0.2 6.1 0 ;
+    END
+  END vbat_1
+  PIN vbat_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 6.3 -0.2 6.5 0 ;
+    END
+  END vbat_2
+  PIN vbat_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 6.7 -0.2 6.9 0 ;
+    END
+  END vbat_3
+  PIN vbat_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.1 -0.2 7.3 0 ;
+    END
+  END vbat_4
+  PIN vbat_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.5 -0.2 7.7 0 ;
+    END
+  END vbat_5
+  PIN vbat_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 7.9 -0.2 8.1 0 ;
+    END
+  END vbat_6
+  PIN vbat_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 8.3 -0.2 8.5 0 ;
+    END
+  END vbat_7
+  PIN tbat_0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 8.7 -0.2 8.9 0 ;
+    END
+  END tbat_0
+  PIN tbat_1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.1 -0.2 9.3 0 ;
+    END
+  END tbat_1
+  PIN tbat_2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.5 -0.2 9.7 0 ;
+    END
+  END tbat_2
+  PIN tbat_3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 9.9 -0.2 10.1 0 ;
+    END
+  END tbat_3
+  PIN tbat_4
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 10.3 -0.2 10.5 0 ;
+    END
+  END tbat_4
+  PIN tbat_5
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 10.7 -0.2 10.9 0 ;
+    END
+  END tbat_5
+  PIN tbat_6
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 11.1 -0.2 11.3 0 ;
+    END
+  END tbat_6
+  PIN tbat_7
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER ME2 ;
+        RECT 11.5 -0.2 11.7 0 ;
+    END
+  END tbat_7
+  PIN dvdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER ME3 ;
+        RECT 0 -2.1 0.2 -1.9 ;
+    END
+  END dvdd
+  PIN dgnd
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER ME3 ;
+        RECT 0 -2.5 0.2 -2.3 ;
+    END
+  END dgnd
+  PIN clk
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER ME3 ;
+        RECT 0 -2.9 0.2 -2.7 ;
+    END
+  END clk
+  PIN rstz
+    DIRECTION INPUT ;
+    PORT
+      LAYER ME3 ;
+        RECT 0 -3.3 0.2 -3.1 ;
+    END
+  END rstz
+  OBS
+    LAYER ME1 SPACING 0.16 ;
+      RECT 0 -56.251 56.251 0 ;
+    LAYER ME2 SPACING 0.2 ;
+      RECT 12.06 -55.69 56.25 0 ;
+      RECT 20.06 -56.25 56.25 0 ;
+      RECT 0 -55.69 1.54 0 ;
+      RECT 0 -55.69 56.25 -0.56 ;
+    LAYER ME3 SPACING 0.2 ;
+      RECT 12 -55.75 55.69 0 ;
+      RECT 0 -1.54 1.6 0 ;
+      RECT 0.56 -55.75 55.69 -0.5 ;
+      RECT 20 -56.25 56.25 -2.86 ;
+      RECT 0 -55.75 56.25 -3.66 ;
+    LAYER ME4 SPACING 0.2 ;
+      RECT 0 -1.6 55.75 0 ;
+      RECT 0.5 -56.25 55.75 0 ;
+      RECT 0.5 -56.25 56.25 -2.8 ;
+      RECT 0 -56.25 56.25 -3.6 ;
+    LAYER ME5 SPACING 0.2 ;
+      RECT 0 -56.251 56.251 0 ;
+    LAYER ME6 SPACING 0.2 ;
+      RECT 0 -56.251 56.251 0 ;
+    LAYER ME7 SPACING 0.4 ;
+      RECT 0 -56.251 56.251 0 ;
+    LAYER ME8 SPACING 1.5 ;
+      RECT 0 -56.251 56.251 0 ;
+  END
+END controller
+
+END LIBRARY

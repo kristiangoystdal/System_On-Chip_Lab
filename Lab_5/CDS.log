@@ -1,0 +1,81 @@
+\# Program start time:     UTC 2024.12.13 17:47:53.007
+\# Local time: WET (UTC+00:00) 2024.12.13 17:47:53.007
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 05/03/2023 09:48 (sjfhw317) $
+\o Hierarchy:		/opt/ic_tools/cad/ic618_hf320/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.32  (64-bit addresses)
+\# Command line:	/opt/ic_tools/cad/ic618_hf320/tools/dfII/bin/64bit/virtuoso
+\# Host name (type):	fatima.novalocal (x86_64)
+\# Operating system:	Linux 3.10.0-1160.99.1.el7.x86_64 #1 SMP Wed Sep 13 14:19:20 UTC 2023
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	localhost:30.0 (1280x720)
+\# Available geometry:			TL(0:0) BR(1279:719)
+\# X server:			Colin Harrison
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 60900031)
+\# X resource pool:	base 0xa00000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        619 MB
+\# Available memory:	      5,614 MB
+\# System memory:	     15,885 MB
+\# Maximum memory size:	     15,458 MB
+\# Max mem available:	      5,807 MB
+\# Initial memory used:	        193 MB
+\#        process size:	      1,802 MB
+\# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 4.00/4.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ist1112497
+\o Working Directory:	fatima.novalocal:/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/CDBOA/BATCHARGER
+\# Process Id:		14935
+\o 
+\o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\# Memory report: using         300 MB, process size 1,915 MB at UTC 2024.12.13 17:48:00.061
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [17:47:53.190425] Configured Lic search path (22.01-s002): 5280@ofelia.tagus.ist.utl.pt
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.12s.
+\# Available memory:          5,523 MB at UTC 2024.12.13 17:48:04.947
+\# Memory report: Maximum memory size now 5,890 MB at UTC 2024.12.13 17:48:04.947
+\# Thread usage report: 9 active threads, active load 1.40 at UTC 2024.12.13 17:48:04.948
+\o Calibre MGC_HOME not set
+\o END OF USER CUSTOMIZATION
+\p > 
+\w *WARNING* could not load font "-*-courier-medium-r-*-*-12-*", using font "fixed"
+\# Loading perfDiag...
+\# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
+\o Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 14935' to open it when Virtuoso freezes.
+\# (PerfDiag): Loading backtrace from /opt/ic_tools/cad/ic618_hf320/tools/lib/64bit/cdnslibunwind.so
+\a hiResizeWindow(window(1) list(237:110 1032:303))
+\# [17:48:06.418267] Periodic Lic check successful
+\# [17:48:06.418280] Feature usage summary:
+\# [17:48:06.418281] 111
+\r t
+\# Thread usage report: 10 active threads, active load 1.40 at UTC 2024.12.13 17:48:14.555

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<report>
+    <info>
+        <lib>BATCHARGER</lib>
+        <cell>controller</cell>
+        <view>layout</view>
+    </info>
+    <process_info>
+        <h1>Time taken by the abstract generator processes:</h1>
+        <process>
+            <name>Pins</name>
+            <real_time>0.036</real_time>
+            <cpu_time>0.020</cpu_time>
+        </process>
+        <process>
+            <name>Extract</name>
+            <real_time>0.021</real_time>
+            <cpu_time>0.010</cpu_time>
+        </process>
+        <process>
+            <name>Final pin creation</name>
+            <real_time>0.379</real_time>
+            <cpu_time>0.100</cpu_time>
+        </process>
+        <process>
+            <name>Blockage creation</name>
+            <real_time>0.073</real_time>
+            <cpu_time>0.030</cpu_time>
+        </process>
+        <process>
+            <name>Abstract view creation</name>
+            <real_time>0.808</real_time>
+            <cpu_time>0.040</cpu_time>
+        </process>
+    </process_info>
+    <nets_info>
+        <h1>Time taken to extract nets, where the real time is greater than 5 seconds:</h1>
+        <nets_stats>
+            <h2>Extracted nets: </h2>
+            <nets_count>84</nets_count>
+            <h3>Extracted shapes: </h3>
+            <shape_count>84</shape_count>
+        </nets_stats>
+    </nets_info>
+    <blockage_info>
+        <h1>Types of blockages created on different layers:</h1>
+        <blockage>
+            <name>Cover blockage:</name>
+            <layers>ME1, ME2, ME3, ME4, ME5, ME6, ME7, ME8</layers>
+        </blockage>
+        <blockage>
+            <name>Detailed blockage:</name>
+            <layers>NIL</layers>
+        </blockage>
+        <blockage>
+            <name>Shrink-wrap blockage:</name>
+            <layers>NIL</layers>
+        </blockage>
+    </blockage_info>
+    <msg_info>
+        <h3>Warning(s) : </h3>
+        <msg_warn>
+            <msg>
+                <msgID>11026</msgID>
+                <occurrences>1</occurrences>
+                <message>Bus annotation cannot be completed for the specified abstract because the logical view for cell controller is invalid.
+</message>
+            </msg>
+        </msg_warn>
+        <h4>Warning count: </h4>
+        <warn_count>1</warn_count>
+    </msg_info>
+</report>

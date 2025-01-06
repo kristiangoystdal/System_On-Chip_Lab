@@ -1,0 +1,10 @@
+*lvsRulesFile: /opt/ic_tools/pdk/umc130_a02_pb/RuleDecks/Calibre/LVS/G-DF-MIXED_MODE_RFCMOS13-1P8M-MMC-FSG-L130E-CALIBRE-LVS-2.3-P10.txt
+*lvsRunDir: CALIBRE_LVS
+*lvsLayoutView: layout
+*lvsLayoutGetFromViewer: 1
+*lvsSourceView: schematic
+*lvsSourceGetFromViewer: 1
+*lvsSVDBxcal: 1
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
