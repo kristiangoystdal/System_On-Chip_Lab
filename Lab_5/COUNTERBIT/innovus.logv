@@ -1,0 +1,526 @@
+[01/07 10:03:24      0s] 
+[01/07 10:03:24      0s] Cadence Innovus(TM) Implementation System.
+[01/07 10:03:24      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/07 10:03:24      0s] 
+[01/07 10:03:24      0s] Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+[01/07 10:03:24      0s] Options:	
+[01/07 10:03:24      0s] Date:		Tue Jan  7 10:03:24 2025
+[01/07 10:03:24      0s] Host:		fatima.novalocal (x86_64 w/Linux 3.10.0-1160.99.1.el7.x86_64) (1core*4cpus*Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz 16384KB)
+[01/07 10:03:24      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[01/07 10:03:24      0s] 
+[01/07 10:03:24      0s] License:
+[01/07 10:03:24      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[01/07 10:03:24      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[01/07 10:03:58     18s] **WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[01/07 10:04:00     20s] @(#)CDS: Innovus v20.11-s130_1 (64bit) 08/05/2020 15:53 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/07 10:04:00     20s] @(#)CDS: NanoRoute 20.11-s130_1 NR200802-2257/20_11-UB (database version 18.20.512) {superthreading v2.9}
+[01/07 10:04:00     20s] @(#)CDS: AAE 20.11-s008 (64bit) 08/05/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/07 10:04:00     20s] @(#)CDS: CTE 20.11-s059_1 () Aug  2 2020 05:46:30 ( )
+[01/07 10:04:00     20s] @(#)CDS: SYNTECH 20.11-s028_1 () Aug  1 2020 06:14:27 ( )
+[01/07 10:04:00     20s] @(#)CDS: CPE v20.11-s013
+[01/07 10:04:00     20s] @(#)CDS: IQuantus/TQuantus 19.1.3-s260 (64bit) Thu May 28 10:57:28 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/07 10:04:00     20s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[01/07 10:04:00     20s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[01/07 10:04:00     20s] @(#)CDS: RCDB 11.15.0
+[01/07 10:04:00     20s] @(#)CDS: STYLUS 20.10-p011_1 (06/03/2020 04:47 PDT)
+[01/07 10:04:00     20s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1904_fatima.novalocal_ist1112497_H04r3r.
+
+[01/07 10:04:00     20s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[01/07 10:04:02     22s] 
+[01/07 10:04:02     22s] **INFO:  MMMC transition support version v31-84 
+[01/07 10:04:02     22s] 
+[01/07 10:04:02     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[01/07 10:04:02     22s] <CMD> suppressMessage ENCEXT-2799
+[01/07 10:04:02     22s] <CMD> win
+[01/07 10:04:56     26s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[01/07 10:04:56     26s] <CMD> set conf_qxconf_file NULL
+[01/07 10:04:56     26s] <CMD> set conf_qxlib_file NULL
+[01/07 10:04:56     26s] <CMD> set defHierChar /
+[01/07 10:04:56     26s] Set Default Input Pin Transition as 0.1 ps.
+[01/07 10:04:56     26s] <CMD> set delaycal_input_transition_delay 0.1ps
+[01/07 10:04:56     26s] <CMD> set distributed_client_message_echo 1
+[01/07 10:04:56     26s] <CMD> set fpIsMaxIoHeight 0
+[01/07 10:04:56     26s] <CMD> set gpsPrivate::dpgNewAddBufsDBUpdate 1
+[01/07 10:04:56     26s] <CMD> set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+[01/07 10:04:56     26s] <CMD> set init_gnd_net dgnd
+[01/07 10:04:56     26s] <CMD> set init_lef_file {../lef_libs/header8m2t_V55.lef ../lef_libs/fsc0h_d_generic_core.lef ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef}
+[01/07 10:04:56     26s] <CMD> set init_mmmc_file counter4bit.view
+[01/07 10:04:56     26s] <CMD> set init_oa_search_lib {}
+[01/07 10:04:56     26s] <CMD> set init_pwr_net dvdd
+[01/07 10:04:56     26s] <CMD> set init_verilog ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.v
+[01/07 10:04:56     26s] <CMD> set pegDefaultResScaleFactor 1.000000
+[01/07 10:04:56     26s] <CMD> set pegDetailResScaleFactor 1.000000
+[01/07 10:04:56     26s] <CMD> set timing_library_float_precision_tol 0.000010
+[01/07 10:04:56     26s] <CMD> set timing_library_load_pin_cap_indices {}
+[01/07 10:04:56     26s] <CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+[01/07 10:05:39     32s] <CMD> init_design
+[01/07 10:05:39     33s] #% Begin Load MMMC data ... (date=01/07 10:05:39, mem=569.3M)
+[01/07 10:05:39     33s] **ERROR: (TCLCMD-995):	Can not open file '../../SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ss1p08v125c.lib' for library set
+<CMD> set init_lef_file {../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef ../lef_libs/fsc0h_d_generic_core.lef ../lef_libs/header8m2t_V55.lef}
+[01/07 10:06:57     45s] <CMD> init_design
+[01/07 10:06:57     45s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/07 10:06:57     45s] % Begin Load MMMC data ... (date=01/07 10:06:57, mem=571.1M)
+[01/07 10:06:57     45s] Extraction setup Started 
+[01/07 10:06:57     45s] Extraction setup Started 
+[01/07 10:06:57     45s] **ERROR: (TCLCMD-995):	Can not open file '../../SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ss1p08v125c.lib' for library set
+<CMD> set init_lef_file {../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef ../lef_libs/fsc0h_d_generic_core.lef ../lef_libs/header8m2t_V55.lef}
+[01/07 10:08:16     62s] <CMD> init_design
+[01/07 10:08:16     62s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/07 10:08:16     63s] % Begin Load MMMC data ... (date=01/07 10:08:16, mem=572.7M)
+[01/07 10:08:16     63s] Extraction setup Started 
+[01/07 10:08:16     63s] Extraction setup Started 
+[01/07 10:08:16     63s] **ERROR: (TCLCMD-995):	Can not open file '../../SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ss1p08v125c.lib' for library set
+<CMD> set init_lef_file {../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef ../lef_libs/fsc0h_d_generic_core.lef ../lef_libs/header8m2t_V55.lef}
+[01/07 10:18:34    160s] <CMD> init_design
+[01/07 10:18:34    160s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/07 10:18:34    160s] % Begin Load MMMC data ... (date=01/07 10:18:34, mem=572.6M)
+[01/07 10:18:34    160s] Extraction setup Started 
+[01/07 10:18:34    160s] Extraction setup Started 
+[01/07 10:18:34    160s] % End Load MMMC data ... (date=01/07 10:18:34, total cpu=0:00:00.1, real=0:00:00.0, peak res=572.7M, current mem=572.7M)
+[01/07 10:18:34    160s] 
+[01/07 10:18:34    160s] Loading LEF file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef ...
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 11, on token metal1.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 17, on token metal2.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 23, on token metal3.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 29, on token metal4.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 35, on token metal5.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 41, on token metal6.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 47, on token metal7.
+[01/07 10:18:34    160s] ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 53, on token metal8.
+[01/07 10:18:34    160s] **ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+[01/07 10:18:34    160s] **ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+[01/07 10:19:30    169s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[01/07 10:19:30    169s] <CMD> set conf_qxconf_file NULL
+[01/07 10:19:30    169s] <CMD> set conf_qxlib_file NULL
+[01/07 10:19:30    169s] <CMD> set defHierChar /
+[01/07 10:19:30    169s] Set Default Input Pin Transition as 0.1 ps.
+[01/07 10:19:30    169s] <CMD> set delaycal_input_transition_delay 0.1ps
+[01/07 10:19:30    169s] <CMD> set distributed_client_message_echo 1
+[01/07 10:19:30    170s] <CMD> set fpIsMaxIoHeight 0
+[01/07 10:19:30    170s] <CMD> set gpsPrivate::dpgNewAddBufsDBUpdate 1
+[01/07 10:19:30    170s] <CMD> set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+[01/07 10:19:30    170s] <CMD> set init_gnd_net dgnd
+[01/07 10:19:30    170s] <CMD> set init_lef_file {../lef_libs/header8m2t_V55.lef ../lef_libs/fsc0h_d_generic_core.lef ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef}
+[01/07 10:19:30    170s] <CMD> set init_mmmc_file counter4bit.view
+[01/07 10:19:30    170s] <CMD> set init_oa_search_lib {}
+[01/07 10:19:30    170s] <CMD> set init_pwr_net dvdd
+[01/07 10:19:30    170s] <CMD> set init_verilog ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.v
+[01/07 10:19:30    170s] <CMD> set pegDefaultResScaleFactor 1.000000
+[01/07 10:19:30    170s] <CMD> set pegDetailResScaleFactor 1.000000
+[01/07 10:19:30    170s] <CMD> set timing_library_float_precision_tol 0.000010
+[01/07 10:19:30    170s] <CMD> set timing_library_load_pin_cap_indices {}
+[01/07 10:19:30    170s] <CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+[01/07 10:19:32    170s] <CMD> init_design
+[01/07 10:19:32    170s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/07 10:19:32    170s] % Begin Load MMMC data ... (date=01/07 10:19:32, mem=577.1M)
+[01/07 10:19:32    170s] Extraction setup Started 
+[01/07 10:19:32    170s] Extraction setup Started 
+[01/07 10:19:32    170s] Extraction setup Started 
+[01/07 10:19:32    170s] Extraction setup Started 
+[01/07 10:19:32    170s] The existing analysis_view 'WC_AN' has been replaced with new attributes.
+[01/07 10:19:32    170s] The existing analysis_view 'BC_AN' has been replaced with new attributes.
+[01/07 10:19:32    170s] INFO: New setup and hold views overwrite old settings during design initialization
+[01/07 10:19:32    170s] % End Load MMMC data ... (date=01/07 10:19:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=577.2M, current mem=577.2M)
+[01/07 10:19:32    170s] 
+[01/07 10:19:32    170s] Loading LEF file ../lef_libs/header8m2t_V55.lef ...
+[01/07 10:19:32    170s] 
+[01/07 10:19:32    170s] Loading LEF file ../lef_libs/fsc0h_d_generic_core.lef ...
+[01/07 10:19:32    170s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[01/07 10:19:32    170s] The LEF parser will ignore this statement.
+[01/07 10:19:32    170s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../lef_libs/fsc0h_d_generic_core.lef at line 1.
+[01/07 10:19:32    170s] Set DBUPerIGU to M2 pitch 400.
+[01/07 10:19:32    170s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ../lef_libs/fsc0h_d_generic_core.lef at line 41658.
+[01/07 10:19:32    170s] 
+[01/07 10:19:32    170s] Loading LEF file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef ...
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal7' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-119):	LAYER 'metal8' has been found in the database. Its content except ANTENNA* data will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-119' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2B1CHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2B1EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2B1HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2B1KHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2CHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN2KHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B1CHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B1EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B1HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B2BHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B2EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3B2HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3CHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN3HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN4B1BHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN4B1EHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (IMPLF-58):	MACRO 'AN4B1HHD' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[01/07 10:19:32    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:32    170s] Type 'man IMPLF-58' for more detail.
+[01/07 10:19:32    170s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[01/07 10:19:32    170s] To increase the message display limit, refer to the product command reference manual.
+[01/07 10:19:33    170s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[01/07 10:19:33    170s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[01/07 10:19:33    170s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 17898.
+[01/07 10:19:33    170s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[01/07 10:19:33    170s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[01/07 10:19:33    170s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../lef_libs/FSC0H_D_GENERIC_CORE_ANT_V55.lef at line 17898.
+[01/07 10:19:33    170s] **WARN: (IMPLF-61):	407 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+[01/07 10:19:33    170s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[01/07 10:19:33    170s] Type 'man IMPLF-61' for more detail.
+[01/07 10:19:33    170s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTHD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[01/07 10:19:33    170s] Type 'man IMPLF-200' for more detail.
+[01/07 10:19:33    170s] 
+[01/07 10:19:33    170s] viaInitial starts at Tue Jan  7 10:19:33 2025
+viaInitial ends at Tue Jan  7 10:19:33 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[01/07 10:19:33    170s] Loading view definition file from counter4bit.view
+[01/07 10:19:33    170s] Reading SS_LIB timing library '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ss1p08v125c.lib' ...
+[01/07 10:19:35    173s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTHD'. The cell will only be used for analysis. (File /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ss1p08v125c.lib)
+[01/07 10:19:35    173s] Read 407 cells in library 'fsc0h_d_generic_core_ss1p08v125c' 
+[01/07 10:19:35    173s] Reading FF_LIB timing library '/afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ff1p32vm40c.lib' ...
+[01/07 10:19:38    176s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTHD'. The cell will only be used for analysis. (File /afs/.ist.utl.pt/users/9/7/ist1112497/DIGITAL/SYNTHESIS/synthesis_libs/fsc0h_d_generic_core_ff1p32vm40c.lib)
+[01/07 10:19:38    176s] Read 407 cells in library 'fsc0h_d_generic_core_ff1p32vm40c' 
+[01/07 10:19:38    176s] Ending "PreSetAnalysisView" (total cpu=0:00:05.6, real=0:00:05.0, peak res=706.5M, current mem=598.2M)
+[01/07 10:19:38    176s] *** End library_loading (cpu=0.09min, real=0.08min, mem=19.0M, fe_cpu=2.94min, fe_real=16.23min, fe_mem=782.6M) ***
+[01/07 10:19:38    176s] % Begin Load netlist data ... (date=01/07 10:19:38, mem=598.2M)
+[01/07 10:19:38    176s] *** Begin netlist parsing (mem=782.6M) ***
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2KHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2KHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XNR4EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XNR4EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XNR3EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XNR3EHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XNR3CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XNR3CHD' is defined in LEF but not in the timing library.
+[01/07 10:19:38    176s] Type 'man IMPVL-159' for more detail.
+[01/07 10:19:38    176s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[01/07 10:19:38    176s] To increase the message display limit, refer to the product command reference manual.
+[01/07 10:19:38    176s] Created 407 new cells from 2 timing libraries.
+[01/07 10:19:38    176s] Reading netlist ...
+[01/07 10:19:38    176s] Backslashed names will retain backslash and a trailing blank character.
+[01/07 10:19:38    176s] Reading verilog netlist '../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.v'
+[01/07 10:19:38    176s] 
+[01/07 10:19:38    176s] *** Memory Usage v#2 (Current mem = 782.598M, initial mem = 280.281M) ***
+[01/07 10:19:38    176s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=782.6M) ***
+[01/07 10:19:38    176s] % End Load netlist data ... (date=01/07 10:19:38, total cpu=0:00:00.0, real=0:00:00.0, peak res=607.2M, current mem=607.2M)
+[01/07 10:19:38    176s] Top level cell is counter4bit.
+[01/07 10:19:39    176s] Hooked 814 DB cells to tlib cells.
+[01/07 10:19:39    176s] Ending "BindLib:" (total cpu=0:00:00.5, real=0:00:00.0, peak res=644.5M, current mem=644.5M)
+[01/07 10:19:39    176s] Starting recursive module instantiation check.
+[01/07 10:19:39    176s] No recursion found.
+[01/07 10:19:39    176s] Building hierarchical netlist for Cell counter4bit ...
+[01/07 10:19:39    176s] *** Netlist is unique.
+[01/07 10:19:39    176s] Setting Std. cell height to 3200 DBU (smallest netlist inst).
+[01/07 10:19:39    176s] ** info: there are 823 modules.
+[01/07 10:19:39    176s] ** info: there are 25 stdCell insts.
+[01/07 10:19:39    176s] 
+[01/07 10:19:39    176s] *** Memory Usage v#2 (Current mem = 836.023M, initial mem = 280.281M) ***
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'corner_ab' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'corner_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'corner_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_o' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_n' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_k' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_bs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_as' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'corega_3200' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'core_2800' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] **WARN: (IMPFP-3961):	The techSite 'core_3200' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[01/07 10:19:39    176s] Type 'man IMPFP-3961' for more detail.
+[01/07 10:19:39    176s] Set Default Net Delay as 1000 ps.
+[01/07 10:19:39    176s] Set Default Net Load as 0.5 pF. 
+[01/07 10:19:39    176s] Set Default Input Pin Transition as 0.1 ps.
+[01/07 10:19:40    177s] Extraction setup Started 
+[01/07 10:19:40    177s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[01/07 10:19:40    177s] Reading Capacitance Table File captable.cap ...
+[01/07 10:19:40    177s] Cap table was created using Encounter 14.26-s039_1.
+[01/07 10:19:40    177s] Process name: MIXED_MODE_RFCMOS13_1P8M2T_MMC_FSG_TOP_METAL20K_L130E.
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2771):	Via ALVIA specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[01/07 10:19:40    177s] Allocated an empty WireEdgeEnlargement table in SS_RC [7].
+[01/07 10:19:40    177s] Allocated an empty WireEdgeEnlargement table in SS_RC [8].
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[01/07 10:19:40    177s] Reading Capacitance Table File captable.cap ...
+[01/07 10:19:40    177s] Cap table was created using Encounter 14.26-s039_1.
+[01/07 10:19:40    177s] Process name: MIXED_MODE_RFCMOS13_1P8M2T_MMC_FSG_TOP_METAL20K_L130E.
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2771):	Via ALVIA specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[01/07 10:19:40    177s] Allocated an empty WireEdgeEnlargement table in FF_RC [7].
+[01/07 10:19:40    177s] Allocated an empty WireEdgeEnlargement table in FF_RC [8].
+[01/07 10:19:40    177s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[01/07 10:19:40    177s] Importing multi-corner RC tables ... 
+[01/07 10:19:40    177s] Summary of Active RC-Corners : 
+[01/07 10:19:40    177s]  
+[01/07 10:19:40    177s]  Analysis View: WC_AN
+[01/07 10:19:40    177s]     RC-Corner Name        : SS_RC
+[01/07 10:19:40    177s]     RC-Corner Index       : 0
+[01/07 10:19:40    177s]     RC-Corner Temperature : 125 Celsius
+[01/07 10:19:40    177s]     RC-Corner Cap Table   : 'captable.cap'
+[01/07 10:19:40    177s]     RC-Corner PreRoute Res Factor         : 1.1
+[01/07 10:19:40    177s]     RC-Corner PreRoute Cap Factor         : 1.1
+[01/07 10:19:40    177s]     RC-Corner PostRoute Res Factor        : 1.1 {1.1 1 1}
+[01/07 10:19:40    177s]     RC-Corner PostRoute Cap Factor        : 1.1 {1.1 1 1}
+[01/07 10:19:40    177s]     RC-Corner PostRoute XCap Factor       : 1.1 {1.1 1 1}
+[01/07 10:19:40    177s]     RC-Corner PreRoute Clock Res Factor   : 1.1
+[01/07 10:19:40    177s]     RC-Corner PreRoute Clock Cap Factor   : 1.1
+[01/07 10:19:40    177s]     RC-Corner PostRoute Clock Cap Factor  : 1.1 {1.1 1 1} 
+[01/07 10:19:40    177s]     RC-Corner PostRoute Clock Res Factor  : 1.1 {1.1 1 1} 
+[01/07 10:19:40    177s]  
+[01/07 10:19:40    177s]  Analysis View: BC_AN
+[01/07 10:19:40    177s]     RC-Corner Name        : FF_RC
+[01/07 10:19:40    177s]     RC-Corner Index       : 1
+[01/07 10:19:40    177s]     RC-Corner Temperature : -40 Celsius
+[01/07 10:19:40    177s]     RC-Corner Cap Table   : 'captable.cap'
+[01/07 10:19:40    177s]     RC-Corner PreRoute Res Factor         : 0.9
+[01/07 10:19:40    177s]     RC-Corner PreRoute Cap Factor         : 0.9
+[01/07 10:19:40    177s]     RC-Corner PostRoute Res Factor        : 0.9 {0.9 1 1}
+[01/07 10:19:40    177s]     RC-Corner PostRoute Cap Factor        : 0.9 {0.9 1 1}
+[01/07 10:19:40    177s]     RC-Corner PostRoute XCap Factor       : 0.9 {0.9 1 1}
+[01/07 10:19:40    177s]     RC-Corner PreRoute Clock Res Factor   : 0.9
+[01/07 10:19:40    177s]     RC-Corner PreRoute Clock Cap Factor   : 0.9
+[01/07 10:19:40    177s]     RC-Corner PostRoute Clock Cap Factor  : 0.9 {0.9 1 1} 
+[01/07 10:19:40    177s]     RC-Corner PostRoute Clock Res Factor  : 0.9 {0.9 1 1} 
+[01/07 10:19:40    177s] LayerId::1 widthSet size::4
+[01/07 10:19:40    177s] LayerId::2 widthSet size::4
+[01/07 10:19:40    177s] LayerId::3 widthSet size::4
+[01/07 10:19:40    177s] LayerId::4 widthSet size::4
+[01/07 10:19:40    177s] LayerId::5 widthSet size::4
+[01/07 10:19:40    177s] LayerId::6 widthSet size::4
+[01/07 10:19:40    177s] LayerId::7 widthSet size::4
+[01/07 10:19:40    177s] LayerId::8 widthSet size::5
+[01/07 10:19:40    177s] Updating RC grid for preRoute extraction ...
+[01/07 10:19:40    177s] Initializing multi-corner capacitance tables ... 
+[01/07 10:19:40    177s] Initializing multi-corner resistance tables ...
+[01/07 10:19:40    177s] **Info: Trial Route has Max Route Layer 15/8.
+[01/07 10:19:40    177s] {RT SS_RC 0 8 8 {7 0} 1}
+[01/07 10:19:40    177s] Preroute length aware model : LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[01/07 10:19:40    177s] *Info: initialize multi-corner CTS.
+[01/07 10:19:40    178s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=856.6M, current mem=640.9M)
+[01/07 10:19:41    178s] Reading timing constraints file '../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc' ...
+[01/07 10:19:41    178s] Current (total cpu=0:02:58, real=0:16:17, peak res=865.2M, current mem=865.2M)
+[01/07 10:19:41    178s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc, Line 9).
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc, Line 10).
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] INFO (CTE): Reading of timing constraints file ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc completed, with 2 WARNING
+[01/07 10:19:41    178s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=874.2M, current mem=874.2M)
+[01/07 10:19:41    178s] Current (total cpu=0:02:59, real=0:16:17, peak res=874.2M, current mem=874.2M)
+[01/07 10:19:41    178s] Reading timing constraints file '../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc' ...
+[01/07 10:19:41    178s] Current (total cpu=0:02:59, real=0:16:17, peak res=874.2M, current mem=874.2M)
+[01/07 10:19:41    178s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc, Line 9).
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc, Line 10).
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] INFO (CTE): Reading of timing constraints file ../../SYNTHESIS/COUNTER4BIT/counter4bit_synth.sdc completed, with 2 WARNING
+[01/07 10:19:41    178s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=874.5M, current mem=874.5M)
+[01/07 10:19:41    178s] Current (total cpu=0:02:59, real=0:16:17, peak res=874.5M, current mem=874.5M)
+[01/07 10:19:41    178s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[01/07 10:19:41    178s] Creating Cell Server ...(0, 1, 1, 1)
+[01/07 10:19:41    178s] Summary for sequential cells identification: 
+[01/07 10:19:41    178s]   Identified SBFF number: 88
+[01/07 10:19:41    178s]   Identified MBFF number: 0
+[01/07 10:19:41    178s]   Identified SB Latch number: 0
+[01/07 10:19:41    178s]   Identified MB Latch number: 0
+[01/07 10:19:41    178s]   Not identified SBFF number: 4
+[01/07 10:19:41    178s]   Not identified MBFF number: 0
+[01/07 10:19:41    178s]   Not identified SB Latch number: 0
+[01/07 10:19:41    178s]   Not identified MB Latch number: 0
+[01/07 10:19:41    178s]   Number of sequential cells which are not FFs: 26
+[01/07 10:19:41    178s] Total number of combinational cells: 276
+[01/07 10:19:41    178s] Total number of sequential cells: 118
+[01/07 10:19:41    178s] Total number of tristate cells: 13
+[01/07 10:19:41    178s] Total number of level shifter cells: 0
+[01/07 10:19:41    178s] Total number of power gating cells: 0
+[01/07 10:19:41    178s] Total number of isolation cells: 0
+[01/07 10:19:41    178s] Total number of power switch cells: 0
+[01/07 10:19:41    178s] Total number of pulse generator cells: 0
+[01/07 10:19:41    178s] Total number of always on buffers: 0
+[01/07 10:19:41    178s] Total number of retention cells: 0
+[01/07 10:19:41    178s] List of usable buffers: BUFCKEHD BUFCHD BUFCKHHD BUFCKGHD BUFCKIHD BUFCKJHD BUFCKLHD BUFCKKHD BUFCKMHD BUFCKNHD BUFCKQHD BUFEHD BUFDHD BUFHHD BUFGHD BUFIHD BUFJHD BUFKHD BUFLHD BUFMHD BUFNHD BUFQHD
+[01/07 10:19:41    178s] Total number of usable buffers: 22
+[01/07 10:19:41    178s] List of unusable buffers:
+[01/07 10:19:41    178s] Total number of unusable buffers: 0
+[01/07 10:19:41    178s] List of usable inverters: INVCKDHD INVCHD INVCKGHD INVCKHHD INVCKIHD INVCKJHD INVCKKHD INVCKLHD INVCKMHD INVCKNHD INVCKQHD INVDHD INVGHD INVHHD INVJHD INVIHD INVKHD INVLHD INVMHD INVNHD INVQHD
+[01/07 10:19:41    178s] Total number of usable inverters: 21
+[01/07 10:19:41    178s] List of unusable inverters:
+[01/07 10:19:41    178s] Total number of unusable inverters: 0
+[01/07 10:19:41    178s] List of identified usable delay cells: DELAKHD DELBKHD DELDKHD DELCKHD
+[01/07 10:19:41    178s] Total number of identified usable delay cells: 4
+[01/07 10:19:41    178s] List of identified unusable delay cells:
+[01/07 10:19:41    178s] Total number of identified unusable delay cells: 0
+[01/07 10:19:41    178s] Creating Cell Server, finished. 
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] Deleting Cell Server ...
+[01/07 10:19:41    178s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=904.5M, current mem=904.5M)
+[01/07 10:19:41    178s] Creating Cell Server ...(0, 0, 0, 0)
+[01/07 10:19:41    178s] Summary for sequential cells identification: 
+[01/07 10:19:41    178s]   Identified SBFF number: 88
+[01/07 10:19:41    178s]   Identified MBFF number: 0
+[01/07 10:19:41    178s]   Identified SB Latch number: 0
+[01/07 10:19:41    178s]   Identified MB Latch number: 0
+[01/07 10:19:41    178s]   Not identified SBFF number: 4
+[01/07 10:19:41    178s]   Not identified MBFF number: 0
+[01/07 10:19:41    178s]   Not identified SB Latch number: 0
+[01/07 10:19:41    178s]   Not identified MB Latch number: 0
+[01/07 10:19:41    178s]   Number of sequential cells which are not FFs: 26
+[01/07 10:19:41    178s]  Visiting view : WC_AN
+[01/07 10:19:41    178s]    : PowerDomain = none : Weighted F : unweighted  = 29.10 (1.000) with rcCorner = 0
+[01/07 10:19:41    178s]    : PowerDomain = none : Weighted F : unweighted  = 26.90 (1.000) with rcCorner = -1
+[01/07 10:19:41    178s]  Visiting view : BC_AN
+[01/07 10:19:41    178s]    : PowerDomain = none : Weighted F : unweighted  = 12.60 (1.000) with rcCorner = 1
+[01/07 10:19:41    178s]    : PowerDomain = none : Weighted F : unweighted  = 11.50 (1.000) with rcCorner = -1
+[01/07 10:19:41    178s]  Setting StdDelay to 29.10
+[01/07 10:19:41    178s] Creating Cell Server, finished. 
+[01/07 10:19:41    178s] 
+[01/07 10:19:41    178s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/07 10:19:59    180s] <CMD> getIoFlowFlag
+[01/07 10:20:40    181s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Tue Jan  7 10:20:40 2025
+  Total CPU time:     0:03:03
+  Total real time:    0:17:17
+  Peak memory (main): 914.74MB
+
+[01/07 10:20:40    181s] 
+[01/07 10:20:40    181s] *** Memory Usage v#2 (Current mem = 1105.477M, initial mem = 280.281M) ***
+[01/07 10:20:40    181s] 
+[01/07 10:20:40    181s] *** Summary of all messages that are not suppressed in this session:
+[01/07 10:20:40    181s] Severity  ID               Count  Summary                                  
+[01/07 10:20:40    181s] ERROR     IMPLF-3              1  Error found when processing LEF file '%s...
+[01/07 10:20:40    181s] ERROR     IMPLF-26             2  No technology information is defined in ...
+[01/07 10:20:40    181s] WARNING   IMPLF-58           407  MACRO '%s' has been found in the databas...
+[01/07 10:20:40    181s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[01/07 10:20:40    181s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[01/07 10:20:40    181s] WARNING   IMPLF-119            8  LAYER '%s' has been found in the databas...
+[01/07 10:20:40    181s] WARNING   IMPFP-3961          15  The techSite '%s' has no related standar...
+[01/07 10:20:40    181s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[01/07 10:20:40    181s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[01/07 10:20:40    181s] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[01/07 10:20:40    181s] ERROR     IMPSYT-16013         1  Loading LEF file(s) failed, and has abor...
+[01/07 10:20:40    181s] WARNING   IMPVL-159          814  Pin '%s' of cell '%s' is defined in LEF ...
+[01/07 10:20:40    181s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[01/07 10:20:40    181s] ERROR     TCLCMD-995           3  Can not open file '%s' for %s            
+[01/07 10:20:40    181s] WARNING   TCLCMD-1461          4  Skipped unsupported command: %s          
+[01/07 10:20:40    181s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[01/07 10:20:40    181s] *** Message Summary: 1259 warning(s), 7 error(s)
+[01/07 10:20:40    181s] 
+[01/07 10:20:40    181s] --- Ending "Innovus" (totcpu=0:03:02, real=0:17:16, mem=1105.5M) ---
