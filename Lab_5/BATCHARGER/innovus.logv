@@ -11316,3 +11316,190 @@ Total CPU time: 6.23 sec
 [01/08 21:22:52    162s]  *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 0.0M) ***
 [01/08 21:22:52    162s] 
 [01/08 21:22:52    162s] <CMD> set_verify_drc_mode -area {0 0 0 0}
+[01/08 21:46:48    413s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[01/08 21:49:06    438s] <CMD> verify_connectivity
+[01/08 21:49:06    438s] VERIFY_CONNECTIVITY use new engine.
+[01/08 21:49:06    438s] 
+[01/08 21:49:06    438s] ******** Start: VERIFY CONNECTIVITY ********
+[01/08 21:49:06    438s] Start Time: Wed Jan  8 21:49:06 2025
+[01/08 21:49:06    438s] 
+[01/08 21:49:06    438s] Design Name: BATCHARGER_controller
+[01/08 21:49:06    438s] Database Units: 1000
+[01/08 21:49:06    438s] Design Boundary: (0.0000, 0.0000) (69.6000, 64.8000)
+[01/08 21:49:06    438s] Error Limit = 1000; Warning Limit = 50
+[01/08 21:49:06    438s] Check all nets
+[01/08 21:49:06    438s] 
+[01/08 21:49:06    438s] Begin Summary 
+[01/08 21:49:06    438s]   Found no problems or warnings.
+[01/08 21:49:06    438s] End Summary
+[01/08 21:49:06    438s] 
+[01/08 21:49:06    438s] End Time: Wed Jan  8 21:49:06 2025
+[01/08 21:49:06    438s] Time Elapsed: 0:00:00.0
+[01/08 21:49:06    438s] 
+[01/08 21:49:06    438s] ******** End: VERIFY CONNECTIVITY ********
+[01/08 21:49:06    438s]   Verification Complete : 0 Viols.  0 Wrngs.
+[01/08 21:49:06    438s]   (CPU Time: 0:00:00.1  MEM: 0.000M)
+[01/08 21:49:06    438s] 
+[01/08 21:49:37    444s] <CMD> verifyConnectivity -type all -error 1000 -warning 50
+[01/08 21:49:37    444s] VERIFY_CONNECTIVITY use new engine.
+[01/08 21:49:37    444s] 
+[01/08 21:49:37    444s] ******** Start: VERIFY CONNECTIVITY ********
+[01/08 21:49:37    444s] Start Time: Wed Jan  8 21:49:37 2025
+[01/08 21:49:37    444s] 
+[01/08 21:49:37    444s] Design Name: BATCHARGER_controller
+[01/08 21:49:37    444s] Database Units: 1000
+[01/08 21:49:37    444s] Design Boundary: (0.0000, 0.0000) (69.6000, 64.8000)
+[01/08 21:49:37    444s] Error Limit = 1000; Warning Limit = 50
+[01/08 21:49:37    444s] Check all nets
+[01/08 21:49:37    444s] 
+[01/08 21:49:37    444s] Begin Summary 
+[01/08 21:49:37    444s]   Found no problems or warnings.
+[01/08 21:49:37    444s] End Summary
+[01/08 21:49:37    444s] 
+[01/08 21:49:37    444s] End Time: Wed Jan  8 21:49:37 2025
+[01/08 21:49:37    444s] Time Elapsed: 0:00:00.0
+[01/08 21:49:37    444s] 
+[01/08 21:49:37    444s] ******** End: VERIFY CONNECTIVITY ********
+[01/08 21:49:37    444s]   Verification Complete : 0 Viols.  0 Wrngs.
+[01/08 21:49:37    444s]   (CPU Time: 0:00:00.0  MEM: 0.000M)
+[01/08 21:49:37    444s] 
+[01/08 21:49:49    446s] <CMD> verify_drc
+[01/08 21:49:49    446s] #-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+[01/08 21:49:49    446s] #-report BATCHARGER_controller.drc.rpt   # string, default="", user setting
+[01/08 21:49:49    446s]  *** Starting Verify DRC (MEM: 1427.9) ***
+[01/08 21:49:49    446s] 
+[01/08 21:49:49    446s]   VERIFY DRC ...... Starting Verification
+[01/08 21:49:49    446s]   VERIFY DRC ...... Initializing
+[01/08 21:49:49    446s]   VERIFY DRC ...... Deleting Existing Violations
+[01/08 21:49:49    446s]   VERIFY DRC ...... Creating Sub-Areas
+[01/08 21:49:49    446s]   VERIFY DRC ...... Using new threading
+[01/08 21:49:49    446s]   VERIFY DRC ...... Sub-Area: {0.000 0.000 69.600 64.800} 1 of 1
+[01/08 21:49:49    446s]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[01/08 21:49:49    446s] 
+[01/08 21:49:49    446s]   Verification Complete : 0 Viols.
+[01/08 21:49:49    446s] 
+[01/08 21:49:49    446s]  *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 0.0M) ***
+[01/08 21:49:49    446s] 
+[01/08 21:49:55    447s] <CMD> verify_connectivity
+[01/08 21:49:55    447s] VERIFY_CONNECTIVITY use new engine.
+[01/08 21:49:55    447s] 
+[01/08 21:49:55    447s] ******** Start: VERIFY CONNECTIVITY ********
+[01/08 21:49:55    447s] Start Time: Wed Jan  8 21:49:55 2025
+[01/08 21:49:55    447s] 
+[01/08 21:49:55    447s] Design Name: BATCHARGER_controller
+[01/08 21:49:55    447s] Database Units: 1000
+[01/08 21:49:55    447s] Design Boundary: (0.0000, 0.0000) (69.6000, 64.8000)
+[01/08 21:49:55    447s] Error Limit = 1000; Warning Limit = 50
+[01/08 21:49:55    447s] Check all nets
+[01/08 21:49:55    447s] 
+[01/08 21:49:55    447s] Begin Summary 
+[01/08 21:49:55    447s]   Found no problems or warnings.
+[01/08 21:49:55    447s] End Summary
+[01/08 21:49:55    447s] 
+[01/08 21:49:55    447s] End Time: Wed Jan  8 21:49:55 2025
+[01/08 21:49:55    447s] Time Elapsed: 0:00:00.0
+[01/08 21:49:55    447s] 
+[01/08 21:49:55    447s] ******** End: VERIFY CONNECTIVITY ********
+[01/08 21:49:55    447s]   Verification Complete : 0 Viols.  0 Wrngs.
+[01/08 21:49:55    447s]   (CPU Time: 0:00:00.0  MEM: 0.000M)
+[01/08 21:49:55    447s] 
+[01/08 21:58:21    540s]  *** Starting Verify Geometry (MEM: 1427.9) ***
+[01/08 21:58:21    540s] 
+[01/08 21:58:21    540s] **WARN: (IMPVFG-257):	setVerifyGeometryMode/verifyGeometry command is obsolete and should not be used any more. It still works in this release but will be removed in future release. You should change to use set_verify_drc_mode/verify_drc which is the replacement tool for verifyGeometry.
+[01/08 21:58:21    540s]   VERIFY GEOMETRY ...... Starting Verification
+[01/08 21:58:21    540s]   VERIFY GEOMETRY ...... Initializing
+[01/08 21:58:21    540s]   VERIFY GEOMETRY ...... Deleting Existing Violations
+[01/08 21:58:21    540s]   VERIFY GEOMETRY ...... Creating Sub-Areas
+[01/08 21:58:21    540s]                   ...... bin size: 3600
+[01/08 21:58:21    540s]   VERIFY GEOMETRY ...... SubArea : 1 of 1
+[01/08 21:58:21    541s]   VERIFY GEOMETRY ...... Cells          :  0 Viols.
+[01/08 21:58:21    541s]   VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+[01/08 21:58:21    541s]   VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+[01/08 21:58:21    541s]   VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+[01/08 21:58:21    541s]   VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+[01/08 21:58:21    541s] VG: elapsed time: 0.00
+[01/08 21:58:21    541s] Begin Summary ...
+[01/08 21:58:21    541s]   Cells       : 0
+[01/08 21:58:21    541s]   SameNet     : 0
+[01/08 21:58:21    541s]   Wiring      : 0
+[01/08 21:58:21    541s]   Antenna     : 0
+[01/08 21:58:21    541s]   Short       : 0
+[01/08 21:58:21    541s]   Overlap     : 0
+[01/08 21:58:21    541s] End Summary
+[01/08 21:58:21    541s] 
+[01/08 21:58:21    541s]   Verification Complete : 0 Viols.  0 Wrngs.
+[01/08 21:58:21    541s] 
+[01/08 21:58:21    541s] **********End: VERIFY GEOMETRY**********
+[01/08 21:58:21    541s]  *** verify geometry (CPU: 0:00:00.8  MEM: 78.9M)
+[01/08 21:58:21    541s] 
+[01/08 21:58:51    547s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[01/08 22:00:33    566s] <CMD> verifyConnectivity
+[01/08 22:00:33    566s] VERIFY_CONNECTIVITY use new engine.
+[01/08 22:00:33    566s] 
+[01/08 22:00:33    566s] ******** Start: VERIFY CONNECTIVITY ********
+[01/08 22:00:33    566s] Start Time: Wed Jan  8 22:00:33 2025
+[01/08 22:00:33    566s] 
+[01/08 22:00:33    566s] Design Name: BATCHARGER_controller
+[01/08 22:00:33    566s] Database Units: 1000
+[01/08 22:00:33    566s] Design Boundary: (0.0000, 0.0000) (69.6000, 64.8000)
+[01/08 22:00:33    566s] Error Limit = 1000; Warning Limit = 50
+[01/08 22:00:33    566s] Check all nets
+[01/08 22:00:34    566s] 
+[01/08 22:00:34    566s] Begin Summary 
+[01/08 22:00:34    566s]   Found no problems or warnings.
+[01/08 22:00:34    566s] End Summary
+[01/08 22:00:34    566s] 
+[01/08 22:00:34    566s] End Time: Wed Jan  8 22:00:34 2025
+[01/08 22:00:34    566s] Time Elapsed: 0:00:01.0
+[01/08 22:00:34    566s] 
+[01/08 22:00:34    566s] ******** End: VERIFY CONNECTIVITY ********
+[01/08 22:00:34    566s]   Verification Complete : 0 Viols.  0 Wrngs.
+[01/08 22:00:34    566s]   (CPU Time: 0:00:00.0  MEM: 0.000M)
+[01/08 22:00:34    566s] 
+[01/08 22:01:27    576s] 
+[01/08 22:01:27    576s] *** Memory Usage v#2 (Current mem = 1439.816M, initial mem = 272.281M) ***
+[01/08 22:01:27    576s] 
+[01/08 22:01:27    576s] *** Summary of all messages that are not suppressed in this session:
+[01/08 22:01:27    576s] Severity  ID               Count  Summary                                  
+[01/08 22:01:27    576s] WARNING   IMPLF-58           407  MACRO '%s' has been found in the databas...
+[01/08 22:01:27    576s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[01/08 22:01:27    576s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[01/08 22:01:27    576s] WARNING   IMPLF-119            8  LAYER '%s' has been found in the databas...
+[01/08 22:01:27    576s] WARNING   IMPFP-3961          45  The techSite '%s' has no related standar...
+[01/08 22:01:27    576s] WARNING   IMPTS-141            2  Cell (%s) is marked as dont_touch, but i...
+[01/08 22:01:27    576s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[01/08 22:01:27    576s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[01/08 22:01:27    576s] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[01/08 22:01:27    576s] ERROR     IMPEXT-3491         10  Extraction failed because Quantus QRC te...
+[01/08 22:01:27    576s] WARNING   IMPEXT-3493          1  The design extraction status has been re...
+[01/08 22:01:27    576s] WARNING   IMPEXT-3530         17  The process node is not set. Use the com...
+[01/08 22:01:27    576s] WARNING   IMPVL-159          814  Pin '%s' of cell '%s' is defined in LEF ...
+[01/08 22:01:27    576s] WARNING   IMPDC-1629           3  The default delay limit was set to %d. T...
+[01/08 22:01:27    576s] WARNING   IMPESI-3505          1  setDelayCalMode -eng_%s (default=%s) wil...
+[01/08 22:01:27    576s] WARNING   IMPESI-2017         16  There is no coupling capacitance found i...
+[01/08 22:01:27    576s] WARNING   IMPVFG-257           1  setVerifyGeometryMode/verifyGeometry com...
+[01/08 22:01:27    576s] WARNING   IMPPP-193            5  The currently specified %s spacing %f %s...
+[01/08 22:01:27    576s] WARNING   IMPSR-4302           1  Cap-table/qrcTechFile is found in the de...
+[01/08 22:01:27    576s] WARNING   IMPSR-1254           2  Unable to connect the specified objects,...
+[01/08 22:01:27    576s] WARNING   IMPSR-1256           2  Unable to find any CORE class pad pin of...
+[01/08 22:01:27    576s] WARNING   IMPSP-5217           1  addFiller command is running on a postRo...
+[01/08 22:01:27    576s] WARNING   IMPSP-9025           2  No scan chain specified/traced.          
+[01/08 22:01:27    576s] WARNING   IMPOPT-7250          1  Option -signOff for command timeDesign i...
+[01/08 22:01:27    576s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[01/08 22:01:27    576s] ERROR     IMPOPT-7027          1  The analysis mode needs to be set to 'OC...
+[01/08 22:01:27    576s] WARNING   IMPOPT-6118          1  The following cells have a dont_touch pr...
+[01/08 22:01:27    576s] WARNING   IMPCCOPT-1361        3  Routing configuration for %s nets in clo...
+[01/08 22:01:27    576s] WARNING   IMPCCOPT-1127        1  The skew group %s has been identified as...
+[01/08 22:01:27    576s] WARNING   IMPREPO-200          1  There are %d Floating Ports in the top d...
+[01/08 22:01:27    576s] WARNING   IMPREPO-202          1  There are %d Ports connected to core ins...
+[01/08 22:01:27    576s] WARNING   IMPREPO-212          1  There are %d Floating I/O Pins.          
+[01/08 22:01:27    576s] WARNING   IMPREPO-213          1  There are %d I/O Pins connected to Non-I...
+[01/08 22:01:27    576s] WARNING   IMPREPO-216          1  There are %d Instances with input pins t...
+[01/08 22:01:27    576s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[01/08 22:01:27    576s] WARNING   IMPUDM-33            2  Global variable "%s" is obsolete and wil...
+[01/08 22:01:27    576s] WARNING   GLOBAL-100           5  Global '%s' has become obsolete. It will...
+[01/08 22:01:27    576s] WARNING   TCLCMD-1461          4  Skipped unsupported command: %s          
+[01/08 22:01:27    576s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[01/08 22:01:27    576s] *** Message Summary: 1362 warning(s), 11 error(s)
+[01/08 22:01:27    576s] 
+[01/08 22:01:27    576s] --- Ending "Innovus" (totcpu=0:09:36, real=0:46:13, mem=1439.8M) ---
