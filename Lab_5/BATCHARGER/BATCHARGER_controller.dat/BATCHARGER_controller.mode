@@ -8,11 +8,12 @@ catch { setOptMode -activeHoldViews { BC_AN } }
 catch { setOptMode -activeSetupViews { WC_AN } }
 catch { setOptMode -autoSetupViews { WC_AN} }
 catch { setOptMode -autoTDGRSetupViews { WC_AN} }
+catch { setOptMode -autoViewOpt false }
 catch { setOptMode -drcMargin 0 }
 catch { setOptMode -fixDrc true }
 catch { setOptMode -preserveAllSequential false }
 catch { setOptMode -setupTargetSlack 0 }
-catch { setExtractRCMode  -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 -minNetTermNrToBeInMem 50 }
+catch { setExtractRCMode  -effortLevel low -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 -minNetTermNrToBeInMem 50 }
 catch {setNanoRouteMode -quiet -drouteUseMinSpacingForBlockage auto}
 catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
 catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 29.100000}
@@ -31,6 +32,8 @@ catch { setDelayCalMode -eng_copyNetPropToNewNet true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
 catch { setDelayCalMode -SIAware true }
+catch { setDelayCalMode -signOff true }
+catch { setDelayCalMode -siMode signoff }
 catch { setPinAssignMode -pinEditInBatch false }
 catch { setAddRingMode -avoid_short false }
 catch { setAddRingMode -extend_over_row false }
@@ -45,6 +48,8 @@ catch { setAddRingMode -stacked_via_top_layer metal8 }
 catch { setAddRingMode -via_using_exact_crossover_size true }
 catch { setImportMode -discardFloatingVNets false }
 catch { setImportMode -keepEmptyModule true }
+catch { setSIMode -analysisType aae }
+catch { setSIMode -enable_glitch_report false }
 catch { setSIMode -separate_delta_delay_on_data true }
 catch { setAddStripeMode -allow_jog {padcore_ring block_ring} }
 catch { setAddStripeMode -break_at none }

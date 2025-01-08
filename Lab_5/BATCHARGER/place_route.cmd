@@ -137,8 +137,11 @@ redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/nu
 timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_postRoute -outDir timingReports
 getFillerMode -quiet
 addFiller -cell FILLER16EHD FILLER8EHD FILLER64EHD FILLER4EHD FILLER3HD FILLER32EHD FILLER2HD FILLER1HD -prefix FILLER
+verify_drc
 verifyConnectivity
 checkDesign -all
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -signoff -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_signOff -outDir timingReports
 saveNetlist BATCHARGER_controller_pr.v
 write_lef_abstract BATCHARGER_controller.lef
 saveDesign BATCHARGER_controller

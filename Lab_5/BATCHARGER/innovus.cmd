@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Wed Jan  8 19:24:41 2025                
+#  Created on Wed Jan  8 21:15:49 2025                
 #                                                     
 #######################################################
 
@@ -150,8 +150,27 @@ redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/nu
 timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_postRoute -outDir timingReports
 getFillerMode -quiet
 addFiller -cell FILLER16EHD FILLER8EHD FILLER64EHD FILLER4EHD FILLER3HD FILLER32EHD FILLER2HD FILLER1HD -prefix FILLER
+verify_drc
 verifyConnectivity
 checkDesign -all
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -signoff -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_signOff -outDir timingReports
 saveNetlist BATCHARGER_controller_pr.v
 write_lef_abstract BATCHARGER_controller.lef
 saveDesign BATCHARGER_controller
+fit
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report BATCHARGER_controller.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
