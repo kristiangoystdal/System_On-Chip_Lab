@@ -4,7 +4,7 @@ set ::IMEX::libVar ${::IMEX::dataVar}/libs
 
 create_library_set -name SS_LIB\
    -timing\
-    [list ${::IMEX::libVar}/lib/typ/fsc0h_d_generic_core_ss1p08v125c.lib]
+    [list ${::IMEX::libVar}/mmmc/fsc0h_d_generic_core_ss1p08v125c.lib]
 create_library_set -name FF_LIB\
    -timing\
     [list ${::IMEX::libVar}/mmmc/fsc0h_d_generic_core_ff1p32vm40c.lib]
