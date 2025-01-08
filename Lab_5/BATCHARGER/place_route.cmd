@@ -72,9 +72,6 @@ setPinAssignMode -pinEditInBatch true
 editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 2 -spreadType center -spacing 0.4 -pin {{iend[0]} {iend[1]} {iend[2]} {iend[3]} {iend[4]} {iend[5]} {iend[6]} {iend[7]} {tempmax[0]} {tempmax[1]} {tempmax[2]} {tempmax[3]} {tempmax[4]} {tempmax[5]} {tempmax[6]} {tempmax[7]} {tempmin[0]} {tempmin[1]} {tempmin[2]} {tempmin[3]} {tempmin[4]} {tempmin[5]} {tempmin[6]} {tempmin[7]} {tmax[0]} {tmax[1]} {tmax[2]} {tmax[3]} {tmax[4]} {tmax[5]} {tmax[6]} {tmax[7]} {vcutoff[0]} {vcutoff[1]} {vcutoff[2]} {vcutoff[3]} {vcutoff[4]} {vcutoff[5]} {vcutoff[6]} {vcutoff[7]} {vpreset[0]} {vpreset[1]} {vpreset[2]} {vpreset[3]} {vpreset[4]} {vpreset[5]} {vpreset[6]} {vpreset[7]}}
 setPinAssignMode -pinEditInBatch false
 getPinAssignMode -pinEditInBatch -quiet
-setPinAssignMode -pinEditInBatch true
-editPin -pinWidth 0.2 -pinDepth 0.52 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 2 -spreadType center -spacing -0.4 -pin {{iend[0]} {iend[1]} {iend[2]} {iend[3]} {iend[4]} {iend[5]} {iend[6]} {iend[7]} {tempmax[0]} {tempmax[1]} {tempmax[2]} {tempmax[3]} {tempmax[4]} {tempmax[5]} {tempmax[6]} {tempmax[7]} {tempmin[0]} {tempmin[1]} {tempmin[2]} {tempmin[3]} {tempmin[4]} {tempmin[5]} {tempmin[6]} {tempmin[7]} {tmax[0]} {tmax[1]} {tmax[2]} {tmax[3]} {tmax[4]} {tmax[5]} {tmax[6]} {tmax[7]} {vcutoff[0]} {vcutoff[1]} {vcutoff[2]} {vcutoff[3]} {vcutoff[4]} {vcutoff[5]} {vcutoff[6]} {vcutoff[7]} {vpreset[0]} {vpreset[1]} {vpreset[2]} {vpreset[3]} {vpreset[4]} {vpreset[5]} {vpreset[6]} {vpreset[7]}}
-setPinAssignMode -pinEditInBatch false
 getIoFlowFlag
 setIoFlowFlag 0
 floorPlan -site core -s 62.4 57.6 3.6 3.6 3.6 3.6
@@ -89,37 +86,6 @@ fit
 clearGlobalNets
 globalNetConnect dgnd -type pgpin -pin GND -instanceBasename *
 globalNetConnect dvdd -type pgpin -pin VCC -instanceBasename *
-clearGlobalNets
-globalNetConnect dgnd -type pgpin -pin GND -instanceBasename *
-globalNetConnect dvdd -type pgpin -pin VCC -instanceBasename *
-setSrouteMode -viaConnectToShape { noshape }
-sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal8(8) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal8(8) } -nets { dgnd dvdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal8(8) }
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-set sprCreateIeRingOffset 1.0
-set sprCreateIeRingThreshold 1.0
-set sprCreateIeRingJogDistance 1.0
-set sprCreateIeRingLayers {}
-set sprCreateIeStripeWidth 10.0
-set sprCreateIeStripeThreshold 1.0
-setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal8 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
-addRing -nets {dgnd dvdd} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.4 bottom 0.4 left 0.4 right 0.4} -spacing {top 0.40 bottom 0.40 left 0.4 right 0.4} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-undo
-redo
-selectWire 3.6000 44.9200 66.0000 45.4800 1 dgnd
-deleteSelectedFromFPlan
-gui_select -rect {0.70600 63.91600 68.74600 0.58900}
-deleteSelectedFromFPlan
 setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal8 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
 addRing -nets {dgnd dvdd} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.4 bottom 0.4 left 0.4 right 0.4} -spacing {top 0.40 bottom 0.40 left 0.4 right 0.4} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
 setSrouteMode -viaConnectToShape { noshape }
@@ -148,7 +114,6 @@ redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/nu
 timeDesign -prePlace -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_prePlace -outDir timingReports
 setPlaceMode -fp false
 place_design
-saveDesign BATCHARGER_controller
 redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
 timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix BATCHARGER_controller_preCTS -outDir timingReports
 ccopt_design
@@ -176,20 +141,4 @@ verifyConnectivity
 checkDesign -all
 saveNetlist BATCHARGER_controller_pr.v
 write_lef_abstract BATCHARGER_controller.lef
-saveDesign BATCHARGER_controller
-zoomBox -29.94800 2.10600 98.11300 62.69400
-zoomBox -20.95400 6.66900 87.89800 58.16900
-zoomBox -12.44700 10.40400 80.07700 54.17900
-zoomBox -5.44700 13.55100 73.19900 50.76000
-zoomBox 0.50200 16.22600 67.35200 47.85400
-zoomBox 5.55900 18.50000 62.38200 45.38400
-zoomBox 16.55300 23.36500 51.45100 39.87600
-zoomBox 21.36700 25.51000 46.58100 37.43900
-zoomBox 27.30000 28.12900 40.46200 34.35600
-zoomBox 29.88800 29.79500 35.72700 32.55800
-zoomBox 31.12400 30.43200 34.17500 31.87500
-zoomBox 31.23300 30.53600 33.82700 31.76300
-zoomBox 27.64800 27.72600 43.15700 35.06400
-fit
-saveDesign BATCHARGER_controller
 saveDesign BATCHARGER_controller
