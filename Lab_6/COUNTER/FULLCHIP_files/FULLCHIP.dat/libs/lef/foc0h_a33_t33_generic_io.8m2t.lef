@@ -1,0 +1,3894 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+MACRO CORNERHA
+    CLASS PAD ;
+    FOREIGN CORNERHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 218.400 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 218.400 217.800 ;
+    END
+END CORNERHA
+
+MACRO CORNERHAB
+    CLASS PAD ;
+    FOREIGN CORNERHAB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 218.400 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 218.400 151.400 ;
+    END
+END CORNERHAB
+
+MACRO CORNERHB
+    CLASS PAD ;
+    FOREIGN CORNERHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 152.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 152.000 151.400 ;
+    END
+END CORNERHB
+
+MACRO EMPTY16HA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY16HA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 6.400 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 6.400 217.800 ;
+    END
+END EMPTY16HA
+
+MACRO EMPTY16HB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY16HB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 6.400 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 6.400 151.400 ;
+    END
+END EMPTY16HB
+
+MACRO EMPTY1HA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY1HA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.400 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 0.400 217.800 ;
+    END
+END EMPTY1HA
+
+MACRO EMPTY1HB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY1HB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.400 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 0.400 151.400 ;
+    END
+END EMPTY1HB
+
+MACRO EMPTY2HA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY2HA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 0.800 217.800 ;
+    END
+END EMPTY2HA
+
+MACRO EMPTY2HB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY2HB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.800 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 0.800 151.400 ;
+    END
+END EMPTY2HB
+
+MACRO EMPTY4HA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY4HA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 1.600 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 1.600 217.800 ;
+    END
+END EMPTY4HA
+
+MACRO EMPTY4HB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY4HB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 1.600 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 1.600 151.400 ;
+    END
+END EMPTY4HB
+
+MACRO EMPTY8HA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY8HA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 3.200 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+    END
+END EMPTY8HA
+
+MACRO EMPTY8HB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTY8HB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 3.200 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+    END
+END EMPTY8HB
+
+MACRO EMPTYGRHA
+    CLASS PAD SPACER ;
+    FOREIGN EMPTYGRHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 3.200 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 3.200 217.800 ;
+    END
+END EMPTYGRHA
+
+MACRO EMPTYGRHB
+    CLASS PAD SPACER ;
+    FOREIGN EMPTYGRHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 3.200 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 3.200 151.400 ;
+    END
+END EMPTYGRHB
+
+MACRO GND3IHA
+    CLASS PAD ;
+    FOREIGN GND3IHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN GND3I
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END GND3I
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END GND3IHA
+
+MACRO GND3IHB
+    CLASS PAD ;
+    FOREIGN GND3IHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN GND3I
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END GND3I
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END GND3IHB
+
+MACRO GND3IOHA
+    CLASS PAD ;
+    FOREIGN GND3IOHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN GND3IO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END GND3IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END GND3IOHA
+
+MACRO GND3IOHB
+    CLASS PAD ;
+    FOREIGN GND3IOHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN GND3IO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END GND3IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END GND3IOHB
+
+MACRO GNDKHA
+    CLASS PAD ;
+    FOREIGN GNDKHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN GND
+        DIRECTION INOUT ;
+        USE ground ;
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal7 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal6 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal5 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal4 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal3 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal2 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        LAYER metal1 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal7 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal6 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal5 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal4 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal3 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal2 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        LAYER metal1 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END GND
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 217.800 38.540 217.800 38.540 212.990 21.400 212.990
+                 21.400 217.800 19.400 217.800 19.400 212.990 2.260 212.990 2.260 217.800
+                 0.000 217.800 0.000 0.000 1.740 0.000 1.740 3.740 39.060 3.740
+                 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 217.800 38.560 217.800 38.560 212.970 21.380 212.970
+                 21.380 217.800 19.420 217.800 19.420 212.970 2.240 212.970 2.240 217.800
+                 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 217.800 38.560 217.800 38.560 212.970 21.380 212.970
+                 21.380 217.800 19.420 217.800 19.420 212.970 2.240 212.970 2.240 217.800
+                 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 217.800 38.560 217.800 38.560 212.970 21.380 212.970
+                 21.380 217.800 19.420 217.800 19.420 212.970 2.240 212.970 2.240 217.800
+                 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 217.800 38.780 217.800 38.780 212.750 21.160 212.750
+                 21.160 217.800 19.640 217.800 19.640 212.750 2.020 212.750 2.020 217.800
+                 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 217.800 38.780 217.800 38.780 212.750 21.160 212.750
+                 21.160 217.800 19.640 217.800 19.640 212.750 2.020 212.750 2.020 217.800
+                 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 217.800 38.780 217.800 38.780 212.750 21.160 212.750
+                 21.160 217.800 19.640 217.800 19.640 212.750 2.020 212.750 2.020 217.800
+                 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 213.250 19.140 218.000 ;
+        RECT  21.660 213.250 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 217.800 38.780 217.800 38.780 212.750 21.160 212.750
+                 21.160 217.800 19.640 217.800 19.640 212.750 2.020 212.750 2.020 217.800
+                 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+    END
+END GNDKHA
+
+MACRO GNDKHB
+    CLASS PAD ;
+    FOREIGN GNDKHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN GND
+        DIRECTION INOUT ;
+        USE ground ;
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal7 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal6 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal5 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal4 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal3 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal2 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        LAYER metal1 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal7 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal6 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal5 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal4 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal3 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal2 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal1 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        END
+    END GND
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 151.600 58.280 151.600 58.280 146.790 36.540 146.790
+                 36.540 151.600 25.460 151.600 25.460 146.790 3.700 146.790 3.700 151.600
+                 0.000 151.600 0.000 0.000 2.600 0.000 2.600 3.740 59.400 3.740
+                 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal2 ;
+        POLYGON  62.000 151.600 58.300 151.600 58.300 146.770 36.520 146.770
+                 36.520 151.600 25.480 151.600 25.480 146.770 3.680 146.770 3.680 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal3 ;
+        POLYGON  62.000 151.600 58.300 151.600 58.300 146.770 36.520 146.770
+                 36.520 151.600 25.480 151.600 25.480 146.770 3.680 146.770 3.680 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal4 ;
+        POLYGON  62.000 151.600 58.300 151.600 58.300 146.770 36.520 146.770
+                 36.520 151.600 25.480 151.600 25.480 146.770 3.680 146.770 3.680 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal5 ;
+        POLYGON  62.000 151.600 58.520 151.600 58.520 146.550 36.300 146.550
+                 36.300 151.600 25.700 151.600 25.700 146.550 3.460 146.550 3.460 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal6 ;
+        POLYGON  62.000 151.600 58.520 151.600 58.520 146.550 36.300 146.550
+                 36.300 151.600 25.700 151.600 25.700 146.550 3.460 146.550 3.460 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal7 ;
+        POLYGON  62.000 151.600 58.520 151.600 58.520 146.550 36.300 146.550
+                 36.300 151.600 25.700 151.600 25.700 146.550 3.460 146.550 3.460 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  3.960 147.050 25.200 151.600 ;
+        RECT  36.800 147.050 58.020 151.600 ;
+        LAYER metal8 ;
+        POLYGON  62.000 151.600 58.520 151.600 58.520 146.550 36.300 146.550
+                 36.300 151.600 25.700 151.600 25.700 146.550 3.460 146.550 3.460 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+    END
+END GNDKHB
+
+MACRO GNDOHA
+    CLASS PAD ;
+    FOREIGN GNDOHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN GNDO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END GNDO
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 217.800 0.000 217.800 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END GNDOHA
+
+MACRO GNDOHB
+    CLASS PAD ;
+    FOREIGN GNDOHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN GNDO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END GNDO
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 151.400 0.000 151.400 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END GNDOHB
+
+MACRO PAD5MH
+    CLASS BLOCK ;
+    FOREIGN PAD5MH 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 75.000 BY 63.000 ;
+    SYMMETRY x y r90 ;
+#     SITE core ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+    END
+END PAD5MH
+
+MACRO PAD6MH
+    CLASS BLOCK ;
+    FOREIGN PAD6MH 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 75.000 BY 63.000 ;
+    SYMMETRY x y r90 ;
+#     SITE core ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+    END
+END PAD6MH
+
+MACRO PAD7MH
+    CLASS BLOCK ;
+    FOREIGN PAD7MH 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 75.000 BY 63.000 ;
+    SYMMETRY x y r90 ;
+#     SITE core ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+    END
+END PAD7MH
+
+MACRO PAD8MH
+    CLASS BLOCK ;
+    FOREIGN PAD8MH 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 75.000 BY 63.000 ;
+    SYMMETRY x y r90 ;
+#     SITE core ;
+    OBS
+        LAYER metal1 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal2 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal3 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal4 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal5 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal6 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal7 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+        LAYER metal8 ;
+        RECT  0.000 0.000 75.000 63.000 ;
+    END
+END PAD8MH
+
+MACRO VCC3IHA
+    CLASS PAD ;
+    FOREIGN VCC3IHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN VCC3I
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END VCC3I
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END VCC3IHA
+
+MACRO VCC3IHB
+    CLASS PAD ;
+    FOREIGN VCC3IHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN VCC3I
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END VCC3I
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END VCC3IHB
+
+MACRO VCC3IOHA
+    CLASS PAD ;
+    FOREIGN VCC3IOHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN VCC3IO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END VCC3IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END VCC3IOHA
+
+MACRO VCC3IOHB
+    CLASS PAD ;
+    FOREIGN VCC3IOHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN VCC3IO
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END VCC3IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END VCC3IOHB
+
+MACRO VCC3OHA
+    CLASS PAD ;
+    FOREIGN VCC3OHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN VCC3O
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END VCC3O
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.740 0.000 1.740 3.740
+                 39.060 3.740 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.720 0.000 1.720 3.760
+                 39.080 3.760 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 218.400 0.000 218.400 0.000 0.000 1.500 0.000 1.500 3.980
+                 39.300 3.980 39.300 0.000 40.800 0.000 ;
+    END
+END VCC3OHA
+
+MACRO VCC3OHB
+    CLASS PAD ;
+    FOREIGN VCC3OHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN VCC3O
+        DIRECTION INOUT ;
+        USE ANALOG ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+    END VCC3O
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.600 0.000 2.600 3.740
+                 59.400 3.740 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.580 0.000 2.580 3.760
+                 59.420 3.760 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal8 ;
+        POLYGON  62.000 152.000 0.000 152.000 0.000 0.000 2.360 0.000 2.360 3.980
+                 59.640 3.980 59.640 0.000 62.000 0.000 ;
+    END
+END VCC3OHB
+
+MACRO VCCKHA
+    CLASS PAD ;
+    FOREIGN VCCKHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 40.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN VCC
+        DIRECTION INOUT ;
+        USE power ;
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal7 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal6 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal5 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal4 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal3 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal2 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        LAYER metal1 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal7 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal6 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal5 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal4 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal3 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal2 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        LAYER metal1 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal1 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        END
+    END VCC
+    OBS
+        LAYER metal1 ;
+        POLYGON  40.800 218.000 38.540 218.000 38.540 213.190 21.820 213.190
+                 21.820 218.000 18.980 218.000 18.980 213.190 2.260 213.190 2.260 218.000
+                 0.000 218.000 0.000 0.000 1.740 0.000 1.740 3.740 39.060 3.740
+                 39.060 0.000 40.800 0.000 ;
+        LAYER via ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal2 ;
+        POLYGON  40.800 218.000 38.560 218.000 38.560 213.170 21.800 213.170
+                 21.800 218.000 19.000 218.000 19.000 213.170 2.240 213.170 2.240 218.000
+                 0.000 218.000 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via2 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal3 ;
+        POLYGON  40.800 218.000 38.560 218.000 38.560 213.170 21.800 213.170
+                 21.800 218.000 19.000 218.000 19.000 213.170 2.240 213.170 2.240 218.000
+                 0.000 218.000 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via3 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal4 ;
+        POLYGON  40.800 218.000 38.560 218.000 38.560 213.170 21.800 213.170
+                 21.800 218.000 19.000 218.000 19.000 213.170 2.240 213.170 2.240 218.000
+                 0.000 218.000 0.000 0.000 1.720 0.000 1.720 3.760 39.080 3.760
+                 39.080 0.000 40.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal5 ;
+        POLYGON  40.800 218.000 38.780 218.000 38.780 212.950 21.580 212.950
+                 21.580 218.000 19.220 218.000 19.220 212.950 2.020 212.950 2.020 218.000
+                 0.000 218.000 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal6 ;
+        POLYGON  40.800 218.000 38.780 218.000 38.780 212.950 21.580 212.950
+                 21.580 218.000 19.220 218.000 19.220 212.950 2.020 212.950 2.020 218.000
+                 0.000 218.000 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal7 ;
+        POLYGON  40.800 218.000 38.780 218.000 38.780 212.950 21.580 212.950
+                 21.580 218.000 19.220 218.000 19.220 212.950 2.020 212.950 2.020 218.000
+                 0.000 218.000 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 213.450 18.720 218.000 ;
+        RECT  22.080 213.450 38.280 218.000 ;
+        RECT  2.000 0.000 38.800 3.480 ;
+        LAYER metal8 ;
+        POLYGON  40.800 218.000 38.780 218.000 38.780 212.950 21.580 212.950
+                 21.580 218.000 19.220 218.000 19.220 212.950 2.020 212.950 2.020 218.000
+                 0.000 218.000 0.000 0.000 1.500 0.000 1.500 3.980 39.300 3.980
+                 39.300 0.000 40.800 0.000 ;
+    END
+END VCCKHA
+
+MACRO VCCKHB
+    CLASS PAD ;
+    FOREIGN VCCKHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 62.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN VCC
+        DIRECTION INOUT ;
+        USE power ;
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        LAYER metal1 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal7 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal6 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal5 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal4 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal3 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal2 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        LAYER metal1 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        END
+        PORT
+        CLASS CORE ;
+        LAYER metal8 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal7 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal6 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal5 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal4 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal3 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal2 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal1 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        END
+    END VCC
+    OBS
+        LAYER metal1 ;
+        POLYGON  62.000 151.600 57.420 151.600 57.420 146.790 32.420 146.790
+                 32.420 151.600 29.580 151.600 29.580 146.790 4.580 146.790 4.580 151.600
+                 0.000 151.600 0.000 0.000 2.600 0.000 2.600 3.740 59.400 3.740
+                 59.400 0.000 62.000 0.000 ;
+        LAYER via ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal2 ;
+        POLYGON  62.000 151.600 57.440 151.600 57.440 146.770 32.400 146.770
+                 32.400 151.600 29.600 151.600 29.600 146.770 4.560 146.770 4.560 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via2 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal3 ;
+        POLYGON  62.000 151.600 57.440 151.600 57.440 146.770 32.400 146.770
+                 32.400 151.600 29.600 151.600 29.600 146.770 4.560 146.770 4.560 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via3 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal4 ;
+        POLYGON  62.000 151.600 57.440 151.600 57.440 146.770 32.400 146.770
+                 32.400 151.600 29.600 151.600 29.600 146.770 4.560 146.770 4.560 151.600
+                 0.000 151.600 0.000 0.000 2.580 0.000 2.580 3.760 59.420 3.760
+                 59.420 0.000 62.000 0.000 ;
+        LAYER via4 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal5 ;
+        POLYGON  62.000 151.600 57.660 151.600 57.660 146.550 32.180 146.550
+                 32.180 151.600 29.820 151.600 29.820 146.550 4.340 146.550 4.340 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via5 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal6 ;
+        POLYGON  62.000 151.600 57.660 151.600 57.660 146.550 32.180 146.550
+                 32.180 151.600 29.820 151.600 29.820 146.550 4.340 146.550 4.340 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via6 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal7 ;
+        POLYGON  62.000 151.600 57.660 151.600 57.660 146.550 32.180 146.550
+                 32.180 151.600 29.820 151.600 29.820 146.550 4.340 146.550 4.340 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+        LAYER via7 ;
+        RECT  2.860 0.000 59.140 3.480 ;
+        RECT  4.840 147.050 29.320 151.600 ;
+        RECT  32.680 147.050 57.160 151.600 ;
+        LAYER metal8 ;
+        POLYGON  62.000 151.600 57.660 151.600 57.660 146.550 32.180 146.550
+                 32.180 151.600 29.820 151.600 29.820 146.550 4.340 146.550 4.340 151.600
+                 0.000 151.600 0.000 0.000 2.360 0.000 2.360 3.980 59.640 3.980
+                 59.640 0.000 62.000 0.000 ;
+    END
+END VCCKHB
+
+MACRO XMHA
+    CLASS PAD ;
+    FOREIGN XMHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 34.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal1 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        END
+    END SMT
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal3 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal2 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal1 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        END
+    END O
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal3 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal2 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal1 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        END
+    END PU
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal3 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal2 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal1 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        END
+    END PD
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal1 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        END
+    END I
+    OBS
+        LAYER metal1 ;
+        POLYGON  34.800 218.000 22.960 218.000 22.960 217.440 21.440 217.440
+                 21.440 218.000 20.160 218.000 20.160 217.440 18.640 217.440
+                 18.640 218.000 11.760 218.000 11.760 217.440 10.240 217.440
+                 10.240 218.000 6.160 218.000 6.160 217.440 4.640 217.440 4.640 218.000
+                 0.000 218.000 0.000 0.000 2.260 0.000 2.260 2.940 32.540 2.940
+                 32.540 0.000 34.800 0.000 ;
+        LAYER via ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        POLYGON  34.800 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        POLYGON  34.800 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        POLYGON  34.800 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal8 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+    END
+END XMHA
+
+MACRO XMHB
+    CLASS PAD ;
+    FOREIGN XMHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        LAYER metal3 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        LAYER metal2 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        LAYER metal1 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        END
+    END SMT
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal3 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal2 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal1 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        END
+    END PU
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal3 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal2 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal1 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        END
+    END PD
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        LAYER metal3 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        LAYER metal2 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        LAYER metal1 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        END
+    END O
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal1 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        END
+    END I
+    OBS
+        LAYER metal1 ;
+        POLYGON  60.000 151.600 37.760 151.600 37.760 151.040 36.240 151.040
+                 36.240 151.600 34.560 151.600 34.560 151.040 33.040 151.040
+                 33.040 151.600 31.760 151.600 31.760 151.040 30.240 151.040
+                 30.240 151.600 22.560 151.600 22.560 151.040 21.040 151.040
+                 21.040 151.600 0.000 151.600 0.000 0.000 1.600 0.000 1.600 2.940
+                 58.400 2.940 58.400 0.000 60.000 0.000 ;
+        LAYER via ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        POLYGON  60.000 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.800 151.600 31.800 151.000 30.200 151.000
+                 30.200 151.600 22.600 151.600 22.600 151.000 21.000 151.000
+                 21.000 151.600 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960
+                 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via2 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        POLYGON  60.000 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.800 151.600 31.800 151.000 30.200 151.000
+                 30.200 151.600 22.600 151.600 22.600 151.000 21.000 151.000
+                 21.000 151.600 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960
+                 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via3 ;
+        RECT  30.400 151.200 31.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  21.200 151.200 22.400 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        POLYGON  60.000 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.800 151.600 31.800 151.000 30.200 151.000
+                 30.200 151.600 22.600 151.600 22.600 151.000 21.000 151.000
+                 21.000 151.600 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960
+                 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal8 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+    END
+END XMHB
+
+MACRO YA28SHA
+    CLASS PAD ;
+    FOREIGN YA28SHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 34.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal3 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal2 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal1 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        END
+    END E
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal3 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal2 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal1 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        END
+    END I
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal3 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal2 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal1 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        END
+    END E4
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal3 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal2 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal1 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        END
+    END SR
+    PIN E2
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal3 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal2 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal1 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        END
+    END E2
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal1 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        END
+    END O
+    OBS
+        LAYER metal1 ;
+        POLYGON  34.800 218.000 28.560 218.000 28.560 217.440 27.040 217.440
+                 27.040 218.000 25.760 218.000 25.760 217.440 24.240 217.440
+                 24.240 218.000 17.360 218.000 17.360 217.440 15.840 217.440
+                 15.840 218.000 14.560 218.000 14.560 217.440 13.040 217.440
+                 13.040 218.000 8.960 218.000 8.960 217.440 7.440 217.440 7.440 218.000
+                 0.000 218.000 0.000 0.000 2.260 0.000 2.260 2.940 32.540 2.940
+                 32.540 0.000 34.800 0.000 ;
+        LAYER via ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via2 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via3 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal8 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+    END
+END YA28SHA
+
+MACRO YA28SHB
+    CLASS PAD ;
+    FOREIGN YA28SHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal1 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        END
+    END E4
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal3 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal2 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal1 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        END
+    END E
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal3 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal2 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal1 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        END
+    END I
+    PIN E2
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal3 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal2 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal1 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        END
+    END E2
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal3 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal2 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal1 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        END
+    END SR
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal1 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        END
+    END O
+    OBS
+        LAYER metal1 ;
+        POLYGON  60.000 151.600 44.160 151.600 44.160 151.040 42.640 151.040
+                 42.640 151.600 40.960 151.600 40.960 151.040 39.440 151.040
+                 39.440 151.600 31.360 151.600 31.360 151.040 29.840 151.040
+                 29.840 151.600 28.160 151.600 28.160 151.040 26.640 151.040
+                 26.640 151.600 10.960 151.600 10.960 151.040 9.440 151.040 9.440 151.600
+                 0.000 151.600 0.000 0.000 1.600 0.000 1.600 2.940 58.400 2.940
+                 58.400 0.000 60.000 0.000 ;
+        LAYER via ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal8 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+    END
+END YA28SHB
+
+MACRO YA4GSHA
+    CLASS PAD ;
+    FOREIGN YA4GSHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 34.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal3 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal2 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal1 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        END
+    END E4
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal3 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal2 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal1 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        END
+    END SR
+    PIN E8
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal3 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal2 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal1 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        END
+    END E8
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal3 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal2 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal1 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        END
+    END I
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal3 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal2 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal1 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        END
+    END E
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal1 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        END
+    END O
+    OBS
+        LAYER metal1 ;
+        POLYGON  34.800 218.000 28.560 218.000 28.560 217.440 27.040 217.440
+                 27.040 218.000 25.760 218.000 25.760 217.440 24.240 217.440
+                 24.240 218.000 17.360 218.000 17.360 217.440 15.840 217.440
+                 15.840 218.000 14.560 218.000 14.560 217.440 13.040 217.440
+                 13.040 218.000 8.960 218.000 8.960 217.440 7.440 217.440 7.440 218.000
+                 0.000 218.000 0.000 0.000 2.260 0.000 2.260 2.940 32.540 2.940
+                 32.540 0.000 34.800 0.000 ;
+        LAYER via ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via2 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via3 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 0.000 218.000 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960
+                 32.560 0.000 34.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal8 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+    END
+END YA4GSHA
+
+MACRO YA4GSHB
+    CLASS PAD ;
+    FOREIGN YA4GSHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN E8
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal1 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        END
+    END E8
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal3 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal2 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal1 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        END
+    END E4
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal3 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal2 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal1 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        END
+    END I
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal3 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal2 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal1 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        END
+    END E
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal3 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal2 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal1 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        END
+    END SR
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal1 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        END
+    END O
+    OBS
+        LAYER metal1 ;
+        POLYGON  60.000 151.600 44.160 151.600 44.160 151.040 42.640 151.040
+                 42.640 151.600 40.960 151.600 40.960 151.040 39.440 151.040
+                 39.440 151.600 31.360 151.600 31.360 151.040 29.840 151.040
+                 29.840 151.600 28.160 151.600 28.160 151.040 26.640 151.040
+                 26.640 151.600 10.960 151.600 10.960 151.040 9.440 151.040 9.440 151.600
+                 0.000 151.600 0.000 0.000 1.600 0.000 1.600 2.940 58.400 2.940
+                 58.400 0.000 60.000 0.000 ;
+        LAYER via ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 0.000 151.600 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960
+                 58.420 0.000 60.000 0.000 ;
+        LAYER via4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal8 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+    END
+END YA4GSHB
+
+MACRO ZMA28SHA
+    CLASS PAD ;
+    FOREIGN ZMA28SHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 34.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal1 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        END
+    END SMT
+    PIN E2
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal3 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal2 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal1 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        END
+    END E2
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal3 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal2 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal1 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        END
+    END O
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal3 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal2 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal1 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        END
+    END SR
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal3 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal2 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal1 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        END
+    END E4
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal3 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal2 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal1 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        END
+    END PU
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal3 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal2 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal1 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        END
+    END PD
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal3 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal2 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal1 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        END
+    END I
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal3 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal2 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal1 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        END
+    END E
+    PIN IO
+        DIRECTION INOUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal1 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        END
+    END IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  34.800 218.000 28.560 218.000 28.560 217.440 27.040 217.440
+                 27.040 218.000 25.760 218.000 25.760 217.440 24.240 217.440
+                 24.240 218.000 22.960 218.000 22.960 217.440 21.440 217.440
+                 21.440 218.000 20.160 218.000 20.160 217.440 18.640 217.440
+                 18.640 218.000 17.360 218.000 17.360 217.440 15.840 217.440
+                 15.840 218.000 14.560 218.000 14.560 217.440 13.040 217.440
+                 13.040 218.000 11.760 218.000 11.760 217.440 10.240 217.440
+                 10.240 218.000 8.960 218.000 8.960 217.440 7.440 217.440 7.440 218.000
+                 6.160 218.000 6.160 217.440 4.640 217.440 4.640 218.000 0.000 218.000
+                 0.000 0.000 2.260 0.000 2.260 2.940 32.540 2.940 32.540 0.000 34.800 0.000 ;
+        LAYER via ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal8 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+    END
+END ZMA28SHA
+
+MACRO ZMA28SHB
+    CLASS PAD ;
+    FOREIGN ZMA28SHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal3 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal2 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal1 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        END
+    END O
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal3 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal2 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal1 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        END
+    END SMT
+    PIN E2
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal3 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal2 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal1 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        END
+    END E2
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal1 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        END
+    END E4
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal3 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal2 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal1 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        END
+    END SR
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal3 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal2 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal1 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        END
+    END PU
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal3 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal2 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal1 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        END
+    END PD
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal3 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal2 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal1 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        END
+    END E
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal3 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal2 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal1 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        END
+    END I
+    PIN IO
+        DIRECTION INOUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal1 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        END
+    END IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  60.000 151.600 44.160 151.600 44.160 151.040 42.640 151.040
+                 42.640 151.600 40.960 151.600 40.960 151.040 39.440 151.040
+                 39.440 151.600 37.760 151.600 37.760 151.040 36.240 151.040
+                 36.240 151.600 34.560 151.600 34.560 151.040 33.040 151.040
+                 33.040 151.600 31.360 151.600 31.360 151.040 29.840 151.040
+                 29.840 151.600 28.160 151.600 28.160 151.040 26.640 151.040
+                 26.640 151.600 18.560 151.600 18.560 151.040 17.040 151.040
+                 17.040 151.600 10.960 151.600 10.960 151.040 9.440 151.040 9.440 151.600
+                 7.760 151.600 7.760 151.040 6.240 151.040 6.240 151.600 0.000 151.600
+                 0.000 0.000 1.600 0.000 1.600 2.940 58.400 2.940 58.400 0.000 60.000 0.000 ;
+        LAYER via ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via2 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via3 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal8 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+    END
+END ZMA28SHB
+
+MACRO ZMA4GSHA
+    CLASS PAD ;
+    FOREIGN ZMA4GSHA 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 34.800 BY 218.400 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_a ;
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        LAYER metal1 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        END
+    END SMT
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal3 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal2 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        LAYER metal1 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        END
+    END E4
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal3 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal2 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        LAYER metal1 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        END
+    END O
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal3 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal2 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        LAYER metal1 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        END
+    END SR
+    PIN E8
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal3 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal2 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        LAYER metal1 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        END
+    END E8
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal3 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal2 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        LAYER metal1 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        END
+    END PU
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal3 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal2 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        LAYER metal1 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        END
+    END PD
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal3 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal2 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        LAYER metal1 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        END
+    END I
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal3 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal2 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        LAYER metal1 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        END
+    END E
+    PIN IO
+        DIRECTION INOUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal1 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        END
+    END IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  34.800 218.000 28.560 218.000 28.560 217.440 27.040 217.440
+                 27.040 218.000 25.760 218.000 25.760 217.440 24.240 217.440
+                 24.240 218.000 22.960 218.000 22.960 217.440 21.440 217.440
+                 21.440 218.000 20.160 218.000 20.160 217.440 18.640 217.440
+                 18.640 218.000 17.360 218.000 17.360 217.440 15.840 217.440
+                 15.840 218.000 14.560 218.000 14.560 217.440 13.040 217.440
+                 13.040 218.000 11.760 218.000 11.760 217.440 10.240 217.440
+                 10.240 218.000 8.960 218.000 8.960 217.440 7.440 217.440 7.440 218.000
+                 6.160 218.000 6.160 217.440 4.640 217.440 4.640 218.000 0.000 218.000
+                 0.000 0.000 2.260 0.000 2.260 2.940 32.540 2.940 32.540 0.000 34.800 0.000 ;
+        LAYER via ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal2 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via2 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal3 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via3 ;
+        RECT  4.800 217.600 6.000 218.000 ;
+        RECT  7.600 217.600 8.800 218.000 ;
+        RECT  10.400 217.600 11.600 218.000 ;
+        RECT  13.200 217.600 14.400 218.000 ;
+        RECT  16.000 217.600 17.200 218.000 ;
+        RECT  18.800 217.600 20.000 218.000 ;
+        RECT  21.600 217.600 22.800 218.000 ;
+        RECT  24.400 217.600 25.600 218.000 ;
+        RECT  27.200 217.600 28.400 218.000 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal4 ;
+        POLYGON  34.800 218.000 28.600 218.000 28.600 217.400 27.000 217.400
+                 27.000 218.000 25.800 218.000 25.800 217.400 24.200 217.400
+                 24.200 218.000 23.000 218.000 23.000 217.400 21.400 217.400
+                 21.400 218.000 20.200 218.000 20.200 217.400 18.600 217.400
+                 18.600 218.000 17.400 218.000 17.400 217.400 15.800 217.400
+                 15.800 218.000 14.600 218.000 14.600 217.400 13.000 217.400
+                 13.000 218.000 11.800 218.000 11.800 217.400 10.200 217.400
+                 10.200 218.000 9.000 218.000 9.000 217.400 7.400 217.400 7.400 218.000
+                 6.200 218.000 6.200 217.400 4.600 217.400 4.600 218.000 0.000 218.000
+                 0.000 0.000 2.240 0.000 2.240 2.960 32.560 2.960 32.560 0.000 34.800 0.000 ;
+        LAYER via4 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal5 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via5 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal6 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via6 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal7 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+        LAYER via7 ;
+        RECT  2.520 0.000 32.280 2.680 ;
+        LAYER metal8 ;
+        POLYGON  34.800 218.000 0.000 218.000 0.000 0.000 2.020 0.000 2.020 3.180
+                 32.780 3.180 32.780 0.000 34.800 0.000 ;
+    END
+END ZMA4GSHA
+
+MACRO ZMA4GSHB
+    CLASS PAD ;
+    FOREIGN ZMA4GSHB 0.000 0.000 ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 152.000 ;
+    SYMMETRY x y r90 ;
+    SITE iocore_b ;
+    PIN E4
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal3 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal2 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        LAYER metal1 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        END
+    END E4
+    PIN SMT
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal3 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal2 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        LAYER metal1 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        END
+    END SMT
+    PIN O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal3 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal2 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        LAYER metal1 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        END
+    END O
+    PIN I
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal3 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal2 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        LAYER metal1 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        END
+    END I
+    PIN E
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal3 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal2 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        LAYER metal1 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        END
+    END E
+    PIN PD
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal3 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal2 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        LAYER metal1 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        END
+    END PD
+    PIN PU
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal3 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal2 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        LAYER metal1 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        END
+    END PU
+    PIN SR
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal3 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal2 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        LAYER metal1 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        END
+    END SR
+    PIN E8
+        DIRECTION INPUT ;
+        PORT
+        LAYER metal4 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal3 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal2 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        LAYER metal1 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        END
+    END E8
+    PIN IO
+        DIRECTION INOUT ;
+        PORT
+        LAYER metal8 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal1 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        END
+    END IO
+    OBS
+        LAYER metal1 ;
+        POLYGON  60.000 151.600 44.160 151.600 44.160 151.040 42.640 151.040
+                 42.640 151.600 40.960 151.600 40.960 151.040 39.440 151.040
+                 39.440 151.600 37.760 151.600 37.760 151.040 36.240 151.040
+                 36.240 151.600 34.560 151.600 34.560 151.040 33.040 151.040
+                 33.040 151.600 31.360 151.600 31.360 151.040 29.840 151.040
+                 29.840 151.600 28.160 151.600 28.160 151.040 26.640 151.040
+                 26.640 151.600 18.560 151.600 18.560 151.040 17.040 151.040
+                 17.040 151.600 10.960 151.600 10.960 151.040 9.440 151.040 9.440 151.600
+                 7.760 151.600 7.760 151.040 6.240 151.040 6.240 151.600 0.000 151.600
+                 0.000 0.000 1.600 0.000 1.600 2.940 58.400 2.940 58.400 0.000 60.000 0.000 ;
+        LAYER via ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal2 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via2 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal3 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via3 ;
+        RECT  9.600 151.200 10.800 151.600 ;
+        RECT  6.400 151.200 7.600 151.600 ;
+        RECT  17.200 151.200 18.400 151.600 ;
+        RECT  39.600 151.200 40.800 151.600 ;
+        RECT  42.800 151.200 44.000 151.600 ;
+        RECT  36.400 151.200 37.600 151.600 ;
+        RECT  33.200 151.200 34.400 151.600 ;
+        RECT  30.000 151.200 31.200 151.600 ;
+        RECT  26.800 151.200 28.000 151.600 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal4 ;
+        POLYGON  60.000 151.600 44.200 151.600 44.200 151.000 42.600 151.000
+                 42.600 151.600 41.000 151.600 41.000 151.000 39.400 151.000
+                 39.400 151.600 37.800 151.600 37.800 151.000 36.200 151.000
+                 36.200 151.600 34.600 151.600 34.600 151.000 33.000 151.000
+                 33.000 151.600 31.400 151.600 31.400 151.000 29.800 151.000
+                 29.800 151.600 28.200 151.600 28.200 151.000 26.600 151.000
+                 26.600 151.600 18.600 151.600 18.600 151.000 17.000 151.000
+                 17.000 151.600 11.000 151.600 11.000 151.000 9.400 151.000 9.400 151.600
+                 7.800 151.600 7.800 151.000 6.200 151.000 6.200 151.600 0.000 151.600
+                 0.000 0.000 1.580 0.000 1.580 2.960 58.420 2.960 58.420 0.000 60.000 0.000 ;
+        LAYER via4 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal5 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via5 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal6 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via6 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal7 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+        LAYER via7 ;
+        RECT  1.860 0.000 58.140 2.680 ;
+        LAYER metal8 ;
+        POLYGON  60.000 151.600 0.000 151.600 0.000 0.000 1.360 0.000 1.360 3.180
+                 58.640 3.180 58.640 0.000 60.000 0.000 ;
+    END
+END ZMA4GSHB
+
+
+
+END LIBRARY
