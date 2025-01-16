@@ -42,7 +42,7 @@ module FULLCHIP (
 
   VCC12ACUTHB vccinst2 (.VCC12ANA(dvdd));
 
-  ULSCI0CUTHB analogpad (.O(dgnd));
+  ULSCI0CUTHB analogpad (.O(iforcedbat));
 
   GNDACUTHB gndinst2 (.GNDANA(pgnd));
 
@@ -50,6 +50,7 @@ module FULLCHIP (
 
   GND3IOHB gndio;
   VCC3IOHB vcc3io;
+
 
   GNDKHB gndinst1 (.GND(pgnd));
   VCCKHB vccinst1 (.VCC(dvdd));
@@ -113,15 +114,6 @@ module FULLCHIP (
       .PU (pu),
       .PD (pd),
       .SMT(smt)
-  );
-
-  YA28SHB inst9 (
-      .O (iforcedbat),
-      .I (iforcedbat_core),
-      .E (enable),
-      .E2(e2),
-      .E4(e4),
-      .SR(sr)
   );
 
 endmodule

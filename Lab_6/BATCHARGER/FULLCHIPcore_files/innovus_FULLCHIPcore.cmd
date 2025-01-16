@@ -50,26 +50,13 @@ setPinAssignMode -pinEditInBatch false
 clearGlobalNets
 globalNetConnect dgnd -type pgpin -pin dgnd -instanceBasename *
 add_ndr -width {metal1 2.0 metal2 2.0 metal3 2.0 metal4 2.0 metal5 2.0 metal6 2.0 metal7 2.0 metal8 2.0 } -spacing {metal1 0.4 metal2 0.4 metal3 0.4 metal4 0.4 metal5 0.4 metal6 0.4 metal7 0.4 metal8 0.4 } -min_cut {via2 1 via3 1 via4 1 via5 1 via6 1 via7 1 } -add_via {VIAM1M2A VIAM2M3 VIAM3M4 VIAM4M5 VIAM5M6 VIAM6M7 VIAM7M8 genm1m2_w genm1m2a genm1m2b genm2m3_w genm2m3a genm2m3b genm3m4_w genm3m4a genm3m4b genm4m5_w genm4m5a genm4m5b genm5m6_w genm5m6a genm5m6b genm6m7_w genm6m7a genm6m7b genm7m8_w genm7m8a genm7m8b} -name pwr
-@REM setAttribute -net avdd -non_default_rule pwr
-@REM setAttribute -net agnd -non_default_rule pwr
 setAttribute -net dgnd -non_default_rule pwr
-@REM setAttribute -net dvdd -non_default_rule pwr
-@REM setAttribute -net pgnd -non_default_rule pwr
-@REM setAttribute -net vin -non_default_rule pwr
 selectNet dgnd
 routeDesign -selected
 
 setSrouteMode -viaConnectToShape { noshape }
 sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal8(8) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal8(8) } -nets {dgnd} -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal8(8) }
 placeAIO
-setAttribute -net avdd -shield_net pgnd
-setAttribute -net agnd -shield_net dgnd
-setAttribute -net ibias1ua -shield_net agnd
-setAttribute -net ibias1ub -shield_net agnd
-setAttribute -net vrefa -shield_net agnd
-setAttribute -net vrefb -shield_net agnd
-selectNet -shield
-routeDesign -selected
 routeDesign -globalDetail
 setDrawView place
 deselectAll
