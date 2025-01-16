@@ -7,7 +7,7 @@ module BATCHARGERcore (
 		       input  vin, // input voltage; must be at least 200mV higher than vsensbat to allow iforcedbat > 0
 		       input  vbattemp, //temperature normalized value: -40 to 125 fitted in the range 0V to vref
 		       input   en,// enables the module
-		       input   sel, // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
+		       input  [3:0] sel, // battery capacity selection bits: b[3,2,1,0] weights are 400,200,100,50 mAh + offset of 50mAh covers the range from 50 up to 800 mAh 
 		       inout   dvdd, // digital supply
 		       inout   dgnd, // digital ground
 		       inout   pgnd  // power ground		       
