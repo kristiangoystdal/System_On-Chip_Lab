@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Name     : Shielded net name
+Length   : Shielded net length
+Shield   : Total length of shielding wire
+Ratio    : Average shielding ratio
+-------------------------------------------------------------------------------
+Name          Length    Shield    Ratio   
+                                         Layer:      Length     Shield  Ratio
+-------------------------------------------------------------------------------
+iforcedbat:
+                91.6       0.0    0.000
+                                         metal2:       56.4        0.0  0.000
+                                         metal3:       35.2        0.0  0.000

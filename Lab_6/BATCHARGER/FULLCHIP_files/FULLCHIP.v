@@ -40,17 +40,12 @@ module FULLCHIP (
 
   LCUT12HB instlc ();
 
-  VCC12ACUTHB vccinst2 (.VCC12ANA(dvdd));
-
   ULSCI0CUTHB analogpad (.O(iforcedbat));
-
-  GNDACUTHB gndinst2 (.GNDANA(pgnd));
 
   RCUT12HB instrc ();
 
   GND3IOHB gndio;
   VCC3IOHB vcc3io;
-
 
   GNDKHB gndinst1 (.GND(pgnd));
   VCCKHB vccinst1 (.VCC(dvdd));
