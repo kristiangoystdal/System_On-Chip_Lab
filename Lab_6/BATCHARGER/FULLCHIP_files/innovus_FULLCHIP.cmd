@@ -8,14 +8,14 @@ set init_original_verilog_files FULLCHIP.v
 set init_pwr_net dvdd
 set init_top_cell FULLCHIP
 set init_verilog FULLCHIP.v
-set init_gnd_net agnd
+set init_gnd_net pgnd
 set init_lef_file {../lef_libs/header8m2t_V55.lef FULLCHIPcore.lef foc0h_a33_t33_generic_io.8m2t.lef  foc0h_a33_t12_analogesd_io.8m2t.lef}
 init_design
-floorPlan -site core_2800 -d 572.4 544.0 6.0 6.0 6.0 6.0
-placeInstance counter12 220.0 210.0
+floorPlan -site core_2800 -d 1400.0 1000.0 6.0 6.0 6.0 6.0
+placeInstance core_instance 200.0 200.0
 add_ndr -width {metal1 2.0 metal2 2.0 metal3 2.0 metal4 2.0 metal5 2.0 metal6 2.0 metal7 2.0 metal8 2.0 } -spacing {metal1 0.4 metal2 0.4 metal3 0.4 metal4 0.4 metal5 0.4 metal6 0.4 metal7 0.4 metal8 0.4 } -min_cut {via2 1 via3 1 via4 1 via5 1 via6 1 via7 1 } -add_via {VIAM1M2A VIAM2M3 VIAM3M4 VIAM4M5 VIAM5M6 VIAM6M7 VIAM7M8 genm1m2_w genm1m2a genm1m2b genm2m3_w genm2m3a genm2m3b genm3m4_w genm3m4a genm3m4b genm4m5_w genm4m5a genm4m5b genm5m6_w genm5m6a genm5m6b genm6m7_w genm6m7a genm6m7b genm7m8_w genm7m8a genm7m8b} -name pwr
 setAttribute -net avdd -non_default_rule pwr
-setAttribute -net agnd -non_default_rule pwr
+setAttribute -net pgnd -non_default_rule pwr
 setAttribute -net dvdd -non_default_rule pwr
 clearGlobalNets
 globalNetConnect dvdd -type tiehi -instanceBasename *
